@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 부트스트랩 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="nav_top.css">
+  <link rel="stylesheet" type="text/css" href="nav_middle.css">
+  <link rel="stylesheet" type="text/css" href="nav_bottom.css">
+  <link rel="stylesheet" type="text/css" href="section.css">
+  <link rel="stylesheet" type="text/css" href="footer.css">
+</head>
+
+<body class="container">
+  <div class="header_m">
+    <nav class="nav_top">
+      <div class="row">
+        <div class="col">
+          <a class="a_signup">회원가입</a>
+          &nbsp;
+          <div class="vr"></div>
+          &nbsp;
+          <a class="a_nomal">로그인</a>
+          &nbsp;
+          <div class="vr"></div>
+          &nbsp;
+          <div class="dropdown">
+            <span class="a_nomal">고객센터 ▼</span>
+            <ul class="dropdown-content">
+              <li><a class="li_hd" href="#">공지사항</a></li>
+              <li><a class="li_hd" href="#">자주하는 질문</a></li>
+              <li><a class="li_hd" href="#">1:1문의</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="nav_middle">
+      <div class="row">
+        <div class="col-3">
+          <span>
+            <img class="logo" src="..\css\logo.png">
+          </span>
+          <a class="merry" href="#">마켓메리</a>
+        </div>
+
+        <div class="col-6 align-self-center">
+          <span class="search-bar">
+            <a href="#"><input class="search-bar__input" type="search" placeholder="검색어를 입력해주세요"></input>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#9E007F" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg></a>
+          </span>
+        </div>
+
+        <div class="col-3 align-self-center">
+          <span class="nav justify-content-end align-items-center gap-4">
+            <a><img class="icon_nav" src="../css/geo-alt.svg" /></a>
+            <a><img class="icon_nav" src="../css/suit-heart.svg" /></a>
+            <a><img class="icon_nav" src="../css/cart2.svg" /></a>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="nav_bottom">
+      <div class="row">
+        <div class="col-2">
+          <div class="catagory">
+            <div class="dropdown">
+              <div class="catagory_bar">
+                <sapn><img class="category_img" src="../css/hamburger.png"></sapn>
+                <span>카테고리</span>
+              </div>
+              <ul class="dropdown-products">
+                <li><a class="li_hd_group" href="#">채소</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">친환경</a></li>
+                    <li><a class="li_hd" href="#">고구마·감자·당근</a></li>
+                    <li><a class="li_hd" href="#">시금치·쌈채소·나물</a></li>
+                    <li><a class="li_hd" href="#">양파·대파·마늘·배추</a></li>
+                    <li><a class="li_hd" href="#">콩나물·버섯</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">과일</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">친환경</a></li>
+                    <li><a class="li_hd" href="#">제철과일</a></li>
+                    <li><a class="li_hd" href="#">국산과일</a></li>
+                    <li><a class="li_hd" href="#">수입과일</a></li>
+                    <li><a class="li_hd" href="#">냉동·건과일</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">해산물</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">친환경</a></li>
+                    <li><a class="li_hd" href="#">생선류</a></li>
+                    <li><a class="li_hd" href="#">반건류</a></li>
+                    <li><a class="li_hd" href="#">수산가공품</a></li>
+                    <li><a class="li_hd" href="#">김·미역·해조류</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">정육</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">국내산소고기</a></li>
+                    <li><a class="li_hd" href="#">수입산소고기</a></li>
+                    <li><a class="li_hd" href="#">돼지고기</a></li>
+                    <li><a class="li_hd" href="#">계란류</a></li>
+                    <li><a class="li_hd" href="#">닭·오리고기</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">국·반찬·메인요리</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">국·탕·찌개</a></li>
+                    <li><a class="li_hd" href="#">밀키트·메인요리</a></li>
+                    <li><a class="li_hd" href="#">밑반찬</a></li>
+                    <li><a class="li_hd" href="#">김치·젓갈·장류</a></li>
+                    <li><a class="li_hd" href="#">베이컨·햄·통조림</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">샐러드·간편식</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">샐러드·닭가슴살</a></li>
+                    <li><a class="li_hd" href="#">도시락·밥류</a></li>
+                    <li><a class="li_hd" href="#">파스타·면류</a></li>
+                    <li><a class="li_hd" href="#">선식·시리얼</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">생수·음료·우유·커피</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">생수·탄산수</a></li>
+                    <li><a class="li_hd" href="#">음료·주스</a></li>
+                    <li><a class="li_hd" href="#">우유·두유·요거트</a></li>
+                    <li><a class="li_hd" href="#">커피</a></li>
+                    <li><a class="li_hd" href="#">차</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">와인</a></li>
+                <ul class="sub">
+                  <li><a class="li_hd" href="#">레드와인</a>
+                  <li><a class="li_hd" href="#">화이트와인</a></li>
+                  <li><a class="li_hd" href="#">샴페인·스파클링</a></li>
+                </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">전통주</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">막걸리·탁주</a>
+                    <li><a class="li_hd" href="#">증류주·약주·청주</a></li>
+                    <li><a class="li_hd" href="#">과실주·리큐르</a></li>
+                    <li><a class="li_hd" href="#">선물세트</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-8">
+          <div class="nav_menu">
+            <span></span>
+            <span>신상품</span>
+            <span>베스트</span>
+            <span>알뜰쇼핑</span>
+            <span>특가/혜택</span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <a class="deliver_icon"><span class="deliver_txt">샛별·낮</span> 배송안내</a>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+  <!-- header,nav 오예림-->
+
+  <!-- section 정명훈 -->
+  <div class="section">
+    <div class="firstSection">
+      <div>
+        <span class="sectionTitle">이 상품 어때요?</span>
+      </div>
+
+      <div class="content1">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-interval = "false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1649150917804l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1587346611469l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="secondSection">
+        <div>
+          <span class="sectionTitle">MD의 추천</span>
+        </div>
+
+        <div class="content1">
+          <ul class="sectionButtonArea">
+            <li>
+              <button class="btn btn-primary" type="submit">채소</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">과일•견과•쌀</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">수산•해산•건어물</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">정육•계란</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">국•반찬•메인요리</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">샐러드•간편식</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">면•양념•오일</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">생수•음료•우유•커피</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">간식•과자•떡</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">베이커리•치즈•델리</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">건강식품</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">와인</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">전통주</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">생활용품•리빙•캠핑</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">스킨케어•메이크업</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">헤어•바디•구강</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">주방용품</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">가전용품</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">선물하기</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">반려동물</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" type="submit">베이비•키즈•완구</button>
+            </li>
+          </ul>
+        </div>
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-interval = "false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1649150917804l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1587346611469l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card innerCard">
+                <img
+                  src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+  <!-- section 정명훈 -->
+  <!-- footer 안소연 -->
+  
+  <div id="footer" class="css-16o2vgi">
+    <div class="css-301see">
+      <div class="css-gh58u4">
+        <div class="css-1rhquhe">
+          <h2 class="css-r0omzn">고객행복센터</h2>
+          <div class="css-1417oa1">
+            <h3><span class="css-162092a">1644-1107</span></h3>
+            <dl class="css-1u2srid">
+              <dt>365고객센터</dt>
+              <dd class="css-14kcwq8">오전 7시 - 오후 7시</dd>
+            </dl>
+          </div>
+          <div class="css-1417oa1">
+            <h3>
+              <button type="button" class="css-163ugaf">카카오톡 문의</button>
+            </h3>
+            <dl class="css-1u2srid">
+              <dt>365고객센터</dt>
+              <dd class="css-14kcwq8">오전 7시 - 오후 7시</dd>
+            </dl>
+          </div>
+          <div class="css-1417oa1">
+            <h3>
+              <a href="/mypage/inquiry/form" class="css-mdfw3w">1:1 문의</a>
+            </h3>
+            <dl class="css-1u2srid">
+              <dt>24시간 접수 가능</dt>
+              <dd class="css-14kcwq8">
+                고객센터 운영시간에 순차적으로 답변해드리겠습니다.
+              </dd>
+            </dl>
+          </div>
+          <div class="css-1417oa1">
+            <h3>
+              <a href="/mypage/inquiry/bulk-order" class="css-mdfw3w">대량주문 문의</a>
+            </h3>
+            <dl class="css-1u2srid">
+              <dd class="css-14kcwq8">비회원의 경우 메일로 문의 바랍니다.</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="css-oortg6" style="width: 515px;">
+          <ul class="css-18ca9s">
+            <li class="css-1x36n8t">
+              <a style="background-color: yellow;" href="https://www.kurly.com/shop/introduce/about_kurly.php"
+                target="_self" rel="noreferrer" class="css-dh4koy">컬리소개</a>
+            </li>
+            <li class="css-1x36n8t">
+              <a href="https://www.youtube.com/embed/WEep7BcboMQ?rel=0&amp;showinfo=0&amp;wmode=opaque&amp;enablejsapi=1"
+                target="_self" rel="noreferrer" class="css-dh4koy">컬리소개영상</a>
+            </li>
+            <li class="css-1x36n8t">
+              <a href="https://marketkurly.recruiter.co.kr/appsite/company/index" target="_blank" rel="noreferrer"
+                class="css-dh4koy">인재채용</a>
+            </li>
+            <li class="css-1x36n8t">
+              <a href="/user-terms/agreement" target="_self" rel="noreferrer" class="css-dh4koy">이용약관</a>
+            </li>
+            <li class="css-1x36n8t">
+              <a href="/user-terms/privacy-policy" target="_self" rel="noreferrer" class="css-1nohcpk">개인정보처리방침</a>
+            </li>
+            <li class="css-1x36n8t">
+              <a href="/user-guide" target="_self" rel="noreferrer" class="css-dh4koy">이용안내</a>
+            </li>
+          </ul>
+          법인명 (상호) : 주식회사 컬리<span class="css-1xezpz6"></span>사업자등록번호 : 261-81-23567
+          <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&amp;apv_perm_no=" target="_blank"
+            rel="noreferrer" class="css-1kxzrwz">사업자정보 확인</a><br />통신판매업 : 제 2018-서울강남-01646 호<span
+            class="css-1xezpz6"></span>개인정보보호책임자 : 이원준<br />주소 : 서울특별시 강남구 테헤란로
+          133, 18층(역삼동)<span class="css-1xezpz6"></span>대표이사 :
+          김슬아<br />입점문의 :
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScLB7YkGJwNRzpGpp0gbR1i4C1_uvTEFj43SFfJ_XEadTn3gQ/viewform?usp=sf_link"
+            target="_blank" rel="noreferrer" class="css-1kxzrwz">입점문의하기</a><span class="css-1xezpz6"></span>제휴문의 :
+          <a href="mailto:business@kurlycorp.com" class="css-1kxzrwz">business@kurlycorp.com</a><br />채용문의 :
+          <a href="mailto:recruit@kurlycorp.com" class="css-1kxzrwz">recruit@kurlycorp.com</a><br />팩스: 070 - 7500 -
+          6098<span class="css-1xezpz6"></span>이메일 :
+          <a href="mailto:help@kurlycorp.com" class="css-1kxzrwz">help@kurlycorp.com</a><br />대량주문 문의 :
+          <a href="mailto:kurlygift@kurlycorp.com" class="css-1kxzrwz">kurlygift@kurlycorp.com</a><br />
+          <ul class="css-qmo96y">
+            <li class="css-1odwksc">
+              <a href="https://instagram.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                  width="100" src="https://res.kurly.com/pc/ico/1810/ico_instagram.png" alt="마켓컬리 인스타그램 바로가기"
+                  class="css-uwwqev" /></a>
+            </li>
+            <li class="css-1odwksc">
+              <a href="https://www.facebook.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                  src="https://res.kurly.com/pc/ico/1810/ico_fb.png" alt="마켓컬리 페이스북 바로가기" class="css-uwwqev" /></a>
+            </li>
+            <li class="css-1odwksc">
+              <a href="https://blog.naver.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                  src="https://res.kurly.com/pc/ico/1810/ico_blog.png" alt="마켓컬리 네이버블로그 바로가기" class="css-uwwqev" /></a>
+            </li>
+            <li class="css-1odwksc">
+              <a href="https://m.post.naver.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                  src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png" alt="마켓컬리 네이버포스트 바로가기"
+                  class="css-uwwqev" /></a>
+            </li>
+            <li class="css-1odwksc">
+              <a href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg" target="_blank" rel="noreferrer"
+                class="css-109fqb7"><img src="https://res.kurly.com/pc/ico/1810/ico_youtube.png" alt="마켓컬리 유튜브 바로가기"
+                  class="css-uwwqev" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="css-151x6dv">
+        <a href="#none" class="css-1yspb9o"><img src="https://res.kurly.com/kurly/logo/isms_220310.png" alt="isms 로고"
+            class="css-1ecf9uj" />
+          <p class="css-yc3koi">
+            [인증범위] 마켓컬리 쇼핑몰 서비스 개발·운영<br />[유효기간]
+            2022.01.19 ~ 2025.01.18
+          </p>
+        </a><a href="#none" class="css-1yspb9o"><img src="https://res.kurly.com/pc/ico/2001/logo_eprivacyplus.png"
+            alt="eprivacy plus 로고" class="css-1ecf9uj" />
+          <p class="css-yc3koi">
+            개인정보보호 우수 웹사이트 ·<br />개인정보처리시스템 인증
+            (ePRIVACY PLUS)
+          </p>
+        </a><a href="#none" class="css-1yspb9o"><img src="https://res.kurly.com/pc/service/main/2009/logo_payments.png"
+            alt="payments 로고" class="css-hmj395" />
+          <p class="css-yc3koi">
+            고객님의 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서
+            가입한<br />토스페이먼츠 구매안전(에스크로) 서비스를 이용하실 수
+            있습니다.
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="css-1dqov19 etk3uz82">
+      <p class="css-15jxxaf etk3uz81">
+        마켓컬리에서 판매되는 상품 중에는 마켓컬리에 입점한 개별 판매자가
+        판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+      </p>
+      <p class="css-15jxxaf etk3uz81">
+        마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서
+        통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불
+        등 의무와 책임을 부담하지 않습니다.
+      </p>
+      <em class="css-z6fhgy etk3uz80">© KURLY CORP. ALL RIGHTS RESERVED</em>
+    </div>
+    <a href="#header" class="css-1t4sf6y">맨 위로가기</a>
+  </div>
+
+  <!-- FOOTER -->
+<div id="footer" class="css-16o2vgi">
+  <div class="css-301see">
+    <div class="css-gh58u4">
+      <div class="css-1rhquhe">
+        <h2 class="css-r0omzn" style="font-size:18px">고객행복센터
+          <span style="font-size:16px">365일 오전 7시 - 오후 7시</span>
+        </h2>
+        <div class="css-1417oa1">
+          <h3><span class="css-162092a">1644-1107</span></h3>
+
+        </div>
+        <div class="css-1417oa1">
+          <h3>
+            <a href="/mypage/inquiry/form" class="css-mdfw3w">자주하는 문의</a>
+          </h3>
+          <h3>
+            <a href="/mypage/inquiry/form" class="css-mdfw3w">1:1 문의</a>
+          </h3>
+          <h3>
+            <!-- <a href="/mypage/inquiry  /form" class="css-mdfw3w">대량구매 문의</a> -->
+          </h3>
+        </div>
+        <!-- <div class="css-vtjvf eam2qm50">비회원 문의 : <a href="mailto:help@kurlycorp.com">help@kurlycorp.com</a><br>비회원 대량주문
+            문의 : <a href="mailto:kurlygift@kurlycorp.com">kurlygift@kurlycorp.com</a>
+          </div> -->
+      </div>
+
+      <div class="css-oortg6" style="width: 515px;">
+        <ul class="css-18ca9s">
+          <li class="css-1x36n8t">
+            <a style="background-color: none;" href="https://www.kurly.com/shop/introduce/about_kurly.php"
+              target="_self" rel="noreferrer" class="css-dh4koy">마켓메리소개</a>
+          </li>
+          <!-- 
+              <li class="css-1x36n8t">
+                <a href="/#" target="_self" rel="noreferrer">소개영상</a>
+              <li class="css-1x36n8t">
+                <a href="/#" target="_self" rel="noreferrer">인재채용</a> -->
+          <li class="css-1x36n8t">
+            <a href="/user-terms/agreement" target="_self" rel="noreferrer" class="css-dh4koy">이용약관</a>
+          </li>
+          <li class="css-1x36n8t">
+            <a href="/user-terms/privacy-policy" target="_self" rel="noreferrer" class="css-1nohcpk">개인정보처리방침</a>
+          </li>
+          <li class="css-1x36n8t">
+            <a href="/user-guide" target="_self" rel="noreferrer" class="css-dh4koy">이용안내</a>
+          </li>
+        </ul>
+        법인명 (상호) : 주식회사 마켓메리<span class="css-1xezpz6"></span>사업자등록번호 : 010-01-77777
+        <br />통신판매업 : 제 2022-천안휴먼-0000호<span class="css-1xezpz6"></span>개인정보보호책임자 : 김준석<br />주소 : 충청남도 천안시 동남구 대흥동
+        134 4교육실<span class="css-1xezpz6"></span>대표이사 :
+        김준석<br /><br />팩스: 070 - 7777 - 7777<span class="css-1xezpz6"></span>이메일 :
+        <a href="mailto:help@merry.com" class="css-1kxzrwz">help@merry.com</a><br />
+        <ul class="css-qmo96y">
+          <li class="css-1odwksc">
+            <a href="https://instagram.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                width="100" src="https://res.kurly.com/pc/ico/1810/ico_instagram.png" alt="마켓메리 인스타그램 바로가기"
+                class="css-uwwqev" /></a>
+          </li>
+          <li class="css-1odwksc">
+            <a href="https://www.facebook.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                src="https://res.kurly.com/pc/ico/1810/ico_fb.png" alt="마켓메리 페이스북 바로가기" class="css-uwwqev" /></a>
+          </li>
+          <li class="css-1odwksc">
+            <a href="https://blog.naver.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                src="https://res.kurly.com/pc/ico/1810/ico_blog.png" alt="마켓메리 네이버블로그 바로가기" class="css-uwwqev" /></a>
+          </li>
+          <li class="css-1odwksc">
+            <a href="https://m.post.naver.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png" alt="마켓메리 네이버포스트 바로가기"
+                class="css-uwwqev" /></a>
+          </li>
+          <li class="css-1odwksc">
+            <a href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg" target="_blank" rel="noreferrer"
+              class="css-109fqb7"><img src="https://res.kurly.com/pc/ico/1810/ico_youtube.png" alt="마켓메리 유튜브 바로가기"
+                class="css-uwwqev" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="css-151x6dv">
+      <a href="#none" class="css-1yspb9o"><img src="https://res.kurly.com/kurly/logo/isms_220310.png" alt="isms 로고"
+          class="css-1ecf9uj" />
+        <p class="css-yc3koi">
+          [인증범위] 마켓컬리 쇼핑몰 서비스 개발·운영<br />[유효기간]
+          2022.01.19 ~ 2025.01.18
+        </p>
+      </a><a href="#none" class="css-1yspb9o"><img src="https://res.kurly.com/pc/ico/2001/logo_eprivacyplus.png"
+          alt="eprivacy plus 로고" class="css-1ecf9uj" />
+        <p class="css-yc3koi">
+          개인정보보호 우수 웹사이트 ·<br />개인정보처리시스템 인증
+          (ePRIVACY PLUS)
+        </p>
+      </a><a href="#none" class="css-1yspb9o"><img src="https://res.kurly.com/pc/service/main/2009/logo_payments.png"
+          alt="payments 로고" class="css-hmj395" />
+        <p class="css-yc3koi">
+          고객님의 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서
+          가입한<br />토스페이먼츠 구매안전(에스크로) 서비스를 이용하실 수
+          있습니다.
+        </p>
+      </a>
+    </div>
+
+    <div class="css-1dqov19 etk3uz82">
+      <p class="css-15jxxaf etk3uz81">
+        마켓메리에서 판매되는 상품 중에는 마켓메리에 입점한 개별 판매자가
+        판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+      </p>
+      <p class="css-15jxxaf etk3uz81">
+        마켓플레이스(오픈마켓) 상품의 경우 마켓메리는 통신판매중개자로서
+        통신판매의 당사자가 아닙니다. 마켓메리는 해당 상품의 주문, 품질, 교환/환불
+        등 의무와 책임을 부담하지 않습니다.
+      </p>
+      <em class="css-z6fhgy etk3uz80">© MERRY CORP. ALL RIGHTS RESERVED</em>
+    </div>
+    <a href="#header" class="css-1t4sf6y">맨 위로가기</a>
+  </div>
+
+  <!-- ////////////////////////////////////////// -->
+  <!--       
+      <div class="css-ikw8c6 ebj6vxr6">
+        <div id="footer" class="css-1i60c0e ebj6vxr5">
+          <div class="css-3wsf38 ebj6vxr4">
+            <div class="css-0 eam2qm56">
+              <h2 class="css-4iyald eam2qm55">고객행복센터<span class="css-1uz1ro8 eam2qm54">365일 오전 7시 - 오후 7시</span></h2><strong
+                class="css-9jqcug eam2qm53">1644-1107</strong>
+              <div class="css-uwvxec eam2qm52"><button class="css-xfcio9 e19i509p0">카카오톡 문의</button><button
+                  class="css-nyzolq eam2qm51">1:1 문의</button>
+                  <button class="css-nyzolq eam2qm51">대량주문 문의</button></div>
+              <div class="css-vtjvf eam2qm50">비회원 문의 : <a href="mailto:help@kurlycorp.com">help@kurlycorp.com</a><br>비회원 대량주문
+                문의 : <a href="mailto:kurlygift@kurlycorp.com">kurlygift@kurlycorp.com</a></div>
+            </div>
+            <div class="css-1vgoj7v ebj6vxr3">
+              <ul class="css-17hse91 e13nap1l2">
+                <li class="css-1tayzmu e13nap1l1"><a href="https://www.kurly.com/shop/introduce/about_kurly.php"
+                    target="_self" class="css-1tfhwyj e13nap1l0">컬리소개</a></li>
+                <li class="css-1tayzmu e13nap1l1"><a
+                    href="https://www.youtube.com/embed/WEep7BcboMQ?rel=0&amp;showinfo=0&amp;wmode=opaque&amp;enablejsapi=1"
+                    target="_self" class="css-1tfhwyj e13nap1l0">컬리소개영상</a></li>
+                <li class="css-1tayzmu e13nap1l1"><a href="https://marketkurly.recruiter.co.kr/appsite/company/index"
+                    target="_blank" class="css-1tfhwyj e13nap1l0">인재채용</a></li>
+                <li class="css-1tayzmu e13nap1l1"><a href="/user-terms/agreement" target="_self"
+                    class="css-1tfhwyj e13nap1l0">이용약관</a></li>
+                <li class="css-1tayzmu e13nap1l1"><a href="/user-terms/privacy-policy" target="_self"
+                    class="css-1tfhwyj e13nap1l0">개인정보처리방침</a></li>
+                <li class="css-1tayzmu e13nap1l1"><a href="/user-guide" target="_self" class="css-1tfhwyj e13nap1l0">이용안내</a>
+                </li>
+              </ul>
+              <div class="css-lst8fs ebj6vxr2">법인명 (상호) : 주식회사 컬리 <span class="css-1ekjygq ebj6vxr1"></span> 사업자등록번호 :
+                261-81-23567<a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2618123567&amp;apv_perm_no=" target="_blank"
+                  rel="noreferrer" class="css-1tby8gd ebj6vxr0">사업자정보 확인</a><br>통신판매업 : 제 2018-서울강남-01646 호 <span
+                  class="css-1ekjygq ebj6vxr1"></span> 개인정보보호책임자 : 이원준<br>주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동) <span
+                  class="css-1ekjygq ebj6vxr1"></span> 대표이사 : 김슬아<br>입점문의 :<a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScLB7YkGJwNRzpGpp0gbR1i4C1_uvTEFj43SFfJ_XEadTn3gQ/viewform?usp=sf_link"
+                  target="_blank" rel="noreferrer" class="css-1tby8gd ebj6vxr0">입점문의하기</a><span
+                  class="css-1ekjygq ebj6vxr1"></span>제휴문의 :<a href="mailto:business@kurlycorp.com"
+                  class="css-1tby8gd ebj6vxr0">business@kurlycorp.com</a><br>채용문의 :<a href="mailto:recruit@kurlycorp.com"
+                  class="css-1tby8gd ebj6vxr0">recruit@kurlycorp.com</a><br>팩스: 070 - 7500 - 6098</div>
+              <ul class="css-5zwsk0 ek68y4g1"><a href="https://instagram.com/marketkurly" target="_blank" rel="noreferrer"
+                  class="css-9ipg3 ek68y4g0"><img src="https://res.kurly.com/pc/ico/1810/ico_instagram.png"
+                    alt="마켓컬리 인스타그램 바로가기"></a><a href="https://www.facebook.com/marketkurly" target="_blank" rel="noreferrer"
+                  class="css-9ipg3 ek68y4g0"><img src="https://res.kurly.com/pc/ico/1810/ico_fb.png"
+                    alt="마켓컬리 페이스북 바로가기"></a><a href="https://blog.naver.com/marketkurly" target="_blank" rel="noreferrer"
+                  class="css-9ipg3 ek68y4g0"><img src="https://res.kurly.com/pc/ico/1810/ico_blog.png"
+                    alt="마켓컬리 네이버블로그 바로가기"></a><a href="https://m.post.naver.com/marketkurly" target="_blank" rel="noreferrer"
+                  class="css-9ipg3 ek68y4g0"><img src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png"
+                    alt="마켓컬리 네이버포스트 바로가기"></a><a href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg"
+                  target="_blank" rel="noreferrer" class="css-9ipg3 ek68y4g0"><img
+                    src="https://res.kurly.com/pc/ico/1810/ico_youtube.png" alt="마켓컬리 유튜브 바로가기"></a></ul>
+            </div>
+          </div>
+          <div class="css-81eeg3 e1t23cq0"><button class="css-12t5wjq e57xuci2"><img
+                src="https://res.kurly.com/pc/ico/2208/logo_isms.svg" alt="isms 로고" class="css-1262i6n e57xuci1">
+              <p class="css-bft4sh e57xuci0">[인증범위] 마켓컬리 쇼핑몰 서비스 개발·운영<br>(심사받지 않은 물리적 인프라 제외)<br>[유효기간] 2022.01.19 ~
+                2025.01.18</p>
+            </button><button class="css-12t5wjq e57xuci2"><img src="https://res.kurly.com/pc/ico/2208/logo_privacy.svg"
+                alt="eprivacy plus 로고" class="css-1262i6n e57xuci1">
+              <p class="css-bft4sh e57xuci0">개인정보보호 우수 웹사이트 ·<br>개인정보처리시스템 인증 (ePRIVACY PLUS)</p>
+            </button><button class="css-12t5wjq e57xuci2"><img src="https://res.kurly.com/pc/ico/2208/logo_tosspayments.svg"
+                alt="payments 로고" class="css-as7ifw e57xuci1">
+              <p class="css-bft4sh e57xuci0">토스페이먼츠 구매안전(에스크로)<br>서비스를 이용하실 수 있습니다.</p>
+            </button><button class="css-12t5wjq e57xuci2"><img src="https://res.kurly.com/pc/ico/2208/logo_wooriBank.svg"
+                alt="우리은행 로고" class="css-1262i6n e57xuci1">
+              <p class="css-bft4sh e57xuci0">고객님이 현금으로 결제한 금액에 대해 우리은행과<br>채무지급보증 계약을 체결하여 안전거래를 보장하고<br>있습니다.</p>
+            </button></div>
+        </div>
+        <div class="css-175n8cp etk3uz81">마켓컬리에서 판매되는 상품 중에는 마켓컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어
+          있습니다.<br>마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.<em
+            class="css-1vhhy2d etk3uz80">© KURLY CORP. ALL RIGHTS RESERVED</em></div>
+      </div> -->
+
+  <!-- ////////////////////////////////////////// -->
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>
