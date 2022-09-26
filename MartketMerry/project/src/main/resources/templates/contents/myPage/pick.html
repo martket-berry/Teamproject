@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+  <meta name="generator" content="Hugo 0.101.0" />
+  <title>MarketMerry</title>
+
+  <link rel="icon" href="/static/img/favicon.png">
+
+  <!-- 부트스트랩 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/static/css/header/nav_top.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/header/nav_middle.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/header/nav_bottom.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/contents/myPage/pick.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/contents/contents.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/footer/footer.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  </head>
+
+<body class="container">
+
+<!-- header -->
+<header>
+  <nav class="nav_top">
+    <div class="row">
+      <div class="col">
+        <a class="a_signup">회원가입</a>
+        &nbsp;
+        <div class="vr"></div>
+        &nbsp;
+        <a class="a_nomal">로그인</a>
+        &nbsp;
+        <div class="vr"></div>
+        &nbsp;
+        <div class="dropdown">
+          <span class="a_nomal">고객센터 ▼</span>
+          <ul class="dropdown-content">
+            <li><a class="li_hd" href="#">공지사항</a></li>
+            <li><a class="li_hd" href="#">자주하는 질문</a></li>
+            <li><a class="li_hd" href="#">1:1문의</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="nav_middle">
+    <div class="row">
+      <div class="col-3">
+          <span>
+            <img class="logo" src="..\css\logo.png">
+          </span>
+        <a class="merry" href="#">마켓메리</a>
+      </div>
+
+      <div class="col-6 align-self-center">
+          <span class="search-bar">
+            <a href="#"><input class="search-bar__input" type="search" placeholder="검색어를 입력해주세요"></input>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#9E007F" class="bi bi-search"
+                   viewBox="0 0 16 16">
+                <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg></a>
+          </span>
+      </div>
+
+      <div class="col-3 align-self-center">
+          <span class="nav justify-content-end align-items-center gap-4">
+            <a><img class="icon_nav" src="/static/img/geo-alt.svg" /></a>
+            <a><img class="icon_nav" src="/static/img/suit-heart.svg" /></a>
+            <a><img class="icon_nav" src="/static/img/cart2.svg" /></a>
+          </span>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="nav_bottom">
+    <div class="row">
+      <div class="col-2">
+        <div class="catagory">
+          <div class="dropdown">
+            <div class="catagory_bar">
+              <sapn><img class="category_img" src="/static/img/hamburger.png"></sapn>
+              <span>카테고리</span>
+            </div>
+            <ul class="dropdown-products">
+              <li><a class="li_hd_group" href="#">채소</a>
+                <ul class="sub">
+                  <li><a class="li_hd" href="#">친환경</a></li>
+                  <li><a class="li_hd" href="#">고구마·감자·당근</a></li>
+                  <li><a class="li_hd" href="#">시금치·쌈채소·나물</a></li>
+                  <li><a class="li_hd" href="#">양파·대파·마늘·배추</a></li>
+                  <li><a class="li_hd" href="#">콩나물·버섯</a></li>
+                </ul>
+              </li>
+              <li><a class="li_hd_group" href="#">과일</a>
+                <ul class="sub">
+                  <li><a class="li_hd" href="#">친환경</a></li>
+                  <li><a class="li_hd" href="#">제철과일</a></li>
+                  <li><a class="li_hd" href="#">국산과일</a></li>
+                  <li><a class="li_hd" href="#">수입과일</a></li>
+                  <li><a class="li_hd" href="#">냉동·건과일</a></li>
+                </ul>
+              </li>
+              <li><a class="li_hd_group" href="#">해산물</a>
+                <ul class="sub">
+                  <li><a class="li_hd" href="#">친환경</a></li>
+                  <li><a class="li_hd" href="#">생선류</a></li>
+                  <li><a class="li_hd" href="#">반건류</a></li>
+                  <li><a class="li_hd" href="#">수산가공품</a></li>
+                  <li><a class="li_hd" href="#">김·미역·해조류</a></li>
+                </ul>
+              </li>
+              <li><a class="li_hd_group" href="#">정육</a>
+                <ul class="sub">
+                  <li><a class="li_hd" href="#">국내산소고기</a></li>
+                  <li><a class="li_hd" href="#">수입산소고기</a></li>
+                  <li><a class="li_hd" href="#">돼지고기</a></li>
+                  <li><a class="li_hd" href="#">계란류</a></li>
+                  <li><a class="li_hd" href="#">닭·오리고기</a></li>
+                </ul>
+              </li>
+              <li><a class="li_hd_group" href="#">국·반찬·메인요리</a>
+                <ul class="sub">
+                  <li><a class="li_hd" href="#">국·탕·찌개</a></li>
+                  <li><a class="li_hd" href="#">밀키트·메인요리</a></li>
+                  <li><a class="li_hd" href="#">밑반찬</a></li>
+                  <li><a class="li_hd" href="#">김치·젓갈·장류</a></li>
+                  <li><a class="li_hd" href="#">베이컨·햄·통조림</a></li>
+                </ul>
+              </li>
+              <li><a class="li_hd_group" href="#">샐러드·간편식</a>
+                <ul class="sub">
+                  <li><a class="li_hd" href="#">샐러드·닭가슴살</a></li>
+                  <li><a class="li_hd" href="#">도시락·밥류</a></li>
+                  <li><a class="li_hd" href="#">파스타·면류</a></li>
+                  <li><a class="li_hd" href="#">선식·시리얼</a></li>
+                </ul>
+              </li>
+              <li><a class="li_hd_group" href="#">생수·음료·우유·커피</a>
+                <ul class="sub">
+                  <li><a class="li_hd" href="#">생수·탄산수</a></li>
+                  <li><a class="li_hd" href="#">음료·주스</a></li>
+                  <li><a class="li_hd" href="#">우유·두유·요거트</a></li>
+                  <li><a class="li_hd" href="#">커피</a></li>
+                  <li><a class="li_hd" href="#">차</a></li>
+                </ul>
+              </li>
+              <li><a class="li_hd_group" href="#">와인</a>
+                <ul class="sub">
+                  <li><a class="li_hd" href="#">레드와인</a>
+                  <li><a class="li_hd" href="#">화이트와인</a></li>
+                  <li><a class="li_hd" href="#">샴페인·스파클링</a></li>
+                </ul>
+              </li>
+              <li><a class="li_hd_group" href="#">전통주</a>
+                <ul class="sub">
+                  <li><a class="li_hd" href="#">막걸리·탁주</a>
+                  <li><a class="li_hd" href="#">증류주·약주·청주</a></li>
+                  <li><a class="li_hd" href="#">과실주·리큐르</a></li>
+                  <li><a class="li_hd" href="#">선물세트</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-8">
+        <div class="nav_menu">
+          <span></span>
+          <span>신상품</span>
+          <span>베스트</span>
+          <span>알뜰쇼핑</span>
+          <span>특가/혜택</span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="col-2">
+        <a class="deliver_icon"><span class="deliver_txt">샛별·낮</span> 배송안내</a>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<!-- pick -->
+<!-- 마이페이지 탭은 헤더처럼 공용이라 다른 페이지  -->
+<div id="mypage-all">
+  <div id="mypage-content">
+
+    <!-- 나중에 등급별로 DB 연결해서 다 바꿔야함 -->
+    <!-- 버튼 태그 다 a태그로 바꿔야함 -->
+    <div class="mypage-top">
+      <div class="mypage_area">
+        <div class="user_grade">
+          <div class="user_grade_area">
+            <div class="user_grade_show">웰컴</div>
+            <div class="user_grade_name">홍길동</div>
+          </div>
+          <div>
+            <div>적립 5%</div>
+            <div>최초 1회 무료배송</div>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <div class="mypageBu">
+              <button>전체 등급 보기</button>
+            </div>
+            <div class="mypageBu">
+              <button>다음 달 예상 등급 보기</button>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; flex-grow: 1; width: 222px; flex-direction: column;">
+          <div class="mypage_right2">
+            <div class="mypage_box">
+              <div> 적립금 ></div>
+              <div> 0원</div>
+            </div>
+            <div class="mypage_box">
+              <div> 쿠폰 ></div>
+              <div> 0개</div>
+            </div>
+            <div class="mypage_box">
+              <div> 나의 컬리 스타일 ></div>
+              <div> 바로가기</div>
+            </div>
+            <!-- <div style="width: 192px; height: 90; padding: 30px 0 30px 30px;">1</div>
+            <div style="width: 192px; height: 90; padding: 30px 0 30px 30px;">2</div>
+            <div style="width: 192px; height: 90; padding: 30px 0 30px 30px;">3</div> -->
+            <!-- </div>
+            <div style="display: flex;"> -->
+            <div class="mypageBoxBu">
+              <button>컬리 퍼플 박스</button>
+              <div>알아보기</div>
+            </div>
+            <div class="mypageBoxBu">
+              <button>컬리 패스</button>
+              <div>알아보기</div>
+              <!-- 알아보기 이미지로 할지 아니면 다른걸로 할지 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 마이컬리 탭 부분도 마이페이지와 같이 공용
+      (주문 내역, 찜한 상품 등의 페이지만 따로 복붙해서 만들기)-->
+  <div class="mypage_tab">
+    <div class="tab_left">
+      <h2 class="title">마이베리</h2>
+      <div class="category">
+        <ul>
+          <li><a href="#">주문 내역</a> </li>
+          <!-- <li><a href="#">선물 내역</a> </li> 선물 내역은 사용x -->
+          <li><a href="#">찜한 상품</a> </li>
+          <li><a href="#">배송지 관리</a> </li>
+          <li><a href="#">상품 후기</a> </li>
+          <li><a href="#">상품 문의</a> </li>
+          <li><a href="#">적립금</a> </li>
+          <li><a href="#">쿠폰</a> </li>
+          <!-- <li><a href="#">나의 컬리 스타일</a> </li> 안쓸듯 -->
+          <li><a href="#">개인정보 수정</a> </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab_right">
+      <div class="header">
+        <h2 class="title">
+          찜한 상품
+          <!-- 자바 스크립트로 짰는데 수치랑 상품만 등록하면 되서 스프링으로 할 수 있을듯 -->
+          0개
+          <!-- 이부분도 수치 조정 -->
+          <span class="sub_tilte">찜한 상품은 최대 200개 까지 저장됩니다.</span>
+        </h2>
+      </div>
+      <div class="empty">
+        <img src="https://res.kurly.com/pc/service/pick/icon-empty-like.svg" alt="">
+        <p>찜한 상품이 없습니다.</p>
+        <a href="#">베스트 상품 보기</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+<!-- FOOTER -->
+
+<div id="footer" class="css-16o2vgi">
+  <div class="css-gh58u4 justify-content-lg-around">
+    <div class="css-1rhquhe">
+      <h2 class="css-r0omzn">고객만족센터</h2>
+      <h3>365일 오전 7시 - 오후 7시</h3>
+      <div class="css-1417oa1">
+        <h3><span class="css-162092a">1644-1107</span></h3>
+        <dl class="css-1u2srid">
+          <dt>365고객센터</dt>
+          <dd class="css-14kcwq8">오전 7시 - 오후 7시</dd>
+        </dl>
+      </div>
+      <div>
+        <div class="css-1417oa1">
+          <h3>
+            <a href="/mypage/inquiry/form" class="css-mdfw3w">자주하는 문의</a>
+          </h3>
+          <span>
+                <h3>
+                  <a href="/mypage/inquiry/form" class="css-mdfw3w">1:1 문의</a>
+                </h3>
+              </span>
+        </div>
+      </div>
+    </div>
+    <div class="css-oortg6" style="width: 515px;">
+      <ul class="css-18ca9s">
+        <li class="css-1x36n8t">
+          <a href="https://www.kurly.com/shop/introduce/about_kurly.php" target="_self" rel="noreferrer"
+             class="css-dh4koy">마켓메리소개</a>
+        </li>
+
+        <li class="css-1x36n8t">
+
+        <li class="css-1x36n8t">
+          <a href="/user-terms/agreement" target="_self" rel="noreferrer" class="css-dh4koy">이용약관</a>
+        </li>
+        <li class="css-1x36n8t">
+          <a href="/user-terms/privacy-policy" target="_self" rel="noreferrer" class="css-1nohcpk">개인정보처리방침</a>
+        </li>
+        <li class="css-1x36n8t">
+          <a href="/user-guide" target="_self" rel="noreferrer" class="css-dh4koy">이용안내</a>
+        </li>
+      </ul>
+      법인명 (상호) : 주식회사 마켓메리<span class="css-1xezpz6"></span>사업자등록번호 : 010-01-77777
+      <br />통신판매업 : 제 2022-천안휴먼-0000호<span class="css-1xezpz6"></span>개인정보보호책임자 : 김준석<br />주소 : 충청남도 천안시 동남구 대흥동 134
+      4교육실<span class="css-1xezpz6"></span>대표이사 :
+      김준석<br /><br />팩스: 070 - 7777 - 7777<span class="css-1xezpz6"></span>이메일 :
+      <a href="mailto:help@merry.com" class="css-1kxzrwz">help@merry.com</a><br />
+      <ul class="css-qmo96y">
+        <li class="css-1odwksc">
+          <a href="https://instagram.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                  width="100" src="https://res.kurly.com/pc/ico/1810/ico_instagram.png" alt="마켓메리 인스타그램 바로가기"
+                  class="css-uwwqev" /></a>
+        </li>
+        <li class="css-1odwksc">
+          <a href="https://www.facebook.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                  src="https://res.kurly.com/pc/ico/1810/ico_fb.png" alt="마켓메리 페이스북 바로가기" class="css-uwwqev" /></a>
+        </li>
+        <li class="css-1odwksc">
+          <a href="https://blog.naver.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                  src="https://res.kurly.com/pc/ico/1810/ico_blog.png" alt="마켓메리 네이버블로그 바로가기" class="css-uwwqev" /></a>
+        </li>
+        <li class="css-1odwksc">
+          <a href="https://m.post.naver.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                  src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png" alt="마켓메리 네이버포스트 바로가기"
+                  class="css-uwwqev" /></a>
+        </li>
+        <li class="css-1odwksc">
+          <a href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg" target="_blank" rel="noreferrer"
+             class="css-109fqb7"><img src="https://res.kurly.com/pc/ico/1810/ico_youtube.png" alt="마켓메리 유튜브 바로가기"
+                                      class="css-uwwqev" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="css-1dqov19 etk3uz82 ">
+    <p class="css-15jxxaf etk3uz81">
+      마켓메리에서 판매되는 상품 중에는 마켓메리에 입점한 개별 판매자가
+      판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+    </p>
+    <p class="css-15jxxaf etk3uz81">
+      마켓플레이스(오픈마켓) 상품의 경우 마켓메리는 통신판매중개자로서
+      통신판매의 당사자가 아닙니다. 마켓메리는 해당 상품의 주문, 품질, 교환/환불
+      등 의무와 책임을 부담하지 않습니다.
+    </p>
+    <em class="css-z6fhgy etk3uz80">© MERRY CORP. ALL RIGHTS RESERVED</em>
+  </div>
+  <a href="#header" class="css-1t4sf6y">맨 위로가기</a>
+</div>
+
+<!-- JavaScript -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"
+        ;></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+
+    navigation: {
+      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+    },
+  })
+</script>
+<script>
+  var innerSlider = $('.inner-slider');
+  innerSlider.slick({
+    slidesToShow: 4,
+  })
+</script>
+</body>
+
+</html>

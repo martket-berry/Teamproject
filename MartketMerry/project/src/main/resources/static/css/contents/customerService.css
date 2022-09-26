@@ -1,0 +1,261 @@
+@media (min-width: 992px) {.container {width: 940px;}}
+@media (min-width: 1200px) {.container {width: 1050px;}}
+.customer-service-all{
+    position: relative;
+    min-width: 1050px;
+}
+.input-customer-service-area{
+    display: flex;
+    width: 1050px;
+    padding: 50px 0 80px 0;
+    margin: 0 auto;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.customer-service-leftbar{
+    width: 200px;
+}
+.customer-service-leftbar-title{
+    height: 75px;
+    padding: 5px 0 35px 1px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 35px;
+    color: #333;
+    letter-spacing: -1px;
+}
+.customer-service-leftbar-body{
+    border: 1px solid #f2f2f2;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    /* padding-inline-start: 40px; */
+    list-style-type: none;
+    width: 200px;
+    height:auto;
+}
+.customer-service-leftbar-li-menu{
+    display: list-item;
+    width: 198px;
+    height: 50px;
+
+}
+.customer-service-leftbar-first-a{
+    background-color: #fafafa;
+    color: #9E007F;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 14px 20px 16px 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    line-height: 19px;
+    letter-spacing: -.3px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.customer-service-leftbar-img{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjExIiB2aWV3Qm94PSIwIDAgNiAxMSI+CiAgICA8cGF0aCBmaWxsPSIjNUYwMDgwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xIDExTDYgNS41IDEgMCAwIDEuMSA0IDUuNSAwIDkuOXoiLz4KPC9zdmc+Cg==);
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    background-size: cover;
+    background-position: center;
+    color: #9E007F;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 19px;
+    letter-spacing: -.3px;
+    font-size: 14px;
+}
+li {
+    text-align: -webkit-match-parent;
+}
+
+
+/* 콘텐츠 */
+.customer-service-center{
+    width: 820px;
+}
+.customer-service-center-title{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 10px 0 37px;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.title-notice{
+    font-weight: 500;
+    font-size: 24px;
+    color: #333;
+    letter-spacing: -.5px;
+}
+.title-notice-info{
+    padding-left: 15px;
+    font-size: 14px;
+    letter-spacing: -.3px;
+    color: #999;
+    line-height: 20px;
+}
+.notice-table{
+    width: 100%;
+    border-bottom: 1px solid #f4f4f4;
+}
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    text-indent: initial;
+    border-color: grey;
+}
+.notice-table-thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.notice-table-thead-tr{
+    width: 100%;
+    table-layout: fixed;
+    border-bottom: 1px solid #333;
+    border-top: 2px solid #333;
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+/* table thead  */
+/* 번호 */
+.css-hyew2s {
+    width: 50px;
+    padding: 20px 0;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    color: #333;
+    font-size: 12px;
+}
+/* 제목 */
+.css-1k9dp5l {
+    padding: 20px 0;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    color: #333;
+    font-size: 12px;
+}
+/* 작성자,작성일 */
+.css-135p6jy {
+    width: 100px;
+    padding: 20px 0;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    color: #333;
+    font-size: 12px;
+}
+
+/* ------------------ */
+/* tbody */
+.notice-talbe-tbody{
+    position: relative;
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+/* tobody tr 가로한줄 */
+.css-x2m5rx {
+    border-bottom: 1px solid rgb(244, 244, 244);
+    cursor: pointer;
+    font-size: 12px;
+}
+/*  번호-> 공지포함 세로줄*/
+.css-1k4d546 {
+    padding: 20px 0px;
+    text-align: center;
+    color: rgb(76, 76, 76);
+}
+/* 제목 세로줄*/
+.css-s1v1rc {
+    padding: 20px 0px 20px 10px;
+    color: rgb(76, 76, 76);
+    text-align: left;
+}
+/* 작성자 세로줄 */
+.css-1k4d546 {
+    padding: 20px 0px;
+    text-align: center;
+    color: rgb(76, 76, 76);
+}
+/* 작성일 세로줄 */
+.css-vzhbq5 {
+    padding: 20px 0px;
+    text-align: center;
+    color: rgb(153, 153, 153);
+}
+/* --------------------- */
+/* 다음페이지 버튼 영역 */
+.next-btn-area{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 60px 0px 30px;
+}
+.css-rzcdhr:disabled {
+    background-image: url(https://res.kurly.com/kurly/ico/2021/paging-prev-disabled.svg);
+    cursor: default;
+}
+button[disabled], input[disabled] {
+    cursor: default;
+}
+
+.css-rzcdhr {
+    width: 44px;
+    height: 44px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(https://res.kurly.com/kurly/ico/2021/paging-prev-activated.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.css-7qb0sc {
+    overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+}
+/* right btn */
+.css-sxxs1g button + button {
+    margin-left: 12px;
+}
+
+.css-1jwilit {
+    width: 44px;
+    height: 44px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(https://res.kurly.com/kurly/ico/2021/paging-next-activated.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

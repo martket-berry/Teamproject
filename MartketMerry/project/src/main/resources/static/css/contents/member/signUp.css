@@ -1,0 +1,455 @@
+@media (min-width: 992px) {.container {width: 940px;}}
+@media (min-width: 1200px) {.container {width: 1050px;}}
+.signup-all{
+    min-width: 1050px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+.signup-header{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: -1px;
+    color: rgb(51, 51, 51);
+    font-family: "Noto Sans", "malgun gothic", sans-serif;
+    font-weight: 650;
+}
+.signup-body{
+    width: 640px;
+    margin: 0px auto;
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+.signup-body-start{
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(51, 51, 51);
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    line-height: 17px;
+    text-align: right;
+}
+.Required-fields{
+    color: rgb(238, 106, 123);
+    font-size: 12px;
+    line-height: 17px;
+    text-align: right;
+    box-sizing: border-box;
+    margin: 0;
+}
+.signup-body-contents{
+    width: 640px;
+    height: 694px;
+}
+.input-id, .input-pw, .input-name, .input-email, .input-phonNbr, .input-adress, .input-gender, .input-birth{
+    display: inline-flex;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 14px;
+}
+.input-id-menu, .input-pw-menu, .input-name-menu, .input-email-menu, .input-phonNbr-menu,.input-adress-menu , .input-gender-menu, .input-birth-menu{
+    width: 139px;
+    padding-top: 12px;
+}
+.label-id, .label-pw, .label-name, .label-email, .label-phonNbr,.label-adress, .label-gender, .label-birth{
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+    line-height: 20px;
+}
+.input-id-center, .input-pw-center, .input-name-center, .input-email-center, .input-phonNbr-center{
+    flex: 1 1 0%;
+    position: relative;
+    height: 48px;
+}
+.input-adress-center{
+    flex: 1 1 0%;
+    position: relative;
+    height: 72px;
+}
+.input-gender-center{
+    flex: 1 1 0%;
+    position: relative;
+    height: 45px;
+}
+.css-1bkd15f{
+    width: 305px;
+    height: 43px;
+    padding: 0px 11px 1px 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(221, 221, 221);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(51, 51, 51);
+    outline: none;
+    box-sizing: border-box;
+    writing-mode: horizontal-tb !important;
+}
+.input-id-rightBtn, .input-email-rightBtn, .input-phonNbr-rightBtn{
+    width: 120px;
+    margin-left: 8px;
+}
+.id-duplchkBtn, .email-duplchkBtn, .phonNbr-duplchkBtn{
+    height: 44px;
+    border-radius: 3px;
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 3px;
+    color: #9E007F;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #9E007F;
+}
+.input-id-duplchkBtn, .input-email-duplchkBtn, .input-phonNbr-duplchkBtn{
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    color: #9E007F;
+}
+.search-adressBtn{
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 304px;
+    height: 44px;
+    border-radius: 4px;
+    color: #9E007F;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #9E007F;
+}
+.search-adress{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #9E007F;
+}
+.adressCaution{
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgb(102, 102, 102);
+    width: 333px;
+    height: 18px;
+}
+.gender-choice{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 14px;
+    color: #333;
+}
+.gender-label{
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 12px 0px 9px;
+    cursor: default;
+}
+.css-1pes2r6 {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0px, 0px, 0px, 0px);
+}
+.css-198i9ca {
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgb(221, 221, 221);
+}
+.css-14wodj6 > label > span {
+    font-size: 14px;
+}
+.css-1dahn5m {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+.css-14wodj6 > label > span {
+    font-size: 14px;
+}
+.css-mgd87h {
+    position: relative;
+    font-size: 16px;
+    margin-left: 12px;
+}
+.css-5xw1m2 {
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background-color: #9E007F;
+}
+.css-1vic0rk {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: white;
+}
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+    box-sizing: border-box;
+    padding: 0;
+}
+.css-18n8lnw {
+    height: 44px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px;
+    padding: 0px 15px;
+}
+.css-1dkwuq4 input {
+    text-align: center;
+    font-size: 14px;
+    border: none;
+}
+
+.css-1368454 {
+    width: 100%;
+    height: 40px;
+    padding: 0px 11px 1px 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(221, 221, 221);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 38px;
+    color: rgb(51, 51, 51);
+    outline: none;
+    box-sizing: border-box;
+}
+.css-iehpfx {
+    height: 100%;
+}
+.css-iehpfx::after {
+    content: "/";
+    font-size: 14px;
+    color: rgb(204, 204, 204);
+    text-align: center;
+    line-height: 40px;
+}
+.css-1eo0fey {
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(51, 51, 51);
+}
+
+
+/* 이용약관동의 */
+.css-y8aj3r {
+    padding: 0px;
+}
+.css-2yzr8b {
+    display: inline-flex;
+    width: 100%;
+    padding: 10px 0px 10px 20px;
+}
+.css-1y8737n {
+    width: 139px;
+    padding-top: 12px;
+}
+.css-1obgjqh {
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+    line-height: 20px;
+}
+.css-82a6rk {
+    flex: 1 1 0%;
+}
+.css-ov2xfu:first-of-type {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 12px;
+}
+
+.css-ov2xfu {
+    display: flex;
+    padding: 8px 0px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.css-agvwxo {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0px, 0px, 0px, 0px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+}
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
+.css-qihf5m {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    vertical-align: top;
+    line-height: normal;
+    color: rgb(51, 51, 51);
+    padding: 0px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.css-1wfsi82 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+img, legend {
+    border: 0;
+    vertical-align: top;
+}
+canvas, img, video {
+    max-width: 100%;
+}
+.css-nygcgj {
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    padding-top: 4px;
+    padding-left: 36px;
+}
+.css-s5xdrg {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.css-18r9a6u {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    vertical-align: top;
+    line-height: normal;
+    color: rgb(51, 51, 51);
+    padding: 0px;
+    font-size: 14px;
+}
+.css-g5xq45 {
+    padding-left: 5px;
+    color: rgb(153, 153, 153);
+}
+.css-7chi73 {
+    padding-right: 22px;
+    color: #9E007F;
+    letter-spacing: 0px;
+}
+
+.css-7chi73::after {
+    content: "";
+    display: inline-block;
+    margin-left: 4px;
+    width: 6px;
+    height: 9px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjExIiB2aWV3Qm94PSIwIDAgNiAxMSI+CiAgICA8cGF0aCBmaWxsPSIjNUYwMDgwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xIDExTDYgNS41IDEgMCAwIDEuMSA0IDUuNSAwIDkuOXoiLz4KPC9zdmc+Cg==) 50% 50% / 6px 9px no-repeat;
+}
+*, :after, :before {
+    box-sizing: border-box;
+    margin: 0;
+}
+*, :after, :before, legend, td, th {
+    padding: 0;
+}
+.css-1qsjbts {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-left: 24px;
+}
+.css-jllwfz {
+    padding: 14px 80px 9px 0px;
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    vertical-align: top;
+    line-height: normal;
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+}
+
+
+/* 가입하기버튼 */
+.css-137ca2h {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-top: 1px solid rgb(247, 247, 247);
+    padding: 40px 0px;
+}
+*, :after, :before {
+    box-sizing: border-box;
+    margin: 0;
+}
+.css-18m884r {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 240px;
+    height: 56px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: #9E007F;
+    border: 0px none;
+    cursor: pointer;
+}
+.css-ymwvow {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+}

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+  <meta name="generator" content="Hugo 0.101.0" />
+  <title>MarketMerry</title>
+
+  <link rel="icon" href="/static/img/favicon.png">
+
+  <!-- 부트스트랩 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/static/css/header/nav_top.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/header/nav_middle.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/header/nav_bottom.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/contents/myPage/cart.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/contents/contents.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/footer/footer.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+</head>
+
+<body class="container">
+
+  <!-- header -->
+  <header>
+    <nav class="nav_top">
+      <div class="row">
+        <div class="col">
+          <a class="a_signup">회원가입</a>
+          &nbsp;
+          <div class="vr"></div>
+          &nbsp;
+          <a class="a_nomal">로그인</a>
+          &nbsp;
+          <div class="vr"></div>
+          &nbsp;
+          <div class="dropdown">
+            <span class="a_nomal">고객센터 ▼</span>
+            <ul class="dropdown-content">
+              <li><a class="li_hd" href="#">공지사항</a></li>
+              <li><a class="li_hd" href="#">자주하는 질문</a></li>
+              <li><a class="li_hd" href="#">1:1문의</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="nav_middle">
+      <div class="row">
+        <div class="col-3">
+          <span>
+            <img class="logo" src="..\css\logo.png">
+          </span>
+          <a class="merry" href="#">마켓메리</a>
+        </div>
+
+        <div class="col-6 align-self-center">
+          <span class="search-bar">
+            <a href="#"><input class="search-bar__input" type="search" placeholder="검색어를 입력해주세요"></input>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#9E007F" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg></a>
+          </span>
+        </div>
+
+        <div class="col-3 align-self-center">
+          <span class="nav justify-content-end align-items-center gap-4">
+            <a><img class="icon_nav" src="/static/img/geo-alt.svg" /></a>
+            <a><img class="icon_nav" src="/static/img/suit-heart.svg" /></a>
+            <a><img class="icon_nav" src="/static/img/cart2.svg" /></a>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="nav_bottom">
+      <div class="row">
+        <div class="col-2">
+          <div class="catagory">
+            <div class="dropdown">
+              <div class="catagory_bar">
+                <sapn><img class="category_img" src="/static/img/hamburger.png"></sapn>
+                <span>카테고리</span>
+              </div>
+              <ul class="dropdown-products">
+                <li><a class="li_hd_group" href="#">채소</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">친환경</a></li>
+                    <li><a class="li_hd" href="#">고구마·감자·당근</a></li>
+                    <li><a class="li_hd" href="#">시금치·쌈채소·나물</a></li>
+                    <li><a class="li_hd" href="#">양파·대파·마늘·배추</a></li>
+                    <li><a class="li_hd" href="#">콩나물·버섯</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">과일</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">친환경</a></li>
+                    <li><a class="li_hd" href="#">제철과일</a></li>
+                    <li><a class="li_hd" href="#">국산과일</a></li>
+                    <li><a class="li_hd" href="#">수입과일</a></li>
+                    <li><a class="li_hd" href="#">냉동·건과일</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">해산물</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">친환경</a></li>
+                    <li><a class="li_hd" href="#">생선류</a></li>
+                    <li><a class="li_hd" href="#">반건류</a></li>
+                    <li><a class="li_hd" href="#">수산가공품</a></li>
+                    <li><a class="li_hd" href="#">김·미역·해조류</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">정육</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">국내산소고기</a></li>
+                    <li><a class="li_hd" href="#">수입산소고기</a></li>
+                    <li><a class="li_hd" href="#">돼지고기</a></li>
+                    <li><a class="li_hd" href="#">계란류</a></li>
+                    <li><a class="li_hd" href="#">닭·오리고기</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">국·반찬·메인요리</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">국·탕·찌개</a></li>
+                    <li><a class="li_hd" href="#">밀키트·메인요리</a></li>
+                    <li><a class="li_hd" href="#">밑반찬</a></li>
+                    <li><a class="li_hd" href="#">김치·젓갈·장류</a></li>
+                    <li><a class="li_hd" href="#">베이컨·햄·통조림</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">샐러드·간편식</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">샐러드·닭가슴살</a></li>
+                    <li><a class="li_hd" href="#">도시락·밥류</a></li>
+                    <li><a class="li_hd" href="#">파스타·면류</a></li>
+                    <li><a class="li_hd" href="#">선식·시리얼</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">생수·음료·우유·커피</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">생수·탄산수</a></li>
+                    <li><a class="li_hd" href="#">음료·주스</a></li>
+                    <li><a class="li_hd" href="#">우유·두유·요거트</a></li>
+                    <li><a class="li_hd" href="#">커피</a></li>
+                    <li><a class="li_hd" href="#">차</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">와인</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">레드와인</a>
+                    <li><a class="li_hd" href="#">화이트와인</a></li>
+                    <li><a class="li_hd" href="#">샴페인·스파클링</a></li>
+                  </ul>
+                </li>
+                <li><a class="li_hd_group" href="#">전통주</a>
+                  <ul class="sub">
+                    <li><a class="li_hd" href="#">막걸리·탁주</a>
+                    <li><a class="li_hd" href="#">증류주·약주·청주</a></li>
+                    <li><a class="li_hd" href="#">과실주·리큐르</a></li>
+                    <li><a class="li_hd" href="#">선물세트</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-8">
+          <div class="nav_menu">
+            <span></span>
+            <span>신상품</span>
+            <span>베스트</span>
+            <span>알뜰쇼핑</span>
+            <span>특가/혜택</span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <a class="deliver_icon"><span class="deliver_txt">샛별·낮</span> 배송안내</a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 장바구니 -->
+<div class="cart">
+  <h2 class="cart_top">장바구니</h2>
+  <div class="cart_center">
+
+    <!-- 왼쪽 -->
+    <div class="cart_left">
+      <div class="cart_left_check">
+        <!-- 아이템 밑에 복붙하면 됨 -->
+        <div class="cart_left_checkbox">
+          <label class="cart_label">
+            <!-- 체크박스 check/checked/disibled -->
+            <input type="checkbox">
+            <!-- style="box-sizing:border-box; padding: 0;" -->
+            전체선택
+            <!-- <span> (0/0)</span> DB 연결, 타임리프 문법-->
+          </label>
+          <span class="area_line"></span>
+          <button class="">선택삭제</button>
+          <!-- 체크박스 선택 안되어있을 시 disabled 되게 해줘야함 -->
+        </div>
+      </div>
+
+
+      <!-- 아이템 부분 /없을 시 화면-->
+      <div style="border-bottom: 1px solid #cfcfcf;">
+        <!-- 상품 부분 -->
+        <!-- 상품이 없을시 를 기본으로 하고 상품 추가 시
+          상품이 없을 시 제거 후 게시판 글 리스트 따오면 될듯 -->
+        <!-- md추천 하는거랑 비슷하게 페이지 불러오는 방식으로 하는게 좋을거 같음 -->
+
+        <!-- 상품이 없을 시 -->
+        <div class="cart_item">
+          장바구니에 담긴 상품이 없습니다.
+        </div>
+
+        <!-- 상품이 있을 시 -->
+        <div>
+          <!-- 부트스트랩 아코디언 -->
+          <!-- 전부 열려있는 상태로 시작해야함!!!!!!!!!!!! -->
+
+          <!-- 타임리프로 컨트롤러 >엔티티 데이터 불러와서
+                    null인지 notnull인지 확인한 후 있으면
+                    사진, 이름, 가격, 수량(조절 가능하게 해야하고 가격이랑 연동해야함) 
+                    체크박스랑 우측 탭 연동해야함-->
+
+          <!-- 아코디언 부트스트랩 사용 -->
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <!-- 상태 영역 -->
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
+                  상온 상품
+                </button>
+              </h2>
+              <!--  상품 영역( 상품 추가 시 ul은 남기고 li만 해야하나?) -->
+              <ul>
+                <li id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body">
+                    <label class="cart_label">
+                      <input type="checkbox">
+                      <!-- <img src="image/cart_check.svg" alt="이미지가 없습니다."> -->
+                    </label>
+                    <div >
+                      <a href="#">
+                        <img src="" alt="">
+                        <!-- 이미지 데이터 베이스에서 가져와야 함 -->
+                      </a>
+                    </div>
+                    <div>
+
+                    </div>
+                  </div>
+                </li>
+                <li id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body">
+                    <strong>1</strong> 1
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#asd"
+                  aria-expanded="true" aria-controls="asd">
+                  <!-- panelsStayOpen-collapse'One'에서 'asd'로 바꿨더니 됨 (숫자로 하면 인식 x) -->
+                  냉동 상품
+                </button>
+              </h2>
+
+              <ul>
+                <li id="asd" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body">
+                    <strong>1</strong> 12
+                  </div>
+                </li>
+                <li id="asd" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body">
+                    <strong>2</strong> 12
+                  </div>
+                </li>
+
+                <li id="asd" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body">
+                    <strong>3</strong> 12
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <div class="cart_left_check">
+        <!-- 아이템 위에 복붙 -->
+        <div class="cart_left_checkbox">
+          <label class="cart_label">
+            <!-- 체크박스 check/checked/disibled -->
+            <input type="checkbox">
+            <!-- style="box-sizing:border-box; padding: 0;" -->
+            전체선택
+            <!-- <span> (0/0)</span> DB 연결, 타임리프 문법-->
+          </label>
+          <span class="area_line"></span>
+          <button class="">선택삭제</button>
+          <!-- 체크박스 선택 안되어있을 시 disabled 되게 해줘야함 -->
+        </div>
+      </div>
+      <!-- 위에 체크박스 복사 -->
+
+    </div>
+
+    <!-- 오른쪽 -->
+    <div class="cart_right">
+      <!-- 배송지 없을 시 -->
+      <div class="shipping_address_area">
+        <h3>배송지</h3>
+        <div>
+          <p>배송지를 등록하고 구매 가능한 상품을 확인하세요.</p>
+          <button style="border: 1px solid  black; border-radius: 3px; width: 100%; padding: 0 10px; height: 36px;">주소
+            검색</button>
+        </div>
+      </div>
+      <!-- 금액 -->
+      <div class="bill_area">
+        <div class="bill_tab">
+          <span class="bill_tab_left">
+            상품금액
+          </span>
+          <span class="bill_tab_right">
+            <!-- 타임리프 숫자-->
+            원
+          </span>
+        </div>
+        <div class="bill_tab">
+          <span class="bill_tab_left">
+            상품할인금액
+          </span>
+          <span class="bill_tab_right">
+            <!-- 타임리프 숫자-->
+            원
+          </span>
+        </div>
+        <div class="bill_tab">
+          <span class="bill_tab_left">
+            배송비
+          </span>
+          <span class="bill_tab_right">
+            <!-- 타임리프 숫자-->
+            원
+          </span>
+        </div>
+
+        <div class="bill_sum">
+          <span class="bill_sum_left">
+            결제예정금액
+          </span>
+          <span class="bill_sum_right">
+            <strong class="bill_sum_number">
+              <!-- 타임리프 숫자 -->
+            </strong>
+            <span class="bill_sum_right2">
+              원
+            </span>
+          </span>
+        </div>
+        
+        <!-- 주문 -->
+        <div class="order">
+          <button class="order_bu">
+            <span>주문하기</span>
+          </button>
+          <ul>
+            <li>쿠폰/적립금은 주문서에서 사용 가능합니다</li>
+            <li>[주문완료] 상태일 경우에만 주문 취소 가능합니다.</li>
+            <li>[마이컬리 > 주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.</li>
+            <li>쿠폰, 적립금 사용 금액을 제외한 실 결제 금액 기준으로 최종 산정됩니다.</li>
+            <li>상품별로 적립금 지급 기준이 다를 수 있습니다. (상품 상세 페이지에서 확인 가능합니다)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+
+    <div id="footer" class="css-16o2vgi">
+      <div class="css-gh58u4 justify-content-lg-around">
+        <div class="css-1rhquhe">
+          <h2 class="css-r0omzn">고객만족센터</h2>
+          <h3>365일 오전 7시 - 오후 7시</h3>
+          <div class="css-1417oa1">
+            <h3><span class="css-162092a">1644-1107</span></h3>
+            <dl class="css-1u2srid">
+              <dt>365고객센터</dt>
+              <dd class="css-14kcwq8">오전 7시 - 오후 7시</dd>
+            </dl>
+          </div>
+          <div>
+            <div class="css-1417oa1">
+              <h3>
+                <a href="/mypage/inquiry/form" class="css-mdfw3w">자주하는 문의</a>
+              </h3>
+              <span>
+                <h3>
+                  <a href="/mypage/inquiry/form" class="css-mdfw3w">1:1 문의</a>
+                </h3>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="css-oortg6" style="width: 515px;">
+          <ul class="css-18ca9s">
+            <li class="css-1x36n8t">
+              <a href="https://www.kurly.com/shop/introduce/about_kurly.php" target="_self" rel="noreferrer"
+                class="css-dh4koy">마켓메리소개</a>
+            </li>
+
+            <li class="css-1x36n8t">
+
+            <li class="css-1x36n8t">
+              <a href="/user-terms/agreement" target="_self" rel="noreferrer" class="css-dh4koy">이용약관</a>
+            </li>
+            <li class="css-1x36n8t">
+              <a href="/user-terms/privacy-policy" target="_self" rel="noreferrer" class="css-1nohcpk">개인정보처리방침</a>
+            </li>
+            <li class="css-1x36n8t">
+              <a href="/user-guide" target="_self" rel="noreferrer" class="css-dh4koy">이용안내</a>
+            </li>
+          </ul>
+          법인명 (상호) : 주식회사 마켓메리<span class="css-1xezpz6"></span>사업자등록번호 : 010-01-77777
+          <br />통신판매업 : 제 2022-천안휴먼-0000호<span class="css-1xezpz6"></span>개인정보보호책임자 : 김준석<br />주소 : 충청남도 천안시 동남구 대흥동 134
+          4교육실<span class="css-1xezpz6"></span>대표이사 :
+          김준석<br /><br />팩스: 070 - 7777 - 7777<span class="css-1xezpz6"></span>이메일 :
+          <a href="mailto:help@merry.com" class="css-1kxzrwz">help@merry.com</a><br />
+          <ul class="css-qmo96y">
+            <li class="css-1odwksc">
+              <a href="https://instagram.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                  width="100" src="https://res.kurly.com/pc/ico/1810/ico_instagram.png" alt="마켓메리 인스타그램 바로가기"
+                  class="css-uwwqev" /></a>
+            </li>
+            <li class="css-1odwksc">
+              <a href="https://www.facebook.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                  src="https://res.kurly.com/pc/ico/1810/ico_fb.png" alt="마켓메리 페이스북 바로가기" class="css-uwwqev" /></a>
+            </li>
+            <li class="css-1odwksc">
+              <a href="https://blog.naver.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                  src="https://res.kurly.com/pc/ico/1810/ico_blog.png" alt="마켓메리 네이버블로그 바로가기" class="css-uwwqev" /></a>
+            </li>
+            <li class="css-1odwksc">
+              <a href="https://m.post.naver.com/marketkurly" target="_blank" rel="noreferrer" class="css-109fqb7"><img
+                  src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png" alt="마켓메리 네이버포스트 바로가기"
+                  class="css-uwwqev" /></a>
+            </li>
+            <li class="css-1odwksc">
+              <a href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg" target="_blank" rel="noreferrer"
+                class="css-109fqb7"><img src="https://res.kurly.com/pc/ico/1810/ico_youtube.png" alt="마켓메리 유튜브 바로가기"
+                  class="css-uwwqev" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="css-1dqov19 etk3uz82 ">
+        <p class="css-15jxxaf etk3uz81">
+          마켓메리에서 판매되는 상품 중에는 마켓메리에 입점한 개별 판매자가
+          판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+        </p>
+        <p class="css-15jxxaf etk3uz81">
+          마켓플레이스(오픈마켓) 상품의 경우 마켓메리는 통신판매중개자로서
+          통신판매의 당사자가 아닙니다. 마켓메리는 해당 상품의 주문, 품질, 교환/환불
+          등 의무와 책임을 부담하지 않습니다.
+        </p>
+        <em class="css-z6fhgy etk3uz80">© MERRY CORP. ALL RIGHTS RESERVED</em>
+      </div>
+      <a href="#header" class="css-1t4sf6y">맨 위로가기</a>
+    </div>
+
+    <!-- JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"
+      ;></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <script>
+      var mySwiper = new Swiper('.swiper-container', {
+
+        navigation: {
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+        },
+      })
+    </script>
+    <script>
+      var innerSlider = $('.inner-slider');
+      innerSlider.slick({
+        slidesToShow: 4,
+      })
+    </script>
+</body>
+
+</html>

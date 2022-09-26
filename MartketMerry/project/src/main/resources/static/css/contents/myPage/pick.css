@@ -1,0 +1,231 @@
+@media (min-width: 992px) {.container {width: 940px;}}
+@media (min-width: 1200px) {.container {width: 1050px;}}
+ol, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/* css 태그 기본값 삭제할지 물어볼 것 */
+
+
+.mypage_all {
+
+}
+
+
+
+
+
+.mypage_top {
+    width: 100%;
+    padding: 50px 0;
+    margin-bottom: -20px;
+    background-color: #f7f7f7;
+}
+.mypage_area {
+    display: flex;
+    width: 100%;
+    /* height: 390px; 이후 하단 배너 추가시 추가*/
+    background: #f7f7f7;
+    padding: 30px;
+}
+.user_grade {
+    /* height: 152px; */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    justify-content: space-between;
+}
+.user_grade_area {
+    width: 312px;
+    display: flex;
+    align-items: center;
+
+}
+.user_grade_show {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    border: solid 1px gray;
+    font-size: 14px;
+    color: #fff;
+}
+.user_grade_name {
+    overflow: hidden;
+    float: left;
+    max-width: 263px;
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #333;
+    line-height: 28px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.mypageBu {
+    width: 151px;
+    height: 42px;
+    border: 1px solid #f4f4f3;
+    border-radius: 30px;
+    background-color: #f4f4f4;
+    font-size: 13px;
+    color: #333;
+    line-height: 40px;
+    text-align: center;
+}
+/* 적립금~ */
+.mypage_right2{
+    flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    row-gap: 4px;
+    column-gap: 4px;
+}
+
+.mypage_box {
+    flex-grow: 1;
+    width: 192px;
+    background-color: #fff;
+    padding: 26px 0 30px 30px;
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mypageBoxBu {
+    display: flex;
+    flex-grow: 1;
+    height: 63px;
+    padding: 20px 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+/* 이후 마이컬리 CSS */
+.mypage_tab {
+    padding-top: 65px;
+    width: 1050px;
+    margin: 0 auto;
+
+}
+.mypage_tab::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.mypage_tab .tab_left{
+    float: left;
+    width: 200px;
+}
+.mypage_tab .title {
+    padding: 5px 0 35px 1px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+    color: #333;
+    letter-spacing: -1px;
+}
+
+.mypage_tab .category{
+    border: 1px solid #f2f2f2;
+    border-bottom: 0;
+}
+
+.mypage_tab ul {
+    font-family: noto sans;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.mypage_tab ul li {
+    border-bottom: 1px solid #f2f2f2;
+}
+.mypage_tab ul li a {
+    display: block;
+    overflow: hidden;
+    padding: 14px 0 16px 20px;
+    background: #fff
+    url(https://res.kurly.com/pc/ico/2008/ico_arrow_6x11.svg)
+    no-repeat 174px 52%;
+    background-size: 6px 11px;
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+    letter-spacing: -.3px;
+}
+
+.mypage_tab ul li a:hover {
+    background: #fafafa url(https://res.kurly.com/pc/ico/2008/ico_arrow_6x11_on.svg) no-repeat 174px 52%;
+    background-size: 6px 11px;
+    font-weight: 700;
+    color: #5f0080;
+}
+
+
+
+
+
+.mypage_tab .tab_right{
+    float: right;
+    width: 820px;
+}
+.header {
+    padding: 5px 0 34px;
+    border-bottom: 2px solid #333;
+}
+.title {
+    height: 36px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #333;
+    letter-spacing: -.5px;
+}
+.sub_tilte {
+    padding-left: 11px;
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+    letter-spacing: -.3px;
+    vertical-align: 3px;
+}
+
+.empty {
+    height: 557px;
+    padding-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+}
+
+.empty>p {
+    margin: 16px 0 20px;
+    color: #b5b5b5;
+    font-size: 16px;
+    letter-spacing: -.3px;
+}
+.empty>a {
+    padding-top: 12px;
+    width: 150px;
+    height: 44px;
+    border: none;
+    border-radius: 3px;
+    background-color: #5f0080;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    outline: none;
+}

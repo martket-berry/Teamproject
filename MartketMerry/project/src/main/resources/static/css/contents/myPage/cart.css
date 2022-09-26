@@ -1,0 +1,227 @@
+ul li {
+    list-style: none;
+}
+
+.cart {
+    /* 기본 마진 패딩 0설정 안해서 1050이 아니라 1026 */
+    width: 1026px;
+    margin:0 auto;
+    padding-bottom: 80px;
+    text-align: center;
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+.cart_top {
+    padding: 50px 0 40px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 35px;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+.cart_center {
+    display: flex;
+    width: 1026px;
+    justify-content: space-between;
+}
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡ왼쪽ㅡㅡㅡㅡㅡㅡㅡㅡ*/
+.cart_left {
+    display: inline-block;
+    width: 700px;
+}
+.cart_left_check {
+    display: flex;
+    align-content: center;
+    padding: 18px 10px 16px 2px;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 500;
+}
+.cart_left_checkbox {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    /* padding: 18px 10px 16px 2px; */
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 500;
+
+    box-sizing: border-box;
+    margin: 0;
+}
+.cart_label {
+    display: inline-flex;
+    font-size: 14px;
+    line-height: 26px;
+    padding: 0;
+    color: black;
+}
+
+input {
+    font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* input[type="checkbox"] {
+    display:none;
+} */
+
+input[type="checkbox"] + label {
+    cursor: pointer;
+    /* 기본체크박스는 없으므로 추가해줌 */
+    padding-left: 23px;
+    /* 패딩값은 21~23px가 적당 */
+    background-repeat: no-repeat;
+    background-image: url('image/cart_check.svg');
+    /* 체크박스 이미지는 라벨 태그의 배경 이미지로 표시 */
+}
+input[type="checkbox"]:checked + label {
+    background-image: url('image/cart_checkedsvg.svg');
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+.area_line {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background: rgb(221, 221, 221);
+    margin: 6px 21px 0px 22px;
+    vertical-align: top;
+}
+.cart_left_button {
+    /* 몰루 */
+}
+.cart_item {
+    padding: 130px 0;
+    border-top: 1px solid rgb(99, 99, 99);
+    font-size: 16px;
+    text-align: center;
+}
+
+.accordion {
+    border: 0;
+}
+.accordion-body {
+    /* 부트스트랩꺼라 이름 변경 X */
+    display: flex;
+    width: 100%;
+}
+.accordion-body button{
+    width: 24px;
+}
+.accordion-body image{
+    width: 60px;
+    height: 78px;
+    margin-right: 20px;
+
+}
+.accordion-body
+.accordion-body
+    /* ㅡㅡㅡㅡㅡㅡㅡㅡ오른쪽ㅡㅡㅡㅡㅡㅡㅡㅡ*/
+.cart_right {
+    /* display: block; */
+    position: relative;
+    width: 284px;
+    min-height: 942px;
+    padding-top: 60px;
+}
+
+.shipping_address_area {
+    /* position: absolute; */
+    width: 284px;
+    border: 1px solid #f2f2f2;
+    padding: 30px;
+    text-align: left;
+}
+.bill_area {
+    /* display: block; */
+    position: absolute;
+    width: 284px;
+    border: 1px solid #f2f2f2;
+    padding: 30px;
+    text-align: left;
+}
+.bill_tab {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+.bill_tab_left {
+    width: 100px;
+    font-size: 16px;
+    line-height: 24px;
+    white-space:nowrap;
+}
+.bill_tab_right {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: right;
+}
+.bill_sum {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-top: 18px;
+    border-top: 1px solid #f2f2f2;
+}
+.bill_sum_left {
+    width: 100px;
+    font-size: 16px;
+    line-height: 24px;
+    white-space:nowrap;
+}
+.bill_sum_right {
+    width: 160;
+    font-size: 18;
+    line-height: 24px;
+    text-align: right;
+}
+.bill_sum_number {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+}
+.bill_sum_right2 {
+    padding-left: 4px;
+    font-size: 16px;
+    vertical-align: 1px;
+}
+
+.order {
+    padding-top: 20px;
+}
+.order_bu {
+    display: block;
+    padding: 0 10px;
+    text-align: center;
+    width: 100%;
+    height: 56px;
+    border-radius: 3px;
+    color: white;
+    background-color: #9E007F;
+    border: 10px;
+    font-weight: 500;
+}
+.order_bu_text{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+}
+.order ul {
+    width: 100%;
+    padding: 16px 0;
+}
+.order ul li{
+    display: list-item;
+    padding-top: 4px;
+    color : rgb(102, 102, 102);
+    position: relative;
+    font-size: 12px;
+    line-height: 16px;
+    padding-left: 7px;
+}
