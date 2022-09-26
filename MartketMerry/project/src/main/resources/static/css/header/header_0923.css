@@ -1,0 +1,778 @@
+
+a{
+    text-decoration:none;
+}
+a:hover {
+    color: #9E007F;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.merry {
+    color: #9E007F;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 맑은고딕;
+}
+.icon_nav {
+width: 1.7em;
+    height: 1.7em;
+    /*margin-left: 5px;*/
+}
+.a_signup {
+    color: #9E007F;
+    text-decoration: none;
+    font-family: 맑은고딕;;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.a_nomal {
+    color: #333333;
+    text-decoration: none;
+    font-family: 맑은고딕;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.vr {
+    font-size: smaller;
+    font-family: 맑은고딕;
+
+}
+.search-bar {
+    width: 20em;
+    height: 3em;
+    border-radius: 5px;
+    border: solid 1px #9E007F;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+}
+
+.search-bar > a {
+    width: 20em;
+    text-decoration: none;
+}
+
+.search-bar_input {
+    width: 22em;
+    border: none;
+    -webkit-appearance: none;
+    text-align: center;
+    /*margin-left: 2em;*/
+    overflow: auto;
+    z-index: -1;
+    font-size: 12px;
+}
+
+.search-bar_input:focus {
+    outline: none;
+    text-align: left;
+}
+
+.fa-search {
+    font-size: 12px;
+    color: #9E007F;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 12;
+    background-color: #F9F9F9;
+    min-width: 100px;
+    padding: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-products {
+    display: none;
+    position: absolute;
+    z-index: 12;
+    background-color: #F9F9F9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-products {
+    display: block;
+}
+
+
+ul {
+    width: 150px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.li_hd {
+    display: block;
+    color: #333333;
+    font-family: 맑은고딕;
+    font-size: 11px;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.li_hd:hover {
+    background-color: #9E007F;
+    color: white;
+}
+
+.li_hd_group {
+    display: block;
+    color: #333333;
+    font-family: 맑은고딕;
+    font-size: 11px;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.li_hd_group:hover {
+    background-color: #9E007F;
+    color: white;
+}
+
+.catagory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-weight: bold;
+}
+
+.category_img {
+    position: absolute;
+    top: 3px;
+    width: 14px;
+    height: 14px;
+}
+
+.catagory_bar {
+    display: flex;
+    gap: 15px;
+}
+
+.catagory_bar:hover {
+    color: #9E007F;
+    cursor: pointer;
+}
+
+.nav_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 0 0;
+    font-weight: bold;
+}
+.sub {
+    display: none;
+    position: absolute;
+    background-color: #F9F9F9;
+    min-width: 160px;
+    height: 292.5px;
+    top: 0px;
+    left: 150px;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-products > li:hover .sub {
+    display: block;
+}
+
+
+
+.deliver_icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center ;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    color: lightgrey;
+    /*width: 50px;*/
+    /*height: 25px;*/
+    font-size: 13px !important;
+    text-decoration: none;
+}
+
+.deliver_txt {
+    color: #9E007F;
+}
+
+.bg-danger {
+    background-color: #9E007F !important;
+}
+
+.cartBox {
+    z-index: 2;
+    position: absolute;
+    bottom: 190px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background-color: #9E007F;
+    opacity: 0.8;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.top{
+    height: 30px;
+}
+.middle{
+    height: 90px;
+}
+.bottom{
+    height: 60px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 8px 12px;
+}
+.navbar_menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+
+
+
+/* 모바일용 CSS */
+
+/*@media all and (min-width:360px) and (max-width: 768px){*/
+
+/*    .top{*/
+/*        height: 30px;*/
+/*    }*/
+/*    .dropdown {*/
+/*        position: relative;*/
+/*        display: inline-block;*/
+/*    }*/
+
+/*    .dropdown-content {*/
+/*        display: none;*/
+/*        position: absolute;*/
+/*        right:3px;*/
+/*        z-index: 12;*/
+/*        background-color: #F9F9F9;*/
+/*        width: 80px;*/
+/*        padding: 8px;*/
+/*        box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.2);*/
+/*    }*/
+
+/*    .dropdown:hover .dropdown-content {*/
+/*        display: block;*/
+/*    }*/
+
+/*    .dropdown-products {*/
+/*        display: none;*/
+/*        position: absolute;*/
+/*        z-index: 12;*/
+/*        background-color: #F9F9F9;*/
+/*        width: 150px;*/
+/*        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
+/*    }*/
+
+/*    .dropdown:hover .dropdown-products {*/
+/*        display: block;*/
+/*    }*/
+/*    .li_hd {*/
+/*        display: block;*/
+/*        color: #333333;*/
+/*        font-family: 맑은고딕;*/
+/*        font-size: 9px;*/
+/*        padding: 8px;*/
+/*        text-decoration: none;*/
+/*        font-weight: bold;*/
+/*    }*/
+
+/*    .li_hd:hover {*/
+/*        background-color: #9E007F;*/
+/*        color: white;*/
+/*    }*/
+
+/*    .li_hd_group {*/
+/*        display: block;*/
+/*        color: #333333;*/
+/*        font-family: 맑은고딕;*/
+/*        font-size: 10px;*/
+/*        padding: 8px;*/
+/*        text-decoration: none;*/
+/*        font-weight: bold;*/
+/*    }*/
+
+/*    .li_hd_group:hover {*/
+/*        background-color: #9E007F;*/
+/*        color: white;*/
+/*    }*/
+/*    */
+/*    */
+/*    .middle{*/
+
+/*        height: 240px!important;*/
+/*    }*/
+/*    .middle>ul{ display: flex;*/
+/*                flex-direction:column;*/
+/*                justify-content: space-around;*/
+/*                align-items: center;*/
+/*                height: 240px!important;*/
+/*    }*/
+/*    .middle>ul>li{display: flex;*/
+/*                    flex-direction:row;*/
+/*                       justify-content: center;*/
+/*    }*/
+/*    .bottom{*/
+/*        height: 60px;*/
+/*    }*/
+/*    .logo img {*/
+/*                width: 110%;*/
+/*                height: 110%;*/
+/*    }*/
+/*    .merry{*/
+/*        font-size: small;*/
+/*    }*/
+/*    .search-bar {*/
+/*        width: 30em;*/
+/*        height: 2.5em;*/
+/*        border-radius: 5px;*/
+/*        border: solid 1px #9E007F;*/
+/*        display: flex;*/
+/*        justify-content: space-around;*/
+/*        align-items: center;*/
+/*        z-index: 1;*/
+/*        opacity: 1;*/
+/*        margin-left: 10px;*/
+/*    }*/
+
+/*    .search-bar > a {*/
+/*        text-decoration: none;*/
+/*    }*/
+
+/*    .search-bar__input {*/
+/*        width: 25em;*/
+/*        border: none;*/
+/*        -webkit-appearance: none;*/
+/*        overflow: auto;*/
+/*        z-index: -1;*/
+/*        font-size: 9px;*/
+/*    }*/
+/*    .bi-search{*/
+/*        width: 10px;*/
+/*        height: 10px;*/
+/*    }*/
+/*    .icon_nav {*/
+/*        margin-left: 9px;*/
+/*        width: 1.4em;*/
+/*        height: 1.4em;*/
+/*    }*/
+/*    .deliver_icon {*/
+/*        border-style: solid;*/
+/*        border-width: 1px;*/
+/*        border-radius: 20px;*/
+/*        color: lightgrey;*/
+/*        width: 200px;*/
+/*        height: 25px;*/
+/*        font-size: 13.5px !important;*/
+/*        text-decoration: none;*/
+/*        display: none;*/
+/*    }*/
+/*    .navbar{*/
+/*        flex-direction: column;*/
+/*        align-items: flex-start;*/
+/*        padding: 8px 24px;*/
+/*    }*/
+/*    .navbar_menu{*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*        width: 100%;*/
+/*        display: none;*/
+/*    }*/
+/*    .navbar_menu li{*/
+/*        width: 100%;*/
+/*        text-align: center;*/
+/*    }*/
+/*    .navbar_icons{*/
+/*        justify-content: center;*/
+/*        width: 100%;*/
+/*        display: none;*/
+/*    }*/
+/*    .navbar_togglebtn{*/
+/*        display: block;*/
+/*    }*/
+
+/*.nav {*/
+/*    flex-direction: column;*/
+/*    align-items: flex-start;*/
+/*}*/
+
+/*.menu {*/
+/*    display: none;*/
+/*    flex-direction: column;*/
+/*    width: 100%;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.menu li {*/
+/*    padding: 20px 0;*/
+/*}*/
+
+/*.category {*/
+/*    display: none;*/
+/*    flex-direction: column;*/
+/*    width: 100%;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.category li {*/
+/*    padding: 20px 0;*/
+/*}*/
+
+/*.category_sub {*/
+/*    display: none;*/
+/*    flex-direction: column;*/
+/*    width: 100%;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.category_sub li {*/
+
+/*    padding: 20px 0;*/
+/*}*/
+
+/*.icon {*/
+/*    display: none;*/
+/*    width: 100%;*/
+/*    justify-content: center;*/
+/*    padding: 10px 0;*/
+/*}*/
+
+/*.fas {*/
+/*    display: block;*/
+/*    font-size: 25px;*/
+/*    color: var(--text-color);*/
+/*    position: absolute;*/
+/*    right: 30px;*/
+/*    top: 50px;*/
+/*}*/
+
+/*.fas_sub {*/
+/*    display: block;*/
+/*    font-size: 25px;*/
+/*    color: var(--text-color);*/
+/*    position: absolute;*/
+/*    right: 30px;*/
+/*    top: 50px;*/
+/*}*/
+
+/*.category_img {*/
+/*    display: block;*/
+/*    width: 60px;*/
+/*    height: 60px;*/
+/*    position: absolute;*/
+/*    right: 30px;*/
+/*    bottom: -20px;*/
+/*}*/
+
+/*.active {*/
+/*    display: flex;*/
+/*}*/
+
+/*.deliver_icon {*/
+
+/*    border-style: solid;*/
+/*    border-width: 2px;*/
+/*    border-radius: 20px;*/
+/*    color: #f2f2f2;*/
+/*    width: 140px;*/
+/*    height: 30px;*/
+/*    font-size: 13.5px !important;*/
+/*    text-decoration: none;*/
+/*}*/
+/*.deliver_txt {*/
+/*    color: palegoldenrod;*/
+/*}*/
+
+
+/*}*/
+
+/*!* 태블릿용 CSS *!*/
+
+/*@media all and (min-width:768px) {*/
+/*    .header {*/
+/*        display: grid;*/
+/*        grid-template-columns: 15% 85%;*/
+/*        padding: 0px;*/
+/*        height: auto;*/
+/*        margin-top: auto;*/
+/*        margin-bottom: auto;*/
+
+/*    }*/
+
+/*    .header nav {*/
+/*        margin-left: 0px;*/
+/*        margin-right: 0px;*/
+/*        padding-left: 0px;*/
+/*        margin-right: 0px;*/
+/*        margin-top: auto;*/
+/*        margin-bottom: auto;*/
+/*        width: 100%;*/
+/*    }*/
+/*    .header .gnb {*/
+/*        !* !important 없으면 btn 접었을 시 display:none되어 gnb가 표시되지 않음 *!*/
+/*        display: grid !important;*/
+/*        display: block;*/
+/*        height: 100%;*/
+/*        grid-template-columns: 150% 55% 55% 60% 150% 60%;*/
+/*        position: static;*/
+/*        width: auto;*/
+/*        background: none;*/
+/*    }*/
+
+/*    .header .menu-toggle-btn {*/
+/*        display: none;*/
+/*    }*/
+
+/*    .merry{*/
+/*        font-size: small;*/
+/*    }*/
+/*    .search-bar {*/
+/*        width: 33em;*/
+/*        height: 3.1em;*/
+/*        border-radius: 5px;*/
+/*        border: solid 1px #9E007F;*/
+/*        display: flex;*/
+/*        justify-content: space-around;*/
+/*        align-items: center;*/
+/*        z-index: 1;*/
+/*        opacity: 1;*/
+/*        margin-left: 15px;*/
+/*    }*/
+
+/*    .search-bar > a {*/
+/*        text-decoration: none;*/
+/*    }*/
+
+/*    .search-bar__input {*/
+/*        width: 22em;*/
+/*        border: none;*/
+/*        -webkit-appearance: none;*/
+/*        text-align: center;*/
+/*        !*margin-left: 2em;*!*/
+/*        overflow: auto;*/
+/*        z-index: -1;*/
+/*        font-size: 12px;*/
+/*    }*/
+/*    .bi-search{*/
+/*        width: 15px;*/
+/*        height: 15px;*/
+/*    }*/
+/*    .deliver_icon {*/
+
+/*        border-style: solid;*/
+/*        border-width: 1px;*/
+/*        border-radius: 20px;*/
+/*        color: lightgrey;*/
+/*        width: 200px;*/
+/*        height: 25px;*/
+/*        font-size: 13.5px !important;*/
+/*        text-decoration: none;*/
+/*    }*/
+
+/*    .nav {*/
+/*        flex-direction: column;*/
+/*        align-items: flex-start;*/
+/*    }*/
+
+/*    .menu {*/
+/*        display: none;*/
+/*        flex-direction: column;*/
+/*        width: 100%;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*    }*/
+
+/*    .menu li {*/
+/*        padding: 20px 0;*/
+/*    }*/
+
+/*    .category {*/
+/*        display: none;*/
+/*        flex-direction: column;*/
+/*        width: 100%;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*    }*/
+
+/*    .category li {*/
+/*        padding: 20px 0;*/
+/*    }*/
+
+/*    .category_sub {*/
+/*        display: none;*/
+/*        flex-direction: column;*/
+/*        width: 100%;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*    }*/
+
+/*    .category_sub li {*/
+
+/*        padding: 20px 0;*/
+/*    }*/
+
+/*    .icon {*/
+/*        display: none;*/
+/*        width: 100%;*/
+/*        justify-content: center;*/
+/*        padding: 10px 0;*/
+/*    }*/
+
+/*    .fas {*/
+/*        display: block;*/
+/*        font-size: 25px;*/
+/*        color: var(--text-color);*/
+/*        position: absolute;*/
+/*        right: 30px;*/
+/*        top: 50px;*/
+/*    }*/
+
+/*    .fas_sub {*/
+/*        display: block;*/
+/*        font-size: 25px;*/
+/*        color: var(--text-color);*/
+/*        position: absolute;*/
+/*        right: 30px;*/
+/*        top: 50px;*/
+/*    }*/
+
+/*    .category_img {*/
+/*        display: block;*/
+/*        width: 60px;*/
+/*        height: 60px;*/
+/*        position: absolute;*/
+/*        right: 30px;*/
+/*        bottom: -20px;*/
+/*    }*/
+
+/*    .active {*/
+/*        display: flex;*/
+/*    }*/
+
+/*    .deliver_icon {*/
+/*        border-style: solid;*/
+/*        border-width: 2px;*/
+/*        border-radius: 20px;*/
+/*        color: #f2f2f2;*/
+/*        width: 140px;*/
+/*        height: 30px;*/
+/*        font-size: 13.5px !important;*/
+/*        text-decoration: none;*/
+/*        display: none;*/
+/*    }*/
+
+/*    .deliver_txt {*/
+/*        color: palegoldenrod;*/
+/*    }*/
+/*}*/
+
+
+/*!* 컴퓨터용 CSS *!*/
+
+/*@media all and (min-width:1132px) {*/
+/*    .header {*/
+/*        grid-template-columns: 20% 80%;*/
+/*    }*/
+
+/*    .header .gnb li a {*/
+/*        font-size: 14.5px;*/
+/*        font-weight: bold;*/
+/*    }*/
+/*    .header .gnb ul {*/
+/*        width: 150px;*/
+/*        list-style: none;*/
+/*        margin: 0;*/
+/*        padding: 0;*/
+/*    }*/
+
+/*    .header .gnb  .li_hd {*/
+/*        display: block;*/
+/*        color: #333333;*/
+/*        font-family: 맑은고딕;*/
+/*        font-size: 11px;*/
+/*        padding: 8px;*/
+/*        text-decoration: none;*/
+/*        font-weight: bold;*/
+/*    }*/
+
+/*    .header .gnb .li_hd:hover {*/
+/*        background-color: #9E007F;*/
+/*        color: white;*/
+/*    }*/
+
+/*    .header .gnb .li_hd_group {*/
+/*        display: block;*/
+/*        color: #333333;*/
+/*        font-family: 맑은고딕;*/
+/*        font-size: 11px;*/
+/*        padding: 8px;*/
+/*        text-decoration: none;*/
+/*        font-weight: bold;*/
+/*    }*/
+
+/*    .header .gnb .li_hd_group:hover {*/
+/*        background-color: #9E007F;*/
+/*        color: white;*/
+/*    }*/
+
+/*    .header .gnb  .nav_menu {*/
+/*        display: flex;*/
+/*        flex-direction: row;*/
+/*        justify-content: space-between;*/
+/*        margin: 0 0 0 0;*/
+/*        font-weight: bold;*/
+/*    }*/
+/*    .header .gnb  .sub {*/
+/*        display: none;*/
+/*        position: absolute;*/
+/*        background-color: #F9F9F9;*/
+/*        min-width: 160px;*/
+/*        height: 292.5px;*/
+/*        top: 0px;*/
+/*        left: 150px;*/
+/*        box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);*/
+/*    }*/
+
+/*    .header .gnb  .dropdown-products > li:hover .sub {*/
+/*        display: block;*/
+/*    }*/
+}

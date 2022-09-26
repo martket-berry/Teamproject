@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <style>
+        :root {
+            --text-color: #f8f8ff;
+            --background-color: #ffb6c1;
+            --accent-color: #fff0f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .nav {
+            background-color: var(--background-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 30px;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            color: var(--text-color);
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .menu li {
+            padding: 0 15px;
+            font-size: 25px;
+        }
+
+        .icon {
+            font-size: 25px;
+            color: var(--text-color);
+        }
+
+        .fab {
+            padding: 0 5px;
+        }
+
+        .fas {
+            display: none;
+        }
+        @media screen and (max-width: 960px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .menu li {
+                padding: 20px 0;
+            }
+
+            .icon {
+                display: none;
+                width: 100%;
+                justify-content: center;
+                padding: 10px 0;
+            }
+
+            .fas {
+                display: block;
+                font-size: 25px;
+                color: var(--text-color);
+                position: absolute;
+                right: 30px;
+                top: 50px;
+            }
+
+            .category_img{
+                display: block;
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                right: 30px;
+                top: -15px;
+            }
+
+            .active {
+                display: flex;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+<section class="nav">
+<!--    <div class="logo">-->
+<!--        <i class="fab fa-airbnb"></i>-->
+<!--        airbnb-->
+<!--    </div>-->
+
+    <ul class="menu">
+        <li><a href="">카테고리</a></li>
+        <li><a href="">신상품</a></li>
+        <li><a href="">베스트</a></li>
+        <li><a href="">알뜰쇼핑</a></li>
+    </ul>
+
+    <div class="icon">
+        <i class="fab"><a class="deliver_icon"><span class="deliver_txt">샛별·낮</span> &nbsp;배송안내</a></i>
+    </div>
+
+    <i class="fas"><img class="category_img" src="/img/hamburger.png"></i>
+</section>
+<script>
+    const bars = document.querySelector(".fas");
+    const menu = document.querySelector(".menu");
+    const icon = document.querySelector(".icon");
+
+    bars.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        icon.classList.toggle("active");
+    });
+</script>
+</body>
+</html>
