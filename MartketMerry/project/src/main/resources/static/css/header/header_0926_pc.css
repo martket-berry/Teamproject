@@ -1,0 +1,360 @@
+:root {
+    /*--text-color: #f8f8ff;*/
+    --background-color: #9E007F;
+    --accent-color: #fff0f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none!important;
+    /*color: var(--text-color);*/
+}
+a:hover {
+    color: #9E007F!important;
+}
+.a_signup {
+     color: #9E007F;
+     text-decoration: none;
+     font-family: 맑은고딕;;
+     font-size: 11px;
+     font-weight: bold;
+     cursor: pointer;
+ }
+
+.a_nomal {
+    color: #333333;
+    text-decoration: none;
+    font-family: 맑은고딕;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.vr {
+    font-size: smaller;
+    font-family: 맑은고딕;
+
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 73%;
+    height: 73%;
+}
+.merry {
+    color: #9E007F;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 맑은고딕;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.search-bar {
+    width: 24em;
+    height: 3em;
+    border-radius: 5px;
+    border: solid 1px #9E007F;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+}
+
+.search-bar > a {
+    width: 22em;
+    text-decoration: none;
+}
+
+.search-bar_input {
+    width: 22em;
+    border: none;
+    -webkit-appearance: none;
+    text-align: center;
+    /*margin-left: 2em;*/
+    overflow: auto;
+    z-index: -1;
+    font-size: 12px;
+}
+
+.search-bar_input:focus {
+    outline: none;
+    text-align: left;
+}
+.nav{
+    background-color: var(--background-color);
+    border-radius: 15px;
+    display: grid!important;
+    height: 50px;
+    margin: 40px 0;
+    padding: 8px 10px;
+}
+.nav ul{
+    height: 25px!important;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+}
+
+.menu li {
+    /*padding: 0 15px;*/
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    color: #333333!important;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.top .dropdown ul{
+    height: 50px;
+}
+.nav .dropdown ul{
+    height: 300px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 12;
+    background-color: #F9F9F9;
+    width: 130px;
+    padding: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.category {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.category li {
+    /*padding: 0 15px;*/
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.category_sub {
+    display: none;
+    position: absolute;
+    background-color: #F9F9F9;
+    width: 150px;
+    height: 290px;
+    top: 25px;
+    left: 0px;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+.sub {
+    display: none;
+    position: absolute;
+    background-color: #F9F9F9;
+    width: 150px;
+    height: 290px;
+    top: 0px;
+    left: 150px;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+.category:hover .category_sub {
+    display: block;
+}
+
+.category_sub>li {
+    display: block;
+    color: #333333;
+    font-family: 맑은고딕;
+    font-size: 12px;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.sub>li {
+    display: block;
+    color: #333333;
+    font-family: 맑은고딕;
+    font-size: 12px;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.category_sub>li:hover {
+    background-color: #9E007F;
+    color: white;
+}
+
+.category_sub>li>.sub li {
+    display: block;
+    color: #333333;
+    font-family: 맑은고딕;
+    font-size: 12px;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.category_sub>li>.sub li:hover {
+    background-color: #9E007F;
+    color: white;
+}
+.category_sub>li:hover .sub {
+    display: block;
+}
+
+.catagory_bar {
+    display: flex;
+    gap: 5px;
+}
+
+.catagory_bar:hover {
+    color: white;
+    cursor: pointer;
+}
+.category_hambuger{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: -2px;
+    left: -1px;
+}
+
+.dropdown:hover .category_sub {
+    display: block;
+}
+
+
+.icon {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.icon li {
+    /*padding: 0 15px;*/
+    padding-left: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+.icon_nav {
+    width: 1.7em;
+    height: 1.7em;
+}
+.fas {
+    display: none;
+}
+
+.deliver_icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center ;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    color: white;
+    width: 130px;
+    /*height: 25px;*/
+    font-size: 13px !important;
+    text-decoration: none;
+}
+
+.deliver_txt {
+    color: papayawhip;
+    font-size: 13px;
+}
+.cartBox {
+    z-index: 2;
+    position: absolute;
+    bottom: 190px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background-color: #9E007F;
+    opacity: 0.8;
+    border-radius: 30px;
+    padding: 10px;
+}
+.top{
+    height: 30px;
+}
+.middle{
+    height: 90px;
+}
+.bottom{
+    height: 60px;
+}
+
+/*@media (min-width: 576px) {*/
+/*    .container, .container-md, .container-sm {*/
+/*        max-width: 720px!important;*/
+/*    }*/
+/*    .middle{*/
+/*        height: 160px;*/
+/*    }*/
+/*    .middle>ul{*/
+/*        !*flex-direction: column;*!*/
+/*        justify-content: space-around;*/
+/*        align-items: center;*/
+/*        height: 130px!important;*/
+/*        margin: 0 0 0 0;*/
+/*    }*/
+
+/*    .nav {*/
+/*        flex-direction: column;*/
+/*        align-items: flex-start;*/
+/*        padding: 8px 24px;*/
+/*    }*/
+/*    .category_sub>li:hover .sub {*/
+/*        display: none;*/
+/*    }*/
+/*}*/
+
+
+        /* 부트스트랩 기본값 제거 */
+        @media (min-width: 576px) {
+            .container, .container-sm {
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container, .container-md, .container-sm {
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 100%;
+                /*padding: 0 20%;*/
+            }
+        }

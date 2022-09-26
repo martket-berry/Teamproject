@@ -19,14 +19,17 @@
     }
 
     .box {
+        display: flex;
+        flex-direction: row;
         margin: 9px 0px 19px;
         border: 1px solid rgb(226, 226, 226);
         width: 1050px;
         height: 100px;
     }
 
-    .box > ul {
+    .box  ul {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         overflow: hidden;
