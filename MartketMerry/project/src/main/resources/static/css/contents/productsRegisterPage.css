@@ -1,18 +1,14 @@
-@media (min-width: 576px){
+@media (max-width: 576px){
     .register_P{
         padding-left: 0!important;
     }
 }
-@media (min-width: 768px) {
-    /*.container{width: ;}*/
+@media (max-width: 768px) {
     .register_P {
         padding-left: 0 !important;;
     }
 }
     .register_P {
-        display: grid;
-        justify-self: center;
-        justify-self: center;
         padding-top: 1.5em;
         padding-left: 6em;
     }
@@ -54,7 +50,7 @@
     .insert {
         padding: 20px 30px;
         display: block;
-        width: 100%;
+        width: 80%;
         margin: 2em auto;
         height: 70vh;
         border: 1px solid #dbdbdb;
@@ -64,7 +60,7 @@
     }
 
     .insert .file-list {
-        height: 180px;
+        height: 100%;
         overflow: auto;
         border: 1px solid #989898;
         padding: 10px;
