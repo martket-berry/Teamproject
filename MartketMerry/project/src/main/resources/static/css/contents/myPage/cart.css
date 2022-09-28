@@ -1,10 +1,14 @@
+.container{
+    width: 100%;
+}
 ul li {
     list-style: none;
 }
 
 .cart {
+    /*justify-content: center;*/
     /* 기본 마진 패딩 0설정 안해서 1050이 아니라 1026 */
-    width: 1026px;
+    width: 1050px;
     margin:0 auto;
     padding-bottom: 80px;
     text-align: center;
@@ -23,7 +27,7 @@ ul li {
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 .cart_center {
     display: flex;
-    width: 1026px;
+    /*width: 1026px;*/
     justify-content: space-between;
 }
 
@@ -55,35 +59,81 @@ ul li {
     box-sizing: border-box;
     margin: 0;
 }
+
+/*ㅡㅡㅡㅡㅡ 상품 영역 ㅡㅡㅡㅡㅡ*/
+
+.cart_area {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 0px;
+    height: 78px;
+}
 .cart_label {
+    width: 80px;
+    justify-content: center;
     display: inline-flex;
     font-size: 14px;
     line-height: 26px;
     padding: 0;
     color: black;
 }
+.cart_item_image {
+    width:60px;
+    height: 78px;
+}
+
+.cart_item_text {
+    /*width: 400px;*/
+    width: 60%;
+    padding: 0 20px;
+}
+.cart_item_text p{
+    width: 100%;
+    align-content: center;
+    text-align: left;
+
+}
+.cart_item_bu{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 14px;
+    border: 1px solid rgb(221, 223, 225);
+    height: 30px;
+    border-radius: 3px;
+}
+
+
+
+.cart_item_sum{
+    width: 10%;
+    text-align: right;
+    padding: 10px;
+}
 
 input {
     font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
 }
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-/* input[type="checkbox"] {
-    display:none;
-} */
+/*!* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ *!*/
+/*!* input[type="checkbox"] {*/
+/*    display:none;*/
+/*} *!*/
 
-input[type="checkbox"] + label {
-    cursor: pointer;
-    /* 기본체크박스는 없으므로 추가해줌 */
-    padding-left: 23px;
-    /* 패딩값은 21~23px가 적당 */
-    background-repeat: no-repeat;
-    background-image: url('image/cart_check.svg');
-    /* 체크박스 이미지는 라벨 태그의 배경 이미지로 표시 */
-}
-input[type="checkbox"]:checked + label {
-    background-image: url('image/cart_checkedsvg.svg');
-}
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/*input[type="checkbox"] + label {*/
+/*    cursor: pointer;*/
+/*    !* 기본체크박스는 없으므로 추가해줌 *!*/
+/*    padding-left: 23px;*/
+/*    !* 패딩값은 21~23px가 적당 *!*/
+/*    background-repeat: no-repeat;*/
+/*    background-image: url('image/cart_check.svg');*/
+/*    !* 체크박스 이미지는 라벨 태그의 배경 이미지로 표시 *!*/
+/*}*/
+/*input[type="checkbox"]:checked + label {*/
+/*    background-image: url('image/cart_checkedsvg.svg');*/
+/*}*/
+/*!* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ *!*/
 
 .area_line {
     display: inline-block;
@@ -105,11 +155,14 @@ input[type="checkbox"]:checked + label {
 
 .accordion {
     border: 0;
+    /*padding: 0;*/
 }
 .accordion-body {
     /* 부트스트랩꺼라 이름 변경 X */
     display: flex;
     width: 100%;
+    padding: 0 20px;
+
 }
 .accordion-body button{
     width: 24px;
@@ -120,16 +173,20 @@ input[type="checkbox"]:checked + label {
     margin-right: 20px;
 
 }
-.accordion-body
-.accordion-body
-    /* ㅡㅡㅡㅡㅡㅡㅡㅡ오른쪽ㅡㅡㅡㅡㅡㅡㅡㅡ*/
+/* ㅡㅡㅡㅡㅡㅡㅡㅡ오른쪽ㅡㅡㅡㅡㅡㅡㅡㅡ*/
 .cart_right {
     /* display: block; */
     position: relative;
     width: 284px;
-    min-height: 942px;
+    /*min-height: 942px;*/
     padding-top: 60px;
 }
+.sticky_test {
+    position: sticky;
+    height: 755px ;
+    top: 0;
+}
+
 
 .shipping_address_area {
     /* position: absolute; */
@@ -176,8 +233,8 @@ input[type="checkbox"]:checked + label {
     white-space:nowrap;
 }
 .bill_sum_right {
-    width: 160;
-    font-size: 18;
+    width: 160px;
+    font-size: 18px;
     line-height: 24px;
     text-align: right;
 }

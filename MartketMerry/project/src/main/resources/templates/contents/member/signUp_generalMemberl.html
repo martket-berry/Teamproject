@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -196,7 +196,7 @@
     </header>
 </div>
 
-
+<form>
 <!-- contents -->
 <div class="signup-all">
     <!-- 회원가입 타이틀 -->
@@ -455,11 +455,13 @@
     </div>
     <!-- 가입하기 버튼 -->
     <div class="css-137ca2h e1utgeno0">
-        <button class="css-18m884r e4nu7ef3" type="submit" width="240" height="56" radius="3">
+        <th:button class="css-18m884r e4nu7ef3" type="submit" width="240" height="56" radius="3" action="">
             <span class="css-ymwvow e4nu7ef1">가입하기</span>
-        </button>
+        </th:button>
     </div>
 </div>
+</form>
+
 
 <!-- FOOTER -->
 <div id="footer" class="css-16o2vgi">
