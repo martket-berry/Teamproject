@@ -700,6 +700,12 @@
     text-align: center;
     color: #9E007F;
 }
+.olmessagef{
+    color: red;
+}
+.olmessaget{
+    color: blue;
+}
 .search-adressBtn{
     display: block;
     padding: 0px 10px;

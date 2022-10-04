@@ -6,8 +6,8 @@
 <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <style>
         :root {
-            --text-color: #f8f8ff;
-            --background-color: #ffb6c1;
+            /*--text-color: #f8f8ff;*/
+            --background-color: #9E007F;
             --accent-color: #fff0f5;
         }
 
@@ -21,43 +21,155 @@
             color: var(--text-color);
         }
 
-        .nav {
-            background-color: var(--background-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px 30px;
+        a:hover{
+            color: var(--text-color);
         }
 
-        .logo {
-            font-size: 2.5em;
-            color: var(--text-color);
+        .nav {
+            background-color: var(--background-color);
+            display: grid;
+            align-items: center;
+            padding: 30px 30px;
         }
 
         .menu {
             list-style: none;
             display: flex;
+            justify-content: space-evenly;
             flex-direction: row;
         }
 
         .menu li {
             padding: 0 15px;
-            font-size: 25px;
+            font-size: 18px;
+        }
+        .menu>li>a:hover {
+            color: white;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
         }
 
-        .icon {
-            font-size: 25px;
-            color: var(--text-color);
+        .category li {
+            padding-left: 0;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .category_sub {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            width: 150px;
+            height: 290px;
+            top: 25px;
+            left: 0px;
+            box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+            z-index: 12;
         }
 
-        .fab {
-            padding: 0 5px;
+        .sub {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            width: 150px;
+            height: 290px;
+            top: 0px;
+            left: 150px;
+            box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+            z-index: 12;
+        }
+
+        .category:hover .category_sub {
+            display: block;
+        }
+
+        .category_sub>li {
+            display: block;
+            color: #333333;
+            font-family: 맑은고딕;
+            font-size: 11px;
+            padding: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .sub>li {
+            display: block;
+            color: #333333;
+            font-family: 맑은고딕;
+            font-size: 11px;
+            padding: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .category_sub>li:hover {
+            background-color: #9E007F;
+            color: white;
+        }
+
+        .category_sub>li>.sub li {
+            display: block;
+            color: #333333;
+            font-family: 맑은고딕;
+            font-size: 11px;
+            padding: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .category_sub>li>.sub li:hover {
+            background-color: #9E007F;
+            color: white;
+        }
+        .category_sub>li:hover .sub {
+            display: block;
+        }
+
+        .catagory_bar {
+            display: flex;
+            gap: 5px;
+        }
+
+        .catagory_bar:hover {
+            color: white;
+            cursor: pointer;
+        }
+        .category_hambuger{
+            width: 15px;
+            height: 15px;
+            position: relative;
+            top: -2px;
+            left: -1px;
+        }
+        .dropdown:hover .category_sub {
+            display: block;
+        }
+
+        .deliver_icon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center ;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 20px;
+            color: white;
+            width: 130px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .deliver_txt {
+            color: papayawhip;
+            font-size: 14px;
         }
 
         .fas {
             display: none;
         }
-        @media screen and (max-width: 960px) {
+
+        @media (max-width: 768px) {
             .nav {
                 flex-direction: column;
                 align-items: flex-start;
@@ -75,12 +187,49 @@
                 padding: 20px 0;
             }
 
-            .icon {
-                display: none;
-                width: 100%;
-                justify-content: center;
-                padding: 10px 0;
+            .category li{
+                padding: 20px 0;
             }
+
+            .category_sub{
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: -50px;
+                left: -145%;
+                width: 360px;
+                box-shadow: 0 0 0 0;
+                background-color: #9E007F;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .category_sub li {
+                position: relative;
+                text-align: center;
+                font-size: 14px;
+                padding: 11.7px 0;
+
+            }
+
+            .category_sub li:hover {
+                background-color: #f2f2f2;
+                color: #9E007F;
+            }
+
+            .sub {
+                display: none;
+            }
+
+            .category_sub > li:hover .sub {
+                display: none;
+            }
+
+            .dropdown:focus-within .category_sub {
+                display: block;
+            }
+
+
 
             .fas {
                 display: block;
@@ -93,11 +242,11 @@
 
             .category_img{
                 display: block;
-                width: 60px;
-                height: 60px;
+                width: 30px;
+                height: 30px;
                 position: absolute;
-                right: 30px;
-                top: -15px;
+                right: 10px;
+                top: -35px;
             }
 
             .active {
@@ -110,32 +259,113 @@
 </head>
 <body>
 <section class="nav">
-<!--    <div class="logo">-->
-<!--        <i class="fab fa-airbnb"></i>-->
-<!--        airbnb-->
-<!--    </div>-->
+
 
     <ul class="menu">
-        <li><a href="">카테고리</a></li>
+        <li>
+        <div class="dropdown">
+            <div class="catagory_bar">
+                <span><img class="category_hambuger" src="/static/img/hamburger.png"></span>
+                <span><a href="">카테고리</a></span>
+            </div>
+                        <ul class="category_sub ">
+                            <li><a href="#">채소</a>
+                                <ul class="sub">
+                                    <li><a  href="#">친환경</a></li>
+                                    <li><a  href="#">고구마·감자·당근</a></li>
+                                    <li><a  href="#">시금치·쌈채소·나물</a></li>
+                                    <li><a  href="#">양파·대파·마늘·배추</a></li>
+                                    <li><a  href="#">콩나물·버섯</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">과일</a>
+                                <ul class="sub">
+                                    <li><a  href="#">친환경</a></li>
+                                    <li><a  href="#">제철과일</a></li>
+                                    <li><a  href="#">국산과일</a></li>
+                                    <li><a  href="#">수입과일</a></li>
+                                    <li><a  href="#">냉동·건과일</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">해산물</a>
+                                <ul class="sub">
+                                    <li><a  href="#">친환경</a></li>
+                                    <li><a  href="#">생선류</a></li>
+                                    <li><a  href="#">반건류</a></li>
+                                    <li><a  href="#">수산가공품</a></li>
+                                    <li><a  href="#">김·미역·해조류</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">정육</a>
+                                <ul class="sub">
+                                    <li><a  href="#">국내산소고기</a></li>
+                                    <li><a  href="#">수입산소고기</a></li>
+                                    <li><a  href="#">돼지고기</a></li>
+                                    <li><a  href="#">계란류</a></li>
+                                    <li><a  href="#">닭·오리고기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">국·반찬·메인요리</a>
+                                <ul class="sub">
+                                    <li><a  href="#">국·탕·찌개</a></li>
+                                    <li><a  href="#">밀키트·메인요리</a></li>
+                                    <li><a  href="#">밑반찬</a></li>
+                                    <li><a  href="#">김치·젓갈·장류</a></li>
+                                    <li><a  href="#">베이컨·햄·통조림</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">샐러드·간편식</a>
+                                <ul class="sub">
+                                    <li><a  href="#">샐러드·닭가슴살</a></li>
+                                    <li><a  href="#">도시락·밥류</a></li>
+                                    <li><a  href="#">파스타·면류</a></li>
+                                    <li><a  href="#">선식·시리얼</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">생수·음료·우유·커피</a>
+                                <ul class="sub">
+                                    <li><a  href="#">생수·탄산수</a></li>
+                                    <li><a  href="#">음료·주스</a></li>
+                                    <li><a  href="#">우유·두유·요거트</a></li>
+                                    <li><a  href="#">커피</a></li>
+                                    <li><a  href="#">차</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">와인</a>
+                                <ul class="sub">
+                                    <li><a  href="#">레드와인</a></li>
+                                    <li><a  href="#">화이트와인</a></li>
+                                    <li><a  href="#">샴페인·스파클링</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">전통주</a>
+                                <ul class="sub">
+                                    <li><a  href="#">막걸리·탁주</a></li>
+                                    <li><a  href="#">증류주·약주·청주</a></li>
+                                    <li><a  href="#">과실주·리큐르</a></li>
+                                    <li><a  href="#">선물세트</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+        </div>
+        </li>
+
+
         <li><a href="">신상품</a></li>
         <li><a href="">베스트</a></li>
         <li><a href="">알뜰쇼핑</a></li>
+        <li><a href="" class="deliver_icon"><span class="deliver_txt">샛별·낮</span> &nbsp;배송안내</a></li>
     </ul>
 
-    <div class="icon">
-        <i class="fab"><a class="deliver_icon"><span class="deliver_txt">샛별·낮</span> &nbsp;배송안내</a></i>
-    </div>
 
-    <i class="fas"><img class="category_img" src="/img/hamburger.png"></i>
+    <i class="fas"><img class="category_img" src="/static/img/hamburger.png"></i>
 </section>
 <script>
     const bars = document.querySelector(".fas");
     const menu = document.querySelector(".menu");
-    const icon = document.querySelector(".icon");
 
     bars.addEventListener("click", () => {
         menu.classList.toggle("active");
-        icon.classList.toggle("active");
     });
 </script>
 </body>

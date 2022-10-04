@@ -1,16 +1,13 @@
-@media (min-width: 992px) {.container {width: 940px;}}
-@media (min-width: 1200px) {.container {width: 1050px;}}
-.container_v{
-    width: 1050px;
+.container{
     margin: 0px auto;
     padding-top: 26px;
 }
 
 .vegetableTitle{
     text-align: center;
-    width: 1050px;
+
     height: 35px;
-    padding: 180px 0 20px 0;
+    padding: 20px 0 40px 0;
     font-weight:bolder;
     font-size:x-large;
 }
@@ -18,7 +15,7 @@ ul{list-style-type: none;}
 .box{
     margin: 9px 0px 19px;
     border: 1px solid rgb(226, 226, 226);
-    width: 1050px;
+
     height: 100px;
 }
 .box>ul{ display: flex;
@@ -28,9 +25,8 @@ ul{list-style-type: none;}
     padding: 40px 25px 20px 25px;
     line-height: 20px;
     font-size: 14px;
-    width: 1050px;
-}
 
+}
 
 .filter{
     display: flex;
