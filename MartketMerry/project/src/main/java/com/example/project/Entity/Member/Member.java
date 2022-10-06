@@ -70,5 +70,9 @@ public class Member {
     @Pattern(regexp = "(?=.*[0-9]).{2}", message = "생년월일을 다시 확인해주세요.")
     private String birthDate;
 
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name= "id", referencedColumnName = "id")
+//    private Item item;
+
 
 }

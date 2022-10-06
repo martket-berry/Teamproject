@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,12 +8,12 @@
   <meta name="generator" content="Hugo 0.101.0" />
   <title>MarketMerry</title>
 
-  <link rel="icon" href="/static/static/img/favicon.png">
+  <link rel="icon" th:href="@{/img/favicon.png}">
   <!-- 부트스트랩 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css}"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="/static/css/header/header.css">
-  <link rel="stylesheet" type="text/css" href="/static/css/contents/addItem.css">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/header/header.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/contents/addItem.css}">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
 
   <div class="middle">
     <ul class="row">
-      <li class="col-2" style="display:flex; justify-content: center; "><a class="logo" href><img src="/static/img/logo.png"></a></li>
+      <li class="col-2" style="display:flex; justify-content: center; "><a class="logo" href><img th:href="@{/img/logo.png}"></a></li>
       <li class="col-2" style="display:flex; justify-content: center; align-items: center;"><a class= "merry" href="#">마켓메리</a></li>
       <li class="col-5" style="display:flex; justify-content: center; align-items: center;">
         <div class="search-bar">
@@ -56,9 +56,9 @@
             </svg></a></div>
       </li>
       <li class=" col-3" style="display:flex; display-direction:row; justify-content: space-evenly; align-items: center">
-        <a href="#"><img class="icon_nav" src="/static/img/geo-alt.svg"/></a>
-        <a href="#"><img class="icon_nav" src="/static/img/suit-heart.svg"/></a>
-        <a href="#"><img class="icon_nav" src="/static/img/cart2.svg"/></a>
+        <a href="#"><img class="icon_nav" th:href="@{/img/geo-alt.svg}"/></a>
+        <a href="#"><img class="icon_nav" th:href="@{/img/suit-heart.svg}"/></a>
+        <a href="#"><img class="icon_nav" th:href="@{/img/cart2.svg}"/></a>
       </li>
     </ul>
   </div>
@@ -69,7 +69,7 @@
       <li>
         <div class="dropdown">
           <div class="catagory_bar">
-            <span><img class="category_hambuger" src="/static/img/hamburger.png"></span>
+            <span><img class="category_hambuger" th:href="@{/img/hamburger.png}"></span>
             <span><a href="">카테고리</a></span>
           </div>
           <ul class="category_sub ">
@@ -162,11 +162,12 @@
     </ul>
 
 
-    <i class="fas"><img class="category_img" src="/static/img/hamburger.png"></i>
+    <i class="fas"><img class="category_img" th:href="@{/img/hamburger.png}"></i>
   </section>
 </div>
 
 <div class="container">
+  <form th:action="@{/otherpage/addItem}" method="post" class="form-inline" role="form" enctype="multipart/form-data">
 <div class="register_P col-12">
   <div class="row justify-content-around">
     <div class="card" style="width: 23rem; height: 38rem;">
@@ -179,7 +180,12 @@
 
     <div class="container" style="width: 26rem; margin: 0 90px;">
       <h4 style="text-align:center;">상품 정보</h4>
-      <form class="form-inline" role="form">
+      <div class="separation">
+        <div>상품번호</div>
+        <div>
+          <input name="itemId" type="text" class="form-control" placeholder="상품번호는 자동생성됩니다.">
+        </div>
+      </div>
         <div class="separation">
           <div>카테고리1</div>
           <div>
@@ -199,25 +205,25 @@
         <div class="separation">
           <div>상품명</div>
           <div>
-            <input type="text" class="form-control" placeholder="상품이름">
+            <input name="itemName" type="text" class="form-control" placeholder="상품이름">
           </div>
         </div>
         <div class="separation">
           <div>상품설명</div>
           <div>
-            <input type="text" class="form-control" placeholder="한줄요약설명">
+            <input name="itemText" type="text" class="form-control" placeholder="한줄요약설명">
           </div>
         </div>
         <div class="separation">
           <div>가격</div>
           <div>
-            <input type="text" class="form-control" placeholder="가격">
+            <input name="price" type="text" class="form-control" placeholder="가격">
           </div>
         </div>
         <div class="separation">
           <div>배송안내</div>
           <div>
-            <select class="form-select" aria-label="Default select example">
+            <select name="delivery" class="form-select" aria-label="Default select example">
               <option selected>배송선택</option>
               <option value="1" >일반배송</option>
               <option value="2" >낮배송</option>
@@ -226,16 +232,16 @@
             <div class="note">23시 전 주문 시 내일 아침 7시 전 도착</br>(대구·부산·울산 샛별배송 운영시간 별도 확인)</div>
           </div>
         </div>
-        <div class="separation">
+        <div $="" class="separation">
           <div>판매자</div>
           <div>
-            <input type="text" class="form-control" placeholder="업체명" >
+            <input name="seller" class="form-control" placeholder="업체명" >
           </div>
         </div>
         <div class="separation">
           <div>포장타입</div>
           <div>
-            <select class="form-select" aria-label="Default select example">
+            <select name="packing" class="form-select" aria-label="Default select example">
               <option selected>포장선택</option>
               <option value="1">상온(종이포장)</option>
               <option value="2">냉장(종이포장)</option>
@@ -247,31 +253,28 @@
         <div class="separation">
           <div>원산지</div>
           <div>
-            <input type="text" class="form-control" placeholder="ex) 국산 or 국가명">
+            <input name="origin" type="text" class="form-control" placeholder="ex) 국산 or 국가명">
           </div>
         </div>
         <div class="separation">
           <div>유통기한</div>
           <div>
-            <input type="date" class="form-control" placeholder="date">
+            <input name="shelfLife" type="date" class="form-control" placeholder="date">
           </div>
         </div>
         <div class="separation">
           <div>재고수량</div>
           <div>
-            <input type="number" class="form-control" placeholder="수량체크">
+            <input name="stock" type="number" class="form-control" placeholder="수량체크">
             <div class="note">※하단의 상품설명까지 입력 후 등록 부탁드립니다.</div>
           </div>
 
         </div>
-      </form>
-
     </div>
   </div>
 
   <div class="d-grid col-12">
-<!--    <div class="d-grid col-4" style=" margin:1.7em 0 0 39.6em;">-->
-    <button class="btn btn-primary mt-5" type="button">등록</button>
+    <button class="btn btn-primary mt-5" type="submit">등록</button>
   </div>
 </div>
 
@@ -289,14 +292,14 @@
 
   <div class="container">
 <div class="insert">
-  <form method="POST" onsubmit="return false;" enctype="multipart/form-data">
     <input type="file" onchange="addFile(this);" multiple />
     <div class="file-list">
       <p style="margin-bottom: 7px;"><textarea style="width:100%; height:13em;" placeholder="상세설명"></textarea></p>
     </div>
-  </form>
 </div>
   </div>
+
+  </form>
 </div>
 
 <!-- JavaScript -->

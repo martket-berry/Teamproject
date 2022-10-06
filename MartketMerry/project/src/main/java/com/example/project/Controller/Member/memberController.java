@@ -14,6 +14,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import javax.validation.Valid;
 
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -40,20 +41,8 @@ public class memberController {
         System.out.println("주소 :"+member.getAddress());
         System.out.println("성별 : "+member.getGender());
         System.out.println("생년월일 : " + member.getBirthYear());
-        Member insertMember = new Member(
-                member.getId(),
-                member.getPassword(),
-                member.getName(),
-                member.getEmail(),
-                member.getPhone(),
-                member.getAddress(),
-                member.getGender(),
-                member.getBirthYear(),
-                member.getBirthMonth(),
-                member.getBirthDate()
-        );
-        model.addAttribute("member", insertMember);
-        return "contents/member/signUp_generalMember";
+        model.addAttribute("member", memberService.getMember(member));
+        return "/contents/member/signUp_member";
     }
 
     //일반 회원가입 데이터 전달
@@ -92,26 +81,20 @@ public class memberController {
                 model.addAttribute(key, member_Availability.get(key));
             }
             //유효성을 통과하지 못할 경우 회원가입 페이지를 리턴
-            return "/contents/member/signUp_generalMember";
+            return "/contents/member/signUp_member";
         }
         //유효성 검사를 통과하고 난 이후의 페이지로 이동
 
         Member findMember = memberService.getMemberWhereId(member.getId());
         if(findMember != null){
             System.out.println("중복 된 아이디 입니다.");
-            return "/contents/member/signUp_generalMember";
+            return "/contents/member/signUp_member";
         }else{
             memberService.insertMember(member);
-            return "/contents/member/login_corporateMember";
+            return "/contents/member/login_member";
         }
 
     }
-
-
-
-
-
-
 
 
     //회원 수정
@@ -119,19 +102,19 @@ public class memberController {
     public String updateMember(Member member, Model model){
         System.out.println("!!!------GetMapping------!!!");
         System.out.println("get방식으로 인해 실제적으로 데이터가 들어가는 곳은 post임");
-        Member insertMember = new Member(
-                member.getId(),
-                member.getPassword(),
-                member.getName(),
-                member.getEmail(),
-                member.getPhone(),
-                member.getAddress(),
-                member.getGender(),
-                member.getBirthYear(),
-                member.getBirthMonth(),
-                member.getBirthDate()
-        );
-        model.addAttribute("member", insertMember);
+//        Member insertMember = new Member(
+//                member.getId(),
+//                member.getPassword(),
+//                member.getName(),
+//                member.getEmail(),
+//                member.getPhone(),
+//                member.getAddress(),
+//                member.getGender(),
+//                member.getBirthYear(),
+//                member.getBirthMonth(),
+//                member.getBirthDate()
+//        );
+//        model.addAttribute("member", insertMember);
         return "회원 수정 페이지";
     }
 
@@ -177,6 +160,16 @@ public class memberController {
         return "유효성 검사를 통과한 후 페이지를 입렵";
     }
 
+    //회원목록
+
+    @GetMapping("/getmemberList")
+    public String getmemberList(Model model){
+//        List<Member> memberList = memberService.getMemberList();
+        model.addAttribute("memberList", memberService.getMemberList());
+        return "/contents/member/memberList";
+    }
+
+
     //로그인
     @GetMapping("login_corporateMember")
     public void loginView(Member member){
@@ -186,7 +179,7 @@ public class memberController {
     }
 
     //로그인
-    @PostMapping("login_corporateMember")
+    @PostMapping("login_generalMember")
     public String login(Member member, Model model){
         Member findMember = memberService.getMember(member);
         //아이디, 비번 일치해야지 로그인 가능
@@ -196,10 +189,10 @@ public class memberController {
                 && findMember.getPassword().equals(member.getPassword())){
             model.addAttribute("member", findMember);
             System.out.println("로그인 성공!!!");
-            return "/init/index";
+            return "/index";
         }else{
             System.out.println("아이디, 비밀번호를 다시 입력해주세요!");
-            return "/contents/member/login_corporateMember";
+            return "login_Member";
         }
     }
     @GetMapping("로그아웃")

@@ -8,6 +8,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -66,6 +67,9 @@ public class MemberServiceImp implements MemberService{
         }
         return availability_ID;
     }
+
+
+
     //회원탈퇴
     @Override
     public void deleteMember(Member member) {
@@ -87,4 +91,12 @@ public class MemberServiceImp implements MemberService{
     public Member getMemberWhereId(String id) {
         return memberRepo.findMemberById(id);
     }
+
+
+    //회원목록
+    @Override
+    public List<Member> getMemberList() {
+        return (List<Member>) memberRepo.findAll();
+    }
+
 }
