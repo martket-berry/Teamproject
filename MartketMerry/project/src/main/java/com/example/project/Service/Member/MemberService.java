@@ -21,6 +21,8 @@ public interface MemberService {
 
     List<Member> getMemberList();
 
+    List<Member> getMemberListss(List<Member> getMemberList);
+
     //아이디 중복확인할 때 쓰는 것.
     Member getMemberWhereId(String id);
 

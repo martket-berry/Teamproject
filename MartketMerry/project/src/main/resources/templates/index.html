@@ -49,9 +49,10 @@
                         </ul>
                     </div>
 
-                    <a class="a_nomal" th:href="@{/contents/member/memberList}">회원관리</a>
-                    &nbsp;
                     <div class="vr"></div>
+
+                    <a class="a_nomal" th:href="@{/contents/member/memberList}">회원관리</a>
+
                 </div>
             </div>
         </div>
@@ -85,7 +86,7 @@
                         <span><a href="">카테고리</a></span>
                         </div>
                         <ul class="category_sub ">
-                          <li><a th:href="@{/templates/contents/items/vegetable}">채소</a>
+                          <li><a th:href="@{/contents/items/vegetable}">채소</a>
                             <ul class="sub">
                               <li><a  href="#">친환경</a></li>
                               <li><a  href="#">고구마·감자·당근</a></li>
@@ -94,7 +95,7 @@
                               <li><a  href="#">콩나물·버섯</a></li>
                             </ul>
                           </li>
-                          <li><a th:href="@{/templates/contents/items/fruit}">과일</a>
+                          <li><a th:href="@{/contents/items/fruit}">과일</a>
                             <ul class="sub">
                               <li><a  href="#">친환경</a></li>
                               <li><a  href="#">제철과일</a></li>
@@ -103,7 +104,7 @@
                               <li><a  href="#">냉동·건과일</a></li>
                             </ul>
                           </li>
-                          <li><a th:href="@{/templates/contents/items/seafood}">해산물</a>
+                          <li><a th:href="@{/contents/items/seafood}">해산물</a>
                             <ul class="sub">
                               <li><a  href="#">친환경</a></li>
                               <li><a  href="#">생선류</a></li>
@@ -112,7 +113,7 @@
                               <li><a  href="#">김·미역·해조류</a></li>
                             </ul>
                           </li>
-                          <li><a th:href="@{/templates/contents/items/meat}">정육</a>
+                          <li><a th:href="@{/contents/items/meat}">정육</a>
                             <ul class="sub">
                               <li><a  href="#">국내산소고기</a></li>
                               <li><a  href="#">수입산소고기</a></li>
@@ -121,7 +122,7 @@
                               <li><a  href="#">닭·오리고기</a></li>
                             </ul>
                           </li>
-                          <li><a th:href="@{/templates/contents/items/dish}">국·반찬·메인요리</a>
+                          <li><a th:href="@{/contents/items/dish}">국·반찬·메인요리</a>
                             <ul class="sub">
                               <li><a  href="#">국·탕·찌개</a></li>
                               <li><a  href="#">밀키트·메인요리</a></li>
@@ -130,7 +131,7 @@
                               <li><a  href="#">베이컨·햄·통조림</a></li>
                             </ul>
                           </li>
-                          <li><a th:href="@{/templates/contents/items/salad}">샐러드·간편식</a>
+                          <li><a th:href="@{/contents/items/salad}">샐러드·간편식</a>
                             <ul class="sub">
                               <li><a  href="#">샐러드·닭가슴살</a></li>
                               <li><a  href="#">도시락·밥류</a></li>
@@ -138,7 +139,7 @@
                               <li><a  href="#">선식·시리얼</a></li>
                             </ul>
                           </li>
-                          <li><a th:href="@{/templates/contents/items/beverage}">생수·음료·우유·커피</a>
+                          <li><a th:href="@{/contents/items/beverage}">생수·음료·우유·커피</a>
                             <ul class="sub">
                               <li><a  href="#">생수·탄산수</a></li>
                               <li><a  href="#">음료·주스</a></li>
@@ -147,14 +148,14 @@
                               <li><a  href="#">차</a></li>
                             </ul>
                           </li>
-                          <li><a th:href="@{/templates/contents/items/wine}">와인</a>
+                          <li><a th:href="@{/contents/items/wine}">와인</a>
                             <ul class="sub">
                               <li><a  href="#">레드와인</a></li>
                               <li><a  href="#">화이트와인</a></li>
                               <li><a  href="#">샴페인·스파클링</a></li>
                             </ul>
                           </li>
-                          <li><a th:href="@{/templates/contents/items/traditionalLiquor}">전통주</a>
+                          <li><a th:href="@{/contents/items/traditionalLiquor}">전통주</a>
                             <ul class="sub">
                               <li><a  href="#">막걸리·탁주</a></li>
                               <li><a  href="#">증류주·약주·청주</a></li>
@@ -173,7 +174,7 @@
         </ul>
 
 
-        <i class="fas"><img class="category_img" src="/img/hamburger.png"></i>
+        <i class="fas"><img class="category_img" th:src="@{/img/hamburger.png}"></i>
     </section>
 </div>
 
@@ -215,6 +216,8 @@
         </div>
     </div>
 
+
+
     <div class="products">
         <div class="section">
             <div class="firstSection">
@@ -224,357 +227,530 @@
 
                 <div class="main-slider">
                     <div class="item">
-                        <div class="inner-slider">
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1658112867906l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="inner-slider slick-initialized slick-slider">
+                            <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button>
+                            <div class="slick-list draggable">
+                                <div class="slick-track" style="opacity: 1; width: 6552px; transform: translate3d(-936px, 0px, 0px);">
+                                    <div class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 234px;">
+                                        <div>
+                                            <div class="card innerCard" style="width: 100%; display: inline-block;">
+                                                <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1654668988540l0.jpg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Card title</h5>
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                        card's content.</p>
+                                                    <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 234px;">
+                                        <div>
+                                            <div class="card innerCard" style="width: 100%; display: inline-block;">
+                                                <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/165812203656l0.jpg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Card title</h5>
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                        card's content.</p>
+                                                    <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://product-image.kurly.com/cdn-cgi/image/width=400,format=auto/product/image/574d5efe-98b7-4cd8-9a71-b03916174222.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1658112867906l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="0">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1637645210373l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="0">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1655430572271l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="0">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-active" data-slick-index="3" aria-hidden="false" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1642401175752l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="0">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1582520962769l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1594018746767l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1652082644420l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1592541219183l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide" data-slick-index="8" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1654668988540l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide" data-slick-index="9" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/165812203656l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide" data-slick-index="10" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide" data-slick-index="11" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://product-image.kurly.com/cdn-cgi/image/width=400,format=auto/product/image/574d5efe-98b7-4cd8-9a71-b03916174222.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="12" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1658112867906l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="13" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1637645210373l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="14" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1655430572271l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="15" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1642401175752l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="16" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1582520962769l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="17" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1594018746767l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="18" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1652082644420l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="19" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1592541219183l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="20" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1654668988540l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="21" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/165812203656l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="22" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="slick-slide slick-cloned" data-slick-index="23" aria-hidden="true" tabindex="-1" style="width: 234px;"><div><div class="card innerCard" style="width: 100%; display: inline-block;">
+                                        <img src="https://product-image.kurly.com/cdn-cgi/image/width=400,format=auto/product/image/574d5efe-98b7-4cd8-9a71-b03916174222.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary" tabindex="-1">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button></div>
 
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1637645210373l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+            <div class="section">
+                <div class="secondSection">
+                    <div>
+                        <span class="sectionTitle">MD의 추천</span>
+                    </div>
+
+                    <div class="content1">
+                        <ul class="sectionButtonArea">
+                            <li>
+                                <button class="btn btn-primary" type="submit">채소</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-primary" type="submit">과일•견과•쌀</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-primary" type="submit">수산•해산•건어물</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-primary" type="submit">정육•계란</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-primary" type="submit">국•반찬•메인요리</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-primary" type="submit">샐러드•간편식</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-primary" type="submit">면•양념•오일</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-primary" type="submit">생수•음료•우유•커피</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-primary" type="submit">와인</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-primary" type="submit">전통주</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-primary" type="submit">선물하기</button>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="main-slider">
+                        <div class="item">
+                            <div class="inner-slider">
+
+                                <div class="card innerCard">
+                                    <img
+                                            src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1656391963198l0.jpg"
+                                            class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1655430572271l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="card innerCard">
+                                    <img
+                                            src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1652859801466l0.jpg"
+                                            class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1642401175752l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="card innerCard">
+                                    <img
+                                            src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1589526644894l0.jpg"
+                                            class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1582520962769l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="card innerCard">
+                                    <img
+                                            src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1539248986546l0.jpg"
+                                            class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1594018746767l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="card innerCard">
+                                    <img
+                                            src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1648618183783l0.jpg"
+                                            class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1652082644420l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="card innerCard">
+                                    <img
+                                            src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1576555719180l0.jpg"
+                                            class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1592541219183l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="card innerCard">
+                                    <img
+                                            src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1657615661423l0.jpg"
+                                            class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1654668988540l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="card innerCard">
+                                    <img
+                                            src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1610330681275l0.jpg"
+                                            class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/165812203656l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="card innerCard">
+                                    <img
+                                            src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1587346611469l0.jpg"
+                                            class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1608787399247l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="card innerCard">
+                                    <img
+                                            src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1652851816427l0.jpg"
+                                            class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="card innerCard">
-                                <img
-                                        src="https://product-image.kurly.com/cdn-cgi/image/width=400,format=auto/product/image/574d5efe-98b7-4cd8-9a71-b03916174222.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="card innerCard">
+                                    <img
+                                            src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1655190519670l0.jpg"
+                                            class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+
+                                <div class="card innerCard">
+                                    <img
+                                            src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1657867084115l0.jpg"
+                                            class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-
-        <div class="section">
-            <div class="secondSection">
-                <div>
-                    <span class="sectionTitle">MD의 추천</span>
-                </div>
-
-                <div class="content1">
-                    <ul class="sectionButtonArea">
-                        <li>
-                            <button class="btn btn-primary" type="submit">채소</button>
-                        </li>
-                        <li>
-                            <button class="btn btn-primary" type="submit">과일•견과•쌀</button>
-                        </li>
-                        <li>
-                            <button class="btn btn-primary" type="submit">수산•해산•건어물</button>
-                        </li>
-                        <li>
-                            <button class="btn btn-primary" type="submit">정육•계란</button>
-                        </li>
-                        <li>
-                            <button class="btn btn-primary" type="submit">국•반찬•메인요리</button>
-                        </li>
-                        <li>
-                            <button class="btn btn-primary" type="submit">샐러드•간편식</button>
-                        </li>
-                        <li>
-                            <button class="btn btn-primary" type="submit">면•양념•오일</button>
-                        </li>
-                        <li>
-                            <button class="btn btn-primary" type="submit">생수•음료•우유•커피</button>
-                        </li>
-                        <li>
-                            <button class="btn btn-primary" type="submit">와인</button>
-                        </li>
-                        <li>
-                            <button class="btn btn-primary" type="submit">전통주</button>
-                        </li>
-                        <li>
-                            <button class="btn btn-primary" type="submit">선물하기</button>
-                        </li>
-                    </ul>
-                </div>
-
-
-                <div class="main-slider">
-                    <div class="item">
-                        <div class="inner-slider">
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1656391963198l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1652859801466l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1589526644894l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1539248986546l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1648618183783l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1576555719180l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1657615661423l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1610330681275l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1587346611469l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1652851816427l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1655190519670l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                            <div class="card innerCard">
-                                <img
-                                        src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1657867084115l0.jpg"
-                                        class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-</div>
 
 
     <!-- FOOTER -->
@@ -752,7 +928,7 @@
     });
 </script>
 <script>
-    var mySwiper = new Swiper('.swiper-container', {
+    let mySwiper = new Swiper('.swiper-container', {
 
         navigation: {
             prevEl: '.swiper-button-prev',
@@ -761,7 +937,7 @@
     });
 </script>
 <script>
-    var innerSlider = $('.inner-slider');
+    let innerSlider = $('.inner-slider');
     innerSlider.slick({
         slidesToShow: 4,
     })

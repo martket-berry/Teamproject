@@ -3,43 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  <link rel="stylesheet" href="/static/css/common.css">
-  <link rel="stylesheet" href="/static/css/board.css">
+  <link rel="stylesheet" th:href="@{/css/member/common.css}">
+  <link rel="stylesheet"  th:href="@{/css/member/board.css}">
 </head>
 <body th:align="center">
 <h1 th:align="center">일반회원목록</h1>
 <table th:align="center" border="1" th:cellpadding="0" th:cellspacing="0" th:width="700">
   <tr>
-    <th bgcolor="#9E007F" width="100">ID</th>
-    <th bgcolor="#9E007F" width="100">비밀번호</th>
-    <th bgcolor="#9E007F" width="100">이름</th>
-    <th bgcolor="#9E007F" width="100">이메일</th>
-    <th bgcolor="#9E007F" width="100">핸드폰번호</th>
-    <th bgcolor="#9E007F" width="100">주소</th>
-    <th bgcolor="#9E007F" width="100">성별</th>
-    <th bgcolor="#9E007F" width="100">생년월일</th>
-    <th bgcolor="#9E007F" width="100">비고</th>
+    <th bgcolor="#9E007F" class="memberId" width="100">ID</th>
+    <th bgcolor="#9E007F" class="memberPassword" width="100">비밀번호</th>
+    <th bgcolor="#9E007F" class="memberName" width="100">이름</th>
+    <th bgcolor="#9E007F" class="memberEmail" width="100">이메일</th>
+    <th bgcolor="#9E007F" class="memberPhone" width="100">핸드폰번호</th>
+    <th bgcolor="#9E007F" class="memberAddress" width="100">주소</th>
+    <th bgcolor="#9E007F" class="memberGender" width="100">성별</th>
+    <th bgcolor="#9E007F" class="memberBirthYear" width="100">출생년도</th>
+    <th bgcolor="#9E007F" class="memberBirthMonth" width="100">월</th>
+    <th bgcolor="#9E007F" class="memberBirthDate" width="100">일</th>
+<!--    <th bgcolor="#9E007F" width="100">비고</th>-->
   </tr>
 
-  <tr th:each="member : ${memberList}">  <!-- 컨트롤러에서 추가-->
-    <td><a th:text="${member.id}"></a></td>
-    <td th:text="${member.password}"></td>
-    <td th:text="${member.name}"></td>
-    <td th:text="${member.email}"></td>
-    <td th:text="${member.phone}"></td>
-    <td th:text="${member.address}"></td>
-    <td th:text="${member.gender}"></td>
-    <td th:text="${member.birthYear}${member.birthMonth}${member.birthDate}"></td>
-
+  <tr th:each="member : ${member}">  <!-- 컨트롤러에서 추가-->
+    <td><a class="memberId" th:text="${member.memberId}"></a></td>
+    <td class="memberPassword" th:text="${member.memberPassword}"></td>
+    <td class="memberName" th:text="${member.memberName}"></td>
+    <td class="memberEmail" th:text="${member.memberEmail}"></td>
+    <td class="memberPhone" th:text="${member.memberPhone}"></td>
+    <td class="memberAddress" th:text="${member.memberAddress}"></td>
+    <td class="memberGender" th:text="${member.memberGender}"></td>
+    <td class="memberBirthYear"
+        th:text="${member.memberBirthYear}"></td>
+    <td class="memberBirthMonth"
+        th:text="${member.memberBirthMonth}"></td>
+    <td class="memberBirthDate"
+        th:text="${member.memberBirthDate}"></td>
     <!--      account/getAccountList에서 get Account 호출할 때
                 기본 시작점이 templates이기 떄문에
                 절대 경로일 경우 template에서 시작하며, 상대경로이면 getAccountList페이지가 있는 폴더에서 시작
                 /를 앞에 붙인 경우    : 절대경로
                 /를 앞에 안 붙인 경우 : 상대경로 -->
     <td align="center">
-      <a th:href="@{/contents/member/signup_member(seq=${member.id})}">
+      <a th:href="@{/contents/member/signup_member(seq=${member.memberId})}">
         <button style="background-color: #666666; color: #f2f2f2; font-family: '나눔손글씨 힘내라는 말보단'">상세보기</button></a>
-      <a th:href="@{/contents/member/deleteAccount(seq=${member.id})}">
+      <a th:href="@{/contents/member/deleteAccount(seq=${member.memberId})}">
         <button style="background-color: #5F0080; color: #f2f2f2; font-family: '나눔손글씨 힘내라는 말보단'">삭제</button></a>
     </td>
   </tr>

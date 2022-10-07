@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,7 +7,7 @@
     <meta
             name="author"
             content="Mark Otto, Jacob Thornton, and Bootstrap contributors"/>
-    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="generator" content="Hugo 0.101.0, Jekyll v3.8.5" />
     <title>MarketMerry</title>
 
     <link rel="icon" th:href="@{/img/favicon.png}">
@@ -19,7 +19,6 @@
     <link rel="stylesheet" th:href="@{/css/contents/member/login.css}">
     <link rel="stylesheet" th:href="@{/css/contents/member/signup.css}">
     <link rel="canonical" th:href="@{https://getbootstrap.com/docs/4.3/examples/sign-in/}">
-    <link rel="stylesheet" th:href="@{sign-in.css}">
 </head>
 
 
@@ -171,31 +170,33 @@
 </div>
 
 
-<!-- contents -->
 <div class="login-all">
 
     <div class="login-header">
         로그인
     </div>
     <div class="login-body">
-        <form class="form-signin" th:action="@{/contents/member/login_member}" method="post" >
+        <form th:action="@{/contents/member/login}" method="post">
             <div class="inputId">
-                <input type="id" id="inputId" name="id" th:value=""
-                       class="form-control" placeholder="아이디를 입력해주세요" required autofocus>
+                <input type="id" name="memberId" id="inputId" class="form-control"  placeholder="아이디를 입력해주세요" required autofocus>
             </div>
             <div class="inputPw">
-                <input type="password" id="inputPassword" name="password" th:value=""
-                       class="form-control" placeholder="비밀번호를 입력해주세요" required>
+                <input type="password" name="memberPassword" id="inputPassword" class="form-control" placeholder="비밀번호를 입력해주세요" required>
             </div>
+
             <div class="findIdOrPw">
                 <a class="findId">아이디 찾기</a>
                 <span class="spanBar">|</span>
                 <a class="findPw">비밀번호 찾기</a>
             </div>
-            <button class="login-btn" type="submit">로그인</button>
-            <button class="signup-btn" type="submit"><a th:href="@{/contents/member/signUp_member}">회원가입</a></button>
-
+            <button class="login-btn"  type="submit">로그인</button>
         </form>
+
+        <button class="signup-btn"  onclick="location.href='/contents/member/signUp'" }>일반 회원가입</button>
+
+        <!--            나중에 사업자 회원가입 페이지로 경로 변경하기-->
+        <button class="signup-btn"  onclick="location.href='/contents/member/signUp'" >사업자 회원가입</button>
+
     </div>
 </div>
 
@@ -368,19 +369,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script>
-    var mySwiper = new Swiper('.swiper-container', {
+    const bars = document.querySelector(".fas");
+    const menu = document.querySelector(".menu");
 
-        navigation: {
-            prevEl: '.swiper-button-prev',
-            nextEl: '.swiper-button-next',
-        },
+    bars.addEventListener("click", () => {
+        menu.classList.toggle("active");
     });
-</script>
-<script>
-    var innerSlider = $('.inner-slider');
-    innerSlider.slick({
-        slidesToShow: 4,
-    })
 </script>
 </body>
 </html>

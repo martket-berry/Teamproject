@@ -1,15 +1,24 @@
 package com.example.project.Service.Item;
 
 import com.example.project.Entity.Item.Item;
+//import com.example.project.Entity.Item.fileUpload;
+
+import java.util.List;
 
 //엔티티의
 public interface ItemService {
 
-    void insertItem(Item item);     // 상품 등록
-    // void를 쓰는 이유 :
-//    void updateItem(Item item);     // 상품 수정 (할건가?)
+    Long insertItems(Item item);
+    //Long 이 Item으로 바뀜
+
+    List<Item> itemLists();
+
+    List<Item> itemListss(List<Item> itemList);
+
+
+     void updateItem(Item item);     // 상품 수정
 
     void deleteItem(Item item);     // 상품 삭제
 
-    Item getItem(Item item);        //상품 불러오기? (멤버에 있길래 써봄)
+//    void insertfileUpload(fileUpload entity);
 }

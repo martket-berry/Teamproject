@@ -13,7 +13,7 @@
     signup-body-contents{
         height: fit-content!important;
     }
-    .input-id, .input-pw, .input-name, .input-email, .input-phonNbr, .input-adress, .input-gender, .input-birth {
+    .input-id, .input-pw, .input-name, .input-email, .input-phoneNbr, .input-address, .input-gender, .input-birth {
         padding: 2px 3px!important;
     }
 
@@ -24,11 +24,11 @@
         margin-left: 0px!important;
         width: 350px!important;
     }
-    .input-adress{
+    .input-address{
         padding-right: 0px!important;
-        width: 300!important;
+        width: 300px!important;
     }
-    .input-id-menu, .input-pw-menu, .input-name-menu, .input-email-menu, .input-phonNbr-menu, .input-adress-menu, .input-gender-menu, .input-birth-menu {
+    .input-id-menu, .input-pw-menu, .input-name-menu, .input-email-menu, .input-phoneNbr-menu, .input-address-menu, .input-gender-menu, .input-birth-menu {
         /* width: 139px; */
         padding-right: 2px!important;
     }
@@ -36,7 +36,7 @@
         width:250px!important;
     }
     /*왼쪽 메뉴 -모바일 */
-    .label-id, .label-pw, .label-name, .label-email, .label-phonNbr, .label-adress, .label-gender, .label-birth {
+    .label-id, .label-pw, .label-name, .label-email, .label-phoneNbr, .label-address, .label-gender, .label-birth {
         width: 50px;
         font-size: 11px!important;
         padding-right:2px!important;
@@ -46,12 +46,12 @@
         width:200px!important;
         font-size: 11px!important;
     }
-    .id-duplchkBtn, .email-duplchkBtn, .phonNbr-duplchkBtn{
+    .id-dupleBtn, .email-dupleBtn, .phoneNbr-dupleBtn{
         height: 35px!important;
         margin-top: 5px!important;
         width: 75px!important;
     }
-    .input-email-duplchkBtn, .input-id-duplchkBtn, .input-phonNbr-duplchkBtn{
+    .input-email-dupleBtn, .input-id-dupleBtn, .input-phoneNbr-dupleBtn{
         font-size: 12px!important;
 
     }
@@ -91,13 +91,13 @@
         width: 716px!important;
     }
     /*왼쪽메뉴*/
-    .label-id, .label-pw, .label-name, .label-email, .label-phonNbr, .label-adress, .label-gender, .label-birth {
+    .label-id, .label-pw, .label-name, .label-email, .label-phoneNbr, .label-address, .label-gender, .label-birth {
         width: 120px;
         font-size: 14px!important;
         padding-right:5px!important;
         padding-left:5px!important;
     }
-    .input-id-menu, .input-pw-menu, .input-name-menu, .input-email-menu, .input-phonNbr-menu, .input-adress-menu, .input-gender-menu, .input-birth-menu {
+    .input-id-menu, .input-phoneNbr-menu, .input-address-menu, .input-pw-menu, .input-name-menu, .input-email-menu,  .input-gender-menu, .input-birth-menu {
         /* width: 139px; */
         padding-right: 5px!important;
         width: 120px;!important;
@@ -174,7 +174,7 @@
         width: 640px;
         height: 694px;
     }
-    .input-id, .input-pw, .input-name, .input-email, .input-phonNbr, .input-adress, .input-gender, .input-birth{
+    .input-id, .input-pw, .input-name, .input-email, .input-phoneNbr, .input-address, .input-gender, .input-birth{
         display: inline-flex;
         width: 100%;
         padding: 10px 20px;
@@ -182,11 +182,11 @@
         margin: 0;
         font-size: 14px;
     }
-    .input-id-menu, .input-pw-menu, .input-name-menu, .input-email-menu, .input-phonNbr-menu,.input-adress-menu , .input-gender-menu, .input-birth-menu{
+    .input-id-menu, .input-pw-menu, .input-name-menu, .input-email-menu, .input-phoneNbr-menu,.input-address-menu , .input-gender-menu, .input-birth-menu{
         width: 139px;
         padding-top: 12px;
     }
-    .label-id, .label-pw, .label-name, .label-email, .label-phonNbr,.label-adress, .label-gender, .label-birth{
+    .label-id, .label-pw, .label-name, .label-email, .label-phoneNbr,.label-address, .label-gender, .label-birth{
         font-weight: 600;
         color: rgb(51, 51, 51);
         line-height: 20px;
@@ -288,13 +288,13 @@
         padding: 12px 0px 9px;
         cursor: default;
     }
-    .css-1pes2r6 {
-        overflow: hidden;
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        clip: rect(0px, 0px, 0px, 0px);
-    }
+    /*.css-1pes2r6 {*/
+    /*    overflow: hidden;*/
+    /*    position: absolute;*/
+    /*    width: 1px;*/
+    /*    height: 1px;*/
+    /*    clip: rect(0px, 0px, 0px, 0px);*/
+    /*}*/
     .css-198i9ca {
         min-width: 24px;
         min-height: 24px;
@@ -439,14 +439,14 @@
         padding: 0;
     }
 
-    .css-agvwxo {
-        overflow: hidden;
-        position: absolute;
-        clip: rect(0px, 0px, 0px, 0px);
-        clip-path: inset(50%);
-        width: 1px;
-        height: 1px;
-    }
+    /*.css-agvwxo {*/
+    /*    overflow: hidden;*/
+    /*    position: absolute;*/
+    /*    clip: rect(0px, 0px, 0px, 0px);*/
+    /*    clip-path: inset(50%);*/
+    /*    width: 1px;*/
+    /*    height: 1px;*/
+    /*}*/
     input[type="checkbox" i] {
         background-color: initial;
         cursor: default;
@@ -630,7 +630,7 @@
     /*width: 640px;*/
     /*height: 694px;*/
 }
-.input-id, .input-pw, .input-name, .input-email, .input-phonNbr, .input-adress, .input-gender, .input-birth{
+.input-id, .input-pw, .input-name, .input-email, .input-phoneNbr, .input-address, .input-gender, .input-birth{
     display: inline-flex;
     width: 100%;
     padding: 10px 20px;
@@ -638,16 +638,16 @@
     margin: 0;
     font-size: 14px;
 }
-.input-id-menu, .input-pw-menu, .input-name-menu, .input-email-menu, .input-phonNbr-menu,.input-adress-menu , .input-gender-menu, .input-birth-menu{
+.input-id-menu, .input-pw-menu, .input-name-menu, .input-email-menu, .input-phoneNbr-menu,.input-address-menu , .input-gender-menu, .input-birth-menu{
     /*width: 139px;*/
     padding-top: 12px;
 }
-.label-id, .label-pw, .label-name, .label-email, .label-phonNbr,.label-adress, .label-gender, .label-birth{
+.label-id, .label-pw, .label-name, .label-email, .label-phoneNbr,.label-address, .label-gender, .label-birth{
     font-weight: 600;
     color: rgb(51, 51, 51);
     line-height: 20px;
 }
-.input-id-center, .input-pw-center, .input-name-center, .input-email-center, .input-phonNbr-center{
+.input-id-center, .input-pw-center, .input-name-center, .input-email-center, .input-phoneNbr-center{
     flex: 1 1 0%;
     position: relative;
     height: 48px;
@@ -676,11 +676,11 @@
     box-sizing: border-box;
     writing-mode: horizontal-tb !important;
 }
-.input-id-rightBtn, .input-email-rightBtn, .input-phonNbr-rightBtn{
+.input-id-rightBtn, .input-email-rightBtn, .input-phoneNbr-rightBtn{
     /*width: 120px;*/
     margin-left: 8px;
 }
-.id-duplchkBtn, .email-duplchkBtn, .phonNbr-duplchkBtn{
+.id-dupleBtn, .email-dupleBtn, .phoneNbr-dupleBtn{
     height: 44px;
     border-radius: 3px;
     display: block;
@@ -699,12 +699,6 @@
     display: inline-block;
     text-align: center;
     color: #9E007F;
-}
-.olmessagef{
-    color: red;
-}
-.olmessaget{
-    color: blue;
 }
 .search-adressBtn{
     display: block;
@@ -750,13 +744,13 @@
     padding: 12px 0px 9px;
     cursor: default;
 }
-.css-1pes2r6 {
-    overflow: hidden;
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    clip: rect(0px, 0px, 0px, 0px);
-}
+/*.css-1pes2r6 {*/
+/*    overflow: hidden;*/
+/*    position: absolute;*/
+/*    width: 1px;*/
+/*    height: 1px;*/
+/*    clip: rect(0px, 0px, 0px, 0px);*/
+/*}*/
 .css-198i9ca {
     min-width: 24px;
     min-height: 24px;
@@ -901,14 +895,14 @@ input[type=checkbox], input[type=radio] {
     padding: 0;
 }
 
-.css-agvwxo {
-    overflow: hidden;
-    position: absolute;
-    clip: rect(0px, 0px, 0px, 0px);
-    clip-path: inset(50%);
-    width: 1px;
-    height: 1px;
-}
+/*.css-agvwxo {*/
+/*    overflow: hidden;*/
+/*    position: absolute;*/
+/*    clip: rect(0px, 0px, 0px, 0px);*/
+/*    clip-path: inset(50%);*/
+/*    width: 1px;*/
+/*    height: 1px;*/
+/*}*/
 input[type="checkbox" i] {
     background-color: initial;
     cursor: default;

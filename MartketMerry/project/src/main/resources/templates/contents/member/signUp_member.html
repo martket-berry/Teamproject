@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,7 +7,7 @@
     <meta
             name="author"
             content="Mark Otto, Jacob Thornton, and Bootstrap contributors"/>
-    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="generator" content="Hugo 0.101.0, Jekyll v3.8.5"/>
     <title>MarketMerry</title>
 
     <link rel="icon" th:href="@{/img/favicon.png}">
@@ -171,464 +171,454 @@
         </section>
     </div>
 
-    <form th:action="@{/contents/member/signUp_member}" method="post" >
-        <!-- contents -->
-        <div class="signup-all">
-            <!-- 회원가입 타이틀 -->
-            <div class="signup-header">
-                회원가입
+<form th:action="@{/contents/member/signUp}" method="post">
+    <!-- contents -->
+    <div class="signup-all">
+        <!-- 회원가입 타이틀 -->
+        <div class="signup-header">
+            회원가입
+        </div>
+        <!-- 콘텐츠 시작부분(필수입력사항부분 시작) -->
+        <div class="signup-body">
+            <div class="signup-body-start">
+                <span class="Required-fields">*</span>필수입력사항
             </div>
-            <!-- 콘텐츠 시작부분(필수입력사항부분 시작) -->
-            <div class="signup-body">
-                <div class="signup-body-start">
-                    <span class="Required-fields">*</span>필수입력사항
+            <!--( 필수입력사항부분 끝) -->
+            <div class="signup-body-contents">
+                <!-- 아이디 칸 -->
+                <div class="input-id">
+                    <div class="input-id-menu">
+                        <label class="label-id" th:text="아이디">
+                            아이디<span class="Required-fields">*</span>
+                        </label>
+                    </div>
+                    <!--아이디 입력칸-->
+                    <div class="input-id-center">
+                        <input data-testid="input-box" id="input-id" name="memberId" placeholder="아이디를 입력해주세요" type="text" required class="css-1bkd15f e1uzxhvi2" >
+                    </div>
+                    <div class="input-id-rightBtn">
+                        <button class="id-dupleBtn">
+                            <span class="input-id-dupleBtn">중복확인</span>
+                        </button>
+                    </div>
                 </div>
-                <!--( 필수입력사항부분 끝) -->
-                <div class="signup-body-contents">
-                    <!-- 아이디 칸 -->
-                    <div class="input-id">
-                        <div class="input-id-menu">
-                            <label class="label-id">
-                                아이디<span class="Required-fields">*</span>
-                            </label>
-                        </div>
-                        <div class="input-id-center">
-                            <input data-testid="input-box" id="input-id" name="id" th:value="${member == null ? '' : member.id}"
-                                   placeholder="아이디를 입력해주세요" type="text" required class="css-1bkd15f e1uzxhvi2" >
-                        </div>
-                        <div class="input-id-rightBtn">
-                            <button class="id-duplchkBtn">
-                                <span class="input-id-duplchkBtn">중복확인</span>
-                            </button>
-                        </div>
+                <!-- 비밀번호 칸-->
+                <div class="input-pw">
+                    <div class="input-pw-menu">
+                        <label class="label-pw">
+                            비밀번호<span class="Required-fields">*</span>
+                        </label>
                     </div>
-                    <!-- 비밀번호 칸-->
-                    <div class="input-pw">
-                        <div class="input-pw-menu">
-                            <label class="label-pw">
-                                비밀번호<span class="Required-fields">*</span>
-                            </label>
-                        </div>
-                        <div class="input-pw-center">
-                            <input data-testid="input-box" id="input-pw" name="password" th:value="${member == null ? '' : member.password}"
-                                   placeholder="비밀번호를 입력해주세요" type="text" required class="css-1bkd15f e1uzxhvi2" value >
-                        </div>
+                    <div class="input-pw-center">
+                        <input data-testid="input-box" id="input-pw" name="memberPassword" placeholder="비밀번호를 입력해주세요" type="text" required class="css-1bkd15f e1uzxhvi2"  >
+                    </div>
 
-                    </div>
-                    <!-- 비밀번호 확인칸 -->
-                    <div class="input-pw">
-                        <div class="input-pw-menu">
-                            <label class="label-pw">
-                                비밀번호확인<span class="Required-fields">*</span>
-                            </label>
-                        </div>
-                        <div class="input-pw-center">
-                            <input data-testid="input-box" id="input-pw2" name="password" placeholder="비밀번호를 한번 더 입력해주세요" type="text" required class="css-1bkd15f e1uzxhvi2" value>
-                        </div>
-                    </div>
-                    <!-- 이름칸 -->
-                    <div class="input-name">
-                        <div class="input-name-menu">
-                            <label class="label-name">
-                                이름<span class="Required-fields">*</span>
-                            </label>
-                        </div>
-                        <div class="input-name-center">
-                            <input data-testid="input-box" id="input-name" name="name"  th:value="${member == null ? '' : member.name}"
-                                   placeholder="이름을 입력해주세요" type="text" required class="css-1bkd15f e1uzxhvi2" value>
-                        </div>
+                </div>
+                <!-- 비밀번호 확인칸 -->
 
-                    </div>
-                    <!-- 이메일칸 -->
-                    <div class="input-email">
-                        <div class="input-email-menu">
-                            <label class="label-email">
-                                이메일<span class="Required-fields">*</span>
-                            </label>
-                        </div>
-                        <div class="input-email-center">
-                            <input data-testid="input-box" id="input-email" name="email" th:value="${member == null ? '' : member.email}"
-                                   placeholder="예:marketberry@berry.com" type="text" required class="css-1bkd15f e1uzxhvi2" value>
-                        </div>
-                        <div class="input-email-rightBtn">
-                            <button class="email-duplchkBtn">
-                                <span class="input-email-duplchkBtn">중복확인</span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- 휴대폰칸 -->
-                    <div class="input-phonNbr">
-                        <div class="input-phonNbr-menu">
-                            <label class="label-phonNbr">
-                                휴대폰<span class="Required-fields">*</span>
-                            </label>
-                        </div>
-                        <div class="input-phonNbr-center">
-                            <input data-testid="input-box" id="memberPhonNbr" name="phone" th:value="${member == null ? '' : member.phone}"
-                                   placeholder="숫자만 입력해주세요" type="text" required class="css-1bkd15f e1uzxhvi2" value>
-                        </div>
-                        <div class="input-phonNbr-rightBtn">
-                            <button class="phonNbr-duplchkBtn">
-                                <span class="input-phonNbr-duplchkBtn">인증번호 받기</span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- 주소칸 -->
-                    <div class="input-adress">
-                        <div class="input-adress-menu">
-                            <label class="label-adress">
-                                주소<span class="Required-fields">*</span>
-                            </label>
-                        </div>
 
-                        <div class="input-adress-center">
-                            <input data-testid="input-box" id="memberAddress" name="address" th:value="${member == null ? '' : member.address}"
-                                   placeholder="도로명주소로 검색해주세요." type="text" required class="css-1bkd15f e1uzxhvi2" value>
-                        </div>
-                            <button class="search-adressBtn">
-              <span class="search-adress">
-                <img src="https://res.kurly.com/pc/service/cart/2007/ico_search.svg" class="css-1m3kac1 e4nu7ef0"> 주소검색
+                <!--                <div class="input-pw">-->
+                <!--                    <div class="input-pw-menu">-->
+                <!--                        <label class="label-pw">-->
+                <!--                            비밀번호확인<span class="Required-fields">*</span>-->
+                <!--                        </label>-->
+                <!--                    </div>-->
+                <!--                    <div class="input-pw-center">-->
+                <!--                        <input data-testid="input-box" id="input-pw2" name="memberPassword" placeholder="비밀번호를 한번 더 입력해주세요" type="text" required class="css-1bkd15f e1uzxhvi2" value>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
+
+                <!-- 이름칸 -->
+                <div class="input-name">
+                    <div class="input-name-menu">
+                        <label class="label-name">
+                            이름<span class="Required-fields">*</span>
+                        </label>
+                    </div>
+                    <div class="input-name-center">
+                        <input data-testid="input-box" id="input-name" name="memberName" placeholder="이름을 입력해주세요" type="text" required class="css-1bkd15f e1uzxhvi2" value>
+                    </div>
+
+                </div>
+                <!-- 이메일칸 -->
+                <div class="input-email">
+                    <div class="input-email-menu">
+                        <label class="label-email">
+                            이메일<span class="Required-fields">*</span>
+                        </label>
+                    </div>
+                    <div class="input-email-center">
+                        <input data-testid="input-box" id="input-email" name="memberEmail" placeholder="예:marketberry@berry.com" type="text" required class="css-1bkd15f e1uzxhvi2" value>
+                    </div>
+                    <div class="input-email-rightBtn">
+                        <button class="email-dupleBtn">
+                            <span class="input-email-dupleBtn">중복확인</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- 휴대폰칸 -->
+                <div class="input-phoneNbr">
+                    <div class="input-phoneNbr-menu">
+                        <label class="label-phoneNbr">
+                            휴대폰<span class="Required-fields">*</span>
+                        </label>
+                    </div>
+                    <div class="input-phoneNbr-center">
+                        <input data-testid="input-box" id="memberPhoneNbr" name="memberPhone" placeholder="숫자만 입력해주세요" type="text" required class="css-1bkd15f e1uzxhvi2" value>
+                    </div>
+                    <div class="input-phoneNbr-rightBtn">
+                        <!--                    <button class="phoneNbr-dupleBtn">-->
+                        <!--                        <span class="input-phoneNbr-dupleBtn">인증번호 받기</span>-->
+                        <!--                    </button>-->
+                    </div>
+                </div>
+                <!-- 주소칸 -->
+                <div class="input-address">
+                    <div class="input-address-menu">
+                        <label class="label-address">
+                            주소<span class="Required-fields">*</span>
+                        </label>
+                    </div>
+
+                    <div class="input-address-center">
+                        <button class="search-addressBtn">
+              <span class="search-address">
+                <input data-testid="input-box" id="memberAddress" name="memberAddress" placeholder="정확한 주소를 입력해주세요." type="text" required class="css-1bkd15f e1uzxhvi2" value>
               </span>
-                            </button>
-                            <span class="adressCaution">배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
-                        </div>
-                    <!-- 성별 칸 -->
-                    <div class="input-gender">
-                        <div class="input-gender-menu">
-                            <label class="label-gender">
-                                성별
-                            </label>
-                        </div>
-                        <div class="input-gender-center">
-                            <div class="gender-choice">
-                                <!-- label 남자 -->
-                                <label class="gender-label">
-                                    <input data-testid="radio-MALE" id="gender-man" name="gender" th:value="${member == null ? 'Male' : member.gender}"
-                                           type="radio" class="css-1pes2r6 et8nqc31">
-                                    <span class="css-5xw1m2 e2sqze61">
-                  <div class="css-1vic0rk e2sqze60"></div>
-                </span>
-                                    <span aria-labelledby="gender-man" class="css-mgd87h et8nqc30">남자</span>
-                                </label>
-                                <!--label 여자  -->
-                                <label class="gender-label">
-                                    <input data-testid="radio-FEMALE" id="gender-woman" name="gender" th:value="${member == null ? 'Female' : member.gender}"
-                                           type="radio" class="css-1pes2r6 et8nqc31">
-                                    <span class="css-5xw1m2 e2sqze61">
-                  <div class="css-1vic0rk e2sqze60"></div>
-                </span>
-                                    <span aria-labelledby="gender-female" class="css-mgd87h et8nqc30">여자</span>
-                                </label>
-                                <!-- label gender 선택안함 -->
-                                <label class="gender-label">
-                                    <input data-testid="radio-genderNochoice" id="gender-no" name="gender" th:value="${member == null ? 'None' : member.gender}"
-                                           type="radio" class="css-1pes2r6 et8nqc31">
-                                    <span class="css-5xw1m2 e2sqze61">
-                  <div class="css-1vic0rk e2sqze60"></div>
-                </span>
-                                    <span aria-labelledby="gender-no" class="css-mgd87h et8nqc30">선택안함</span>
-                                </label>
-                            </div>
-                        </div>
+                        </button>
+                        <!--                    <span class="addressCaution">배송지에 따라 상품 정보가 달라질 수 있습니다.</span>-->
                     </div>
-                    <!-- 생년월일 칸 -->
-                    <div class="input-birth">
-                        <div class="input-birth-menu">
-                            <label class="label-birth">
-                                생년월일
+                </div>
+                <!-- 성별 칸 -->
+                <div class="input-gender">
+                    <div class="input-gender-menu">
+                        <label class="label-gender">
+                            성별
+                        </label>
+                    </div>
+                    <div class="input-gender-center">
+                        <div class="gender-choice">
+                            <!-- label 남자 -->
+                            <label class="gender-label">
+                                <input data-testid="radio-MALE" id="gender-man" name="memberGender" type="radio" class="css-1pes2r6 et8nqc31" value="MALE">
+                                <span aria-labelledby="gender-man" class="css-mgd87h et8nqc30">남자</span>
                             </label>
-                        </div>
-                        <div class="css-82a6rk e744wfw3">
-                            <div class="css-18n8lnw e1ke3ehm1">
-                                <div class="css-1dkwuq4 e1uzxhvi6">
-                                    <div height="40" class="css-xsmgyi e1uzxhvi3">
-                                        <input data-testid="input-box" name="birthYear" th:value="${member == null ? '' : member.birthYear}"
-                                               placeholder="YYYY" type="text" height="40" class="css-1368454 e1uzxhvi2" value >
-                                    </div>
-                                </div>
-                                <span class="css-iehpfx e1ke3ehm0"></span>
-                                <div class="css-1dkwuq4 e1uzxhvi6"><div height="40" class="css-xsmgyi e1uzxhvi3">
-                                    <input data-testid="input-box" name="birthMonth" th:value="${member == null ? '' : member.birthMonth}"
-                                           placeholder="MM" type="text" height="40" class="css-1368454 e1uzxhvi2" value>
-                                </div>
-                                </div>
-                                <span class="css-iehpfx e1ke3ehm0"></span>
-                                <div class="css-1dkwuq4 e1uzxhvi6"><div height="40" class="css-xsmgyi e1uzxhvi3">
-                                    <input data-testid="input-box" name="birthDate" th:value="${member == null ? '' : member.birthDate}"
-                                           placeholder="DD" type="text" height="40" class="css-1368454 e1uzxhvi2" value>
-                                </div>
-                                </div>
-                                <!-- </div>-->
-                            </div>
+                            <!--label 여자  -->
+                            <label class="gender-label">
+                                <input data-testid="radio-FEMALE" id="gender-woman" name="memberGender" type="radio" class="css-1pes2r6 et8nqc31" value="FEMALE">
+                                <span aria-labelledby="gender-female" class="css-mgd87h et8nqc30">여자</span>
+                            </label>
+                            <!-- label gender 선택안함 -->
+                            <label class="gender-label">
+                                <input data-testid="radio-genderNochoice" id="gender-no" name="memberGender" type="radio" class="css-1pes2r6 et8nqc31" value="nogender">
+                                <span aria-labelledby="gender-no" class="css-mgd87h et8nqc30">선택안함</span>
+                            </label>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- 빈칸추가 -->
-            <div class="css-1eo0fey e1j7jtti0"></div>
-            <!-- 약관동의 -->
-            <div class="css-y8aj3r e1k9oeg10">
-                <div class="css-2yzr8b e744wfw6">
-                    <div class="css-1y8737n e744wfw5">
-                        <label class="css-1obgjqh e744wfw4">이용약관동의<span class="Required-fields">*</span>
+                <!-- 생년월일 칸 -->
+                <div class="input-birth">
+                    <div class="input-birth-menu">
+                        <label class="label-birth">
+                            생년월일
                         </label>
                     </div>
                     <div class="css-82a6rk e744wfw3">
-                        <div class="css-ov2xfu e1sjmfnv7">
-                            <label class="css-qihf5m e1dcessg1" for="TermsAgreeAll">
-                                <input id="TermsAgreeAll" type="checkbox" class="css-agvwxo e1dcessg0">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgc3Ryb2tlPSIjREREIj4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjY5LjAwMDAwMCwgLTEwOTAuMDAwMDAwKSB0cmFuc2xhdGUoMTAwLjAwMDAwMCwgOTM2LjAwMDAwMCkgdHJhbnNsYXRlKDU1My4wMDAwMDAsIDE0Mi4wMDAwMDApIHRyYW5zbGF0ZSgxNi4wMDAwMDAsIDEyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMS41Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik03IDEyLjY2N0wxMC4zODUgMTYgMTggOC41Ii8+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" alt="" class="css-1wfsi82 e31wziv0">전체 동의합니다.</label><p class="css-nygcgj e1sjmfnv6">
-                            선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
-                        </div>
-                        <div class="css-ov2xfu e1sjmfnv7">
-                            <div class="css-s5xdrg e1sjmfnv4">
-                                <label class="css-18r9a6u e1dcessg1" for="RequiredTermsCondition">
-                                    <input id="RequiredTermsCondition" type="checkbox" class="css-agvwxo e1dcessg0">
-                                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgc3Ryb2tlPSIjREREIj4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjY5LjAwMDAwMCwgLTEwOTAuMDAwMDAwKSB0cmFuc2xhdGUoMTAwLjAwMDAwMCwgOTM2LjAwMDAwMCkgdHJhbnNsYXRlKDU1My4wMDAwMDAsIDE0Mi4wMDAwMDApIHRyYW5zbGF0ZSgxNi4wMDAwMDAsIDEyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMS41Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik03IDEyLjY2N0wxMC4zODUgMTYgMTggOC41Ii8+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" alt="" class="css-1wfsi82 e31wziv0">
-                                    이용약관 동의</label>
-                                <span class="css-g5xq45 e1sjmfnv5">(필수)</span>
+                        <div class="css-18n8lnw e1ke3ehm1">
+                            <div class="css-1dkwuq4 e1uzxhvi6">
+                                <div height="40" class="css-xsmgyi e1uzxhvi3">
+                                    <input data-testid="input-box" name="memberBirthYear" placeholder="YYYY" type="text" height="40" class="css-1368454 e1uzxhvi2" value >
+                                </div>
                             </div>
-                            <a class="css-7chi73 e1sjmfnv3">약관보기</a>
-                        </div>
-                        <div class="css-ov2xfu e1sjmfnv7">
-                            <div class="css-s5xdrg e1sjmfnv4">
-                                <label class="css-18r9a6u e1dcessg1" for="RequiredTermsOfPrivacy">
-                                    <input id="RequiredTermsOfPrivacy" type="checkbox" class="css-agvwxo e1dcessg0">
-                                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgc3Ryb2tlPSIjREREIj4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjY5LjAwMDAwMCwgLTEwOTAuMDAwMDAwKSB0cmFuc2xhdGUoMTAwLjAwMDAwMCwgOTM2LjAwMDAwMCkgdHJhbnNsYXRlKDU1My4wMDAwMDAsIDE0Mi4wMDAwMDApIHRyYW5zbGF0ZSgxNi4wMDAwMDAsIDEyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMS41Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik03IDEyLjY2N0wxMC4zODUgMTYgMTggOC41Ii8+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" alt="" class="css-1wfsi82 e31wziv0">
-                                    개인정보 수집∙이용 동의</label>
-                                <span class="css-g5xq45 e1sjmfnv5">(필수)</span>
+                            <span class="css-iehpfx e1ke3ehm0"></span>
+                            <div class="css-1dkwuq4 e1uzxhvi6"><div height="40" class="css-xsmgyi e1uzxhvi3">
+                                <input data-testid="input-box" name="memberBirthMonth" placeholder="MM" type="text" height="40" class="css-1368454 e1uzxhvi2" value>
                             </div>
-                            <a class="css-7chi73 e1sjmfnv3">약관보기</a>
-                        </div>
-                        <div class="css-ov2xfu e1sjmfnv7">
-                            <div class="css-s5xdrg e1sjmfnv4">
-                                <label class="css-18r9a6u e1dcessg1" for="OptionalTermsOfPrivacy">
-                                    <input id="OptionalTermsOfPrivacy" type="checkbox" class="css-agvwxo e1dcessg0">
-                                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgc3Ryb2tlPSIjREREIj4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjY5LjAwMDAwMCwgLTEwOTAuMDAwMDAwKSB0cmFuc2xhdGUoMTAwLjAwMDAwMCwgOTM2LjAwMDAwMCkgdHJhbnNsYXRlKDU1My4wMDAwMDAsIDE0Mi4wMDAwMDApIHRyYW5zbGF0ZSgxNi4wMDAwMDAsIDEyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMS41Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik03IDEyLjY2N0wxMC4zODUgMTYgMTggOC41Ii8+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" alt="" class="css-1wfsi82 e31wziv0">
-                                    개인정보 수집∙이용 동의</label>
-                                <span class="css-g5xq45 e1sjmfnv5">(선택)</span>
                             </div>
-                            <a class="css-7chi73 e1sjmfnv3">약관보기</a>
-                        </div>
-                        <div class="css-ob6kg2 e1sjmfnv7">
-                            <div class="css-s5xdrg e1sjmfnv4">
-                                <label class="css-18r9a6u e1dcessg1" for="SignupEventAll">
-                                    <input id="SignupEventAll" type="checkbox" class="css-agvwxo e1dcessg0">
-                                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgc3Ryb2tlPSIjREREIj4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjY5LjAwMDAwMCwgLTEwOTAuMDAwMDAwKSB0cmFuc2xhdGUoMTAwLjAwMDAwMCwgOTM2LjAwMDAwMCkgdHJhbnNsYXRlKDU1My4wMDAwMDAsIDE0Mi4wMDAwMDApIHRyYW5zbGF0ZSgxNi4wMDAwMDAsIDEyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMS41Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik03IDEyLjY2N0wxMC4zODUgMTYgMTggOC41Ii8+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" alt="" class="css-1wfsi82 e31wziv0">
-                                    무료배송, 할인쿠폰 등 혜택/정보 수신 동의</label>
-                                <span class="css-g5xq45 e1sjmfnv5">(선택)</span>
+                            <span class="css-iehpfx e1ke3ehm0"></span>
+                            <div class="css-1dkwuq4 e1uzxhvi6"><div height="40" class="css-xsmgyi e1uzxhvi3">
+                                <input data-testid="input-box" name="memberBirthDate" placeholder="DD" type="text" height="40" class="css-1368454 e1uzxhvi2" value>
                             </div>
-                            <div class="css-1qsjbts e1sjmfnv2">
-                                <label class="css-jllwfz e1dcessg1" for="OptionalTermsOfSms">
-                                    <input id="OptionalTermsOfSms" type="checkbox" class="css-agvwxo e1dcessg0">
-                                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgc3Ryb2tlPSIjREREIj4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjY5LjAwMDAwMCwgLTEwOTAuMDAwMDAwKSB0cmFuc2xhdGUoMTAwLjAwMDAwMCwgOTM2LjAwMDAwMCkgdHJhbnNsYXRlKDU1My4wMDAwMDAsIDE0Mi4wMDAwMDApIHRyYW5zbGF0ZSgxNi4wMDAwMDAsIDEyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMS41Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik03IDEyLjY2N0wxMC4zODUgMTYgMTggOC41Ii8+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" alt="" class="css-1wfsi82 e31wziv0">
-                                    SMS</label>
-                                <label class="css-jllwfz e1dcessg1" for="OptionalTermsOfMailing">
-                                    <input id="OptionalTermsOfMailing" type="checkbox" class="css-agvwxo e1dcessg0">
-                                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgc3Ryb2tlPSIjREREIj4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjY5LjAwMDAwMCwgLTEwOTAuMDAwMDAwKSB0cmFuc2xhdGUoMTAwLjAwMDAwMCwgOTM2LjAwMDAwMCkgdHJhbnNsYXRlKDU1My4wMDAwMDAsIDE0Mi4wMDAwMDApIHRyYW5zbGF0ZSgxNi4wMDAwMDAsIDEyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMS41Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik03IDEyLjY2N0wxMC4zODUgMTYgMTggOC41Ii8+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" alt="" class="css-1wfsi82 e31wziv0">
-                                    이메일</label>
                             </div>
-                        </div>
-                        <div class="css-ov2xfu e1sjmfnv7">
-                            <div class="css-s5xdrg e1sjmfnv4">
-                                <label class="css-18r9a6u e1dcessg1" for="RequiredSignupAge">
-                                    <input id="RequiredSignupAge" type="checkbox" class="css-agvwxo e1dcessg0">
-                                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgc3Ryb2tlPSIjREREIj4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjY5LjAwMDAwMCwgLTEwOTAuMDAwMDAwKSB0cmFuc2xhdGUoMTAwLjAwMDAwMCwgOTM2LjAwMDAwMCkgdHJhbnNsYXRlKDU1My4wMDAwMDAsIDE0Mi4wMDAwMDApIHRyYW5zbGF0ZSgxNi4wMDAwMDAsIDEyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMS41Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik03IDEyLjY2N0wxMC4zODUgMTYgMTggOC41Ii8+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" alt="" class="css-1wfsi82 e31wziv0">
-                                    본인은 만 14세 이상입니다.</label>
-                                <span class="css-g5xq45 e1sjmfnv5">(필수)</span>
-                            </div>
+                            <!-- </div>-->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-            <!-- 가입하기 버튼 -->
-            <div class="css-137ca2h e1utgeno0">
-                <button class="css-18m884r e4nu7ef3" th:classappend="${board} != null ? 'update'" type="submit" onclick="this.submit()" width="240" height="56" radius="3">
-                   가입하기
-                </button>
+        <!-- 빈칸추가 -->
+        <div class="css-1eo0fey e1j7jtti0"></div>
+        <!-- 약관동의 -->
+        <div class="css-y8aj3r e1k9oeg10">
+            <div class="css-2yzr8b e744wfw6">
+                <div class="css-1y8737n e744wfw5">
+                    <label class="css-1obgjqh e744wfw4">이용약관동의<span class="Required-fields">*</span>
+                    </label>
+                </div>
+                <div class="css-82a6rk e744wfw3">
+                    <div class="css-ov2xfu e1sjmfnv7">
+                        <label class="css-qihf5m e1dcessg1" for="TermsAgreeAll">
+                            <input name="checkbox" id="TermsAgreeAll" type="checkbox" class="css-agvwxo e1dcessg0" onclick="TermsAgreeAll()">
+                            전체 동의합니다.
+                        </label>
+                        <p class="css-nygcgj e1sjmfnv6">
+                            전체 동의버튼에 체크 시, 아래 동의버튼과 관계 없이 전체 동의되어 가입됩니다.</p>
+                    </div>
+                    <div class="css-ov2xfu e1sjmfnv7">
+                        <div class="css-s5xdrg e1sjmfnv4">
+                            <label class="css-18r9a6u e1dcessg1" for="RequiredTermsCondition">
+                                <input name="checkbox" id="RequiredTermsCondition" type="checkbox" class="css-agvwxo e1dcessg0">
+                                이용약관 동의
+                            </label>
+                            <span class="css-g5xq45 e1sjmfnv5">(필수)</span>
+                        </div>
+                        <a class="css-7chi73 e1sjmfnv3">약관보기</a>
+                    </div>
+                    <div class="css-ov2xfu e1sjmfnv7">
+                        <div class="css-s5xdrg e1sjmfnv4">
+                            <label class="css-18r9a6u e1dcessg1" for="RequiredTermsOfPrivacy">
+                                <input name="checkbox" id="RequiredTermsOfPrivacy" type="checkbox" class="css-agvwxo e1dcessg0">
+                                개인정보 수집∙이용 동의
+                            </label>
+                            <span class="css-g5xq45 e1sjmfnv5">(필수)</span>
+                        </div>
+                        <a class="css-7chi73 e1sjmfnv3">약관보기</a>
+                    </div>
+                    <div class="css-ov2xfu e1sjmfnv7">
+                        <div class="css-s5xdrg e1sjmfnv4">
+                            <label class="css-18r9a6u e1dcessg1" for="OptionalTerms">
+                                <input name="checkbox" id="OptionalTerms" type="checkbox" class="css-agvwxo e1dcessg0">
+                                개인정보 수집∙이용 동의
+                            </label>
+                            <span class="css-g5xq45 e1sjmfnv5">(선택)</span>
+                        </div>
+                        <a class="css-7chi73 e1sjmfnv3">약관보기</a>
+                    </div>
+                    <div class="css-ob6kg2 e1sjmfnv7">
+                        <div class="css-s5xdrg e1sjmfnv4">
+                            <label class="css-18r9a6u e1dcessg1" for="SignupEventAll">
+                                <input name="checkbox" id="SignupEventAll" type="checkbox" class="css-agvwxo e1dcessg0">
+                                무료배송, 할인쿠폰 등 혜택/정보 수신 동의
+                            </label>
+                            <span class="css-g5xq45 e1sjmfnv5">(선택)</span>
+                        </div>
+                        <div class="css-1qsjbts e1sjmfnv2">
+                            <label class="css-jllwfz e1dcessg1" for="OptionalTermsOfSms">
+                                <input name="checkbox" id="OptionalTermsOfSms" type="checkbox" class="css-agvwxo e1dcessg0">
+                                SMS
+                            </label>
+                            <label class="css-jllwfz e1dcessg1" for="OptionalTermsOfMailing">
+                                <input name="checkbox" id="OptionalTermsOfMailing" type="checkbox" class="css-agvwxo e1dcessg0">
+                                이메일
+                            </label>
+                        </div>
+                    </div>
+                    <div class="css-ov2xfu e1sjmfnv7">
+                        <div class="css-s5xdrg e1sjmfnv4">
+                            <label class="css-18r9a6u e1dcessg1" for="RequiredSignupAge">
+                                <input name="checkbox" id="RequiredSignupAge" type="checkbox" class="css-agvwxo e1dcessg0">
+                                본인은 만 14세 이상입니다.
+                            </label>
+                            <span class="css-g5xq45 e1sjmfnv5">(필수)</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-    </form>
+        </div>
+        <!-- 가입하기 버튼 -->
+        <div class="css-137ca2h e1utgeno0">
+            <button class="css-18m884r e4nu7ef3" type="submit" width="240" height="56" radius="3">
+                <!--                <span class="css-ymwvow e4nu7ef1" th:href="@{/contents/member/login_member}">가입하기</span>-->
+                <span class="css-ymwvow e4nu7ef1">가입하기</span>
+            </button>
+        </div>
+    </div>
 
-<!-- FOOTER -->
-<div id="footer" class="css-16o2vgi">
-    <div class="css-gh58u4 justify-content-lg-around">
-        <div class="css-1rhquhe">
-            <h2 class="css-r0omzn">고객만족센터</h2><h3>365일 오전 7시 - 오후 7시</h3>
-            <div class="css-1417oa1">
-                <h3><span class="css-162092a">1644-1107</span></h3>
-                <dl class="css-1u2srid">
-                    <dt>365고객센터</dt>
-                    <dd class="css-14kcwq8">오전 7시 - 오후 7시</dd>
-                </dl>
-            </div>
-            <div>
+    <!-- FOOTER -->
+    <div id="footer" class="css-16o2vgi">
+        <div class="css-gh58u4 justify-content-lg-around">
+            <div class="css-1rhquhe">
+                <h2 class="css-r0omzn">고객만족센터</h2><h3>365일 오전 7시 - 오후 7시</h3>
                 <div class="css-1417oa1">
-                    <h3>
-                        <a href="/mypage/inquiry/form" class="css-mdfw3w">자주하는 문의</a>
-                    </h3>
-                    <span>
+                    <h3><span class="css-162092a">1644-1107</span></h3>
+                    <dl class="css-1u2srid">
+                        <dt>365고객센터</dt>
+                        <dd class="css-14kcwq8">오전 7시 - 오후 7시</dd>
+                    </dl>
+                </div>
+                <div>
+                    <div class="css-1417oa1">
+                        <h3>
+                            <a href="/mypage/inquiry/form" class="css-mdfw3w">자주하는 문의</a>
+                        </h3>
+                        <span>
               <h3>
                 <a href="/mypage/inquiry/form" class="css-mdfw3w"
                 >1:1 문의</a>
               </h3>
             </span>
+                    </div>
                 </div>
             </div>
+            <div class="css-oortg6" style="width: 515px;">
+                <ul class="css-18ca9s">
+                    <li class="css-1x36n8t">
+                        <a href="https://www.kurly.com/shop/introduce/about_kurly.php"
+                           target="_self"
+                           rel="noreferrer"
+                           class="css-dh4koy"
+                        >마켓메리소개</a>
+                    </li>
+
+                    <li class="css-1x36n8t">
+
+                    <li class="css-1x36n8t">
+                        <a
+                                href="/user-terms/agreement"
+                                target="_self"
+                                rel="noreferrer"
+                                class="css-dh4koy"
+                        >이용약관</a
+                        >
+                    </li>
+                    <li class="css-1x36n8t">
+                        <a
+                                href="/user-terms/privacy-policy"
+                                target="_self"
+                                rel="noreferrer"
+                                class="css-1nohcpk"
+                        >개인정보처리방침</a
+                        >
+                    </li>
+                    <li class="css-1x36n8t">
+                        <a
+                                href="/user-guide"
+                                target="_self"
+                                rel="noreferrer"
+                                class="css-dh4koy"
+                        >이용안내</a
+                        >
+                    </li>
+                </ul>
+                법인명 (상호) : 주식회사 마켓메리<span class="css-1xezpz6"></span
+            >사업자등록번호 : 010-01-77777
+                <br />통신판매업 : 제 2022-천안휴먼-0000호<span
+                    class="css-1xezpz6"
+            ></span
+            >개인정보보호책임자 : 김준석<br />주소 : 충청남도 천안시 동남구 대흥동 134 4교육실<span class="css-1xezpz6"></span>대표이사 :
+                김준석<br /><br />팩스: 070 - 7777 - 7777<span class="css-1xezpz6"></span
+            >이메일 :
+                <a href="mailto:help@merry.com" class="css-1kxzrwz"
+                >help@merry.com</a
+                ><br />
+                <ul class="css-qmo96y">
+                    <li class="css-1odwksc">
+                        <a
+                                href="https://instagram.com/marketkurly"
+                                target="_blank"
+                                rel="noreferrer"
+                                class="css-109fqb7"
+                        ><img width="100"
+                              src="https://res.kurly.com/pc/ico/1810/ico_instagram.png"
+                              alt="마켓메리 인스타그램 바로가기"
+                              class="css-uwwqev"
+                        /></a>
+                    </li>
+                    <li class="css-1odwksc">
+                        <a
+                                href="https://www.facebook.com/marketkurly"
+                                target="_blank"
+                                rel="noreferrer"
+                                class="css-109fqb7"
+                        ><img
+                                src="https://res.kurly.com/pc/ico/1810/ico_fb.png"
+                                alt="마켓메리 페이스북 바로가기"
+                                class="css-uwwqev"
+                        /></a>
+                    </li>
+                    <li class="css-1odwksc">
+                        <a
+                                href="https://blog.naver.com/marketkurly"
+                                target="_blank"
+                                rel="noreferrer"
+                                class="css-109fqb7"
+                        ><img
+                                src="https://res.kurly.com/pc/ico/1810/ico_blog.png"
+                                alt="마켓메리 네이버블로그 바로가기"
+                                class="css-uwwqev"
+                        /></a>
+                    </li>
+                    <li class="css-1odwksc">
+                        <a
+                                href="https://m.post.naver.com/marketkurly"
+                                target="_blank"
+                                rel="noreferrer"
+                                class="css-109fqb7"
+                        ><img
+                                src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png"
+                                alt="마켓메리 네이버포스트 바로가기"
+                                class="css-uwwqev"
+                        /></a>
+                    </li>
+                    <li class="css-1odwksc">
+                        <a
+                                href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg"
+                                target="_blank"
+                                rel="noreferrer"
+                                class="css-109fqb7"
+                        ><img
+                                src="https://res.kurly.com/pc/ico/1810/ico_youtube.png"
+                                alt="마켓메리 유튜브 바로가기"
+                                class="css-uwwqev"
+                        /></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="css-oortg6" style="width: 515px;">
-            <ul class="css-18ca9s">
-                <li class="css-1x36n8t">
-                    <a href="https://www.kurly.com/shop/introduce/about_kurly.php"
-                       target="_self"
-                       rel="noreferrer"
-                       class="css-dh4koy"
-                    >마켓메리소개</a>
-                </li>
 
-                <li class="css-1x36n8t">
-
-                <li class="css-1x36n8t">
-                    <a
-                            href="/user-terms/agreement"
-                            target="_self"
-                            rel="noreferrer"
-                            class="css-dh4koy"
-                    >이용약관</a
-                    >
-                </li>
-                <li class="css-1x36n8t">
-                    <a
-                            href="/user-terms/privacy-policy"
-                            target="_self"
-                            rel="noreferrer"
-                            class="css-1nohcpk"
-                    >개인정보처리방침</a
-                    >
-                </li>
-                <li class="css-1x36n8t">
-                    <a
-                            href="/user-guide"
-                            target="_self"
-                            rel="noreferrer"
-                            class="css-dh4koy"
-                    >이용안내</a
-                    >
-                </li>
-            </ul>
-            법인명 (상호) : 주식회사 마켓메리<span class="css-1xezpz6"></span
-        >사업자등록번호 : 010-01-77777
-            <br />통신판매업 : 제 2022-천안휴먼-0000호<span
-                class="css-1xezpz6"
-        ></span
-        >개인정보보호책임자 : 김준석<br />주소 : 충청남도 천안시 동남구 대흥동 134 4교육실<span class="css-1xezpz6"></span>대표이사 :
-            김준석<br /><br />팩스: 070 - 7777 - 7777<span class="css-1xezpz6"></span
-        >이메일 :
-            <a href="mailto:help@merry.com" class="css-1kxzrwz"
-            >help@merry.com</a
-            ><br />
-            <ul class="css-qmo96y">
-                <li class="css-1odwksc">
-                    <a
-                            href="https://instagram.com/marketkurly"
-                            target="_blank"
-                            rel="noreferrer"
-                            class="css-109fqb7"
-                    ><img width="100"
-                          src="https://res.kurly.com/pc/ico/1810/ico_instagram.png"
-                          alt="마켓메리 인스타그램 바로가기"
-                          class="css-uwwqev"
-                    /></a>
-                </li>
-                <li class="css-1odwksc">
-                    <a
-                            href="https://www.facebook.com/marketkurly"
-                            target="_blank"
-                            rel="noreferrer"
-                            class="css-109fqb7"
-                    ><img
-                            src="https://res.kurly.com/pc/ico/1810/ico_fb.png"
-                            alt="마켓메리 페이스북 바로가기"
-                            class="css-uwwqev"
-                    /></a>
-                </li>
-                <li class="css-1odwksc">
-                    <a
-                            href="https://blog.naver.com/marketkurly"
-                            target="_blank"
-                            rel="noreferrer"
-                            class="css-109fqb7"
-                    ><img
-                            src="https://res.kurly.com/pc/ico/1810/ico_blog.png"
-                            alt="마켓메리 네이버블로그 바로가기"
-                            class="css-uwwqev"
-                    /></a>
-                </li>
-                <li class="css-1odwksc">
-                    <a
-                            href="https://m.post.naver.com/marketkurly"
-                            target="_blank"
-                            rel="noreferrer"
-                            class="css-109fqb7"
-                    ><img
-                            src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png"
-                            alt="마켓메리 네이버포스트 바로가기"
-                            class="css-uwwqev"
-                    /></a>
-                </li>
-                <li class="css-1odwksc">
-                    <a
-                            href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg"
-                            target="_blank"
-                            rel="noreferrer"
-                            class="css-109fqb7"
-                    ><img
-                            src="https://res.kurly.com/pc/ico/1810/ico_youtube.png"
-                            alt="마켓메리 유튜브 바로가기"
-                            class="css-uwwqev"
-                    /></a>
-                </li>
-            </ul>
+        <div class="css-1dqov19 etk3uz82 ">
+            <p class="css-15jxxaf etk3uz81">
+                마켓메리에서 판매되는 상품 중에는 마켓메리에 입점한 개별 판매자가
+                판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+            </p>
+            <p class="css-15jxxaf etk3uz81">
+                마켓플레이스(오픈마켓) 상품의 경우 마켓메리는 통신판매중개자로서
+                통신판매의 당사자가 아닙니다. 마켓메리는 해당 상품의 주문, 품질, 교환/환불
+                등 의무와 책임을 부담하지 않습니다.
+            </p>
+            <em class="css-z6fhgy etk3uz80">© MERRY CORP. ALL RIGHTS RESERVED</em>
         </div>
+        <a href="#header" class="css-1t4sf6y">맨 위로가기</a>
     </div>
+</form>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+    const bars = document.querySelector(".fas");
+    const menu = document.querySelector(".menu");
 
-    <div class="css-1dqov19 etk3uz82 ">
-        <p class="css-15jxxaf etk3uz81">
-            마켓메리에서 판매되는 상품 중에는 마켓메리에 입점한 개별 판매자가
-            판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
-        </p>
-        <p class="css-15jxxaf etk3uz81">
-            마켓플레이스(오픈마켓) 상품의 경우 마켓메리는 통신판매중개자로서
-            통신판매의 당사자가 아닙니다. 마켓메리는 해당 상품의 주문, 품질, 교환/환불
-            등 의무와 책임을 부담하지 않습니다.
-        </p>
-        <em class="css-z6fhgy etk3uz80">© MERRY CORP. ALL RIGHTS RESERVED</em>
-    </div>
-    <a href="#header" class="css-1t4sf6y">맨 위로가기</a>
-</div>
-</div>
-    <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script>
-        const bars = document.querySelector(".fas");
-        const category = document.querySelector(".category");
-        const category_sub = document.querySelector(".category_sub");
-        const menu = document.querySelector(".menu");
-        const icon = document.querySelector(".icon");
-
-        bars.addEventListener("click", () => {
-            category.classList.toggle("active");
-            menu.classList.toggle("active");
-            icon.classList.toggle("active");})
-
-        category.addEventListener("click", () => {
-            category_sub.classList.toggle("active");
-        });
-    </script>
+    bars.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+</script>
+<script>
+    function TermsAgreeAll(){
+        if(document.getElementById("TermsAgreeAll").checked==true){
+            for
+            (var i=0;i<6;i++)
+                document.getElementsByName("checkbox")[i].checked=true;
+        }else{
+            for(var i=0;i<6;i++)
+                document.getElementsByName("checkbox")[i].checked=false;
+        }
+    }
+</script>
 </body>
 </html>

@@ -11,7 +11,8 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor  //파라미터가 없는 기본 생성자 생성
 @AllArgsConstructor //모든 필드 값을 파라미터로 받는 생성자 생성
-//@Column //왜 빨간줄?
+@Builder
+@ToString
 public class Item {
     //  엔티티란? DB와 1:1 매칭되는 것
 //    카트 안에 들어갈 db이름
@@ -22,8 +23,8 @@ public class Item {
 //    pirvate String id; findBySeq가 없어서 Id로 바꿔야 하나?
     @Id //기본 키(PK Key) 지정
     @GeneratedValue //기본 키의 자동 생성 전략 (?)
-//    private String  itemId
-    private Long  seq;;             //상품 번호
+    private Long  itemId;         //상품 번호
+//    private Long  seq;;
 
     @Column     //컬럼이란? 객체 필드를 테이블의 컬럼에 매핑시켜줌
     private String  photo;          //상품 사진 저장한 url
