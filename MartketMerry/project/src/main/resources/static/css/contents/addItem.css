@@ -60,7 +60,7 @@
 }
 
 .insert .file-list {
-    height: 100%;
+
     overflow: auto;
     border: 1px solid #989898;
     padding: 10px;

@@ -1,5 +1,6 @@
 package com.example.project.Service.Item;
 
+import com.example.project.Entity.Item.FileUploadEntity;
 import com.example.project.Entity.Item.Item;
 //import com.example.project.Entity.Item.fileUpload;
 
@@ -20,5 +21,16 @@ public interface ItemService {
 
     void deleteItem(Item item);     // 상품 삭제
 
-//    void insertfileUpload(fileUpload entity);
+    Item getItem(Item item);
+
+    Long insertFileUploadEntity(FileUploadEntity fileUploadEntity);
+
+    List<FileUploadEntity> getFileUploadEntity(Long item_seq);
+
+    List<Item> getItemList();
+
+    List<Item> getItemListss(List<Item> getItemList);
+
+//    Object getPagesSortIndex(Item item);
+
 }

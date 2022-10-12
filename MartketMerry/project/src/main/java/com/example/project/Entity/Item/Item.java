@@ -2,6 +2,7 @@ package com.example.project.Entity.Item;
 
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -26,8 +27,8 @@ public class Item {
     private Long  itemId;         //상품 번호
 //    private Long  seq;;
 
-    @Column     //컬럼이란? 객체 필드를 테이블의 컬럼에 매핑시켜줌
-    private String  photo;          //상품 사진 저장한 url
+//    @Column     //컬럼이란? 객체 필드를 테이블의 컬럼에 매핑시켜줌
+//    private String  photo;          //상품 사진 저장한 url
     @Column
     private String  mainCategory;   //대분류
     @Column
@@ -56,9 +57,26 @@ public class Item {
     private int     stock;          //재고 수량
 
     //    ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ    //
-    @Column
-    private String detailText;      //상세 설명
-    @Column
-    private String detailPhoto;     //상세 사진
+//    @Column
+//    private String detailText;      //상세 설명
+//    @Column
+//    private String detailPhoto;     //상세 사진
+
+//    public Item(Long  itemId, String  mainCategory, String  subCategory, String  itemName,
+//                String  itemText, int price, String  delivery, String  seller, String  packing, String  origin,
+//                Date shelfLife, int stock, String detailText ){
+//        this.itemId = itemId;
+//        this.mainCategory = mainCategory;
+//        this.subCategory = subCategory;
+//        this.itemName = itemName;
+//        this.itemText = itemText;
+//        this.price = price;
+//        this.delivery = delivery;
+//        this.packing = packing;
+//        this.origin = origin;
+//        this.shelfLife = shelfLife;
+//        this.stock = stock;
+//        this.detailText = detailText;
+//    }
 
 }
