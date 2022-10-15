@@ -1,6 +1,6 @@
 @font-face {
-    font-family: '나눔손글씨 힘내라는 말보단';
-    src: url('./font/나눔손글씨 힘내라는 말보단.ttf');
+    /*font-family: '나눔손글씨 힘내라는 말보단';*/
+    /*src: url('./font/나눔손글씨 힘내라는 말보단.ttf');*/
     font-weight: normal;
     font-style: normal;
 }
@@ -15,7 +15,7 @@ body {
     min-width: 760px;
     max-width: 1000px;
     box-sizing: border-box;
-    font-family: '나눔손글씨 힘내라는 말보단';
+    /*font-family: '나눔손글씨 힘내라는 말보단';*/
 }
 a:active, a:visited {
     color: inherit;
